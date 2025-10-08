@@ -1,0 +1,1 @@
+C:\RVA\tweego-2.1.1-windows-x64\game>..\tweego -o build/game.html passages/ scripts/ styles/

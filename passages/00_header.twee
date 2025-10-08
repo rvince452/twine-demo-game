@@ -1,0 +1,64 @@
+:: StoryTitle
+Covenway
+
+
+:: StoryData
+{
+  "ifid": "B0B33293-3C30-4270-A509-DA797296FF91",
+  "format": "SugarCube",
+  "format-version": "2.37.3",
+  "start": "Start",
+  "tag-colors": {
+    "REVIEW": "orange",
+    "UNUSED": "yellow",
+    "EXAMPLE": "purple",
+    "MAIN": "green"
+  },
+  "zoom": 0.6
+}
+
+
+:: StoryStylesheet
+@import url("styles/custom.css");
+
+:: Story JavaScript
+importScripts("scripts/custom.js");
+importScripts("scripts/macros.js");
+
+
+
+:: StoryAuthor {"position":"100,0","size":"100,100"}
+!!! Ed E
+
+
+:: StoryBanner {"position":"300,0","size":"100,100"}
+<img src="img/chamber3.jpg" alt="Pod">
+
+
+:: StoryDisplayTitle {"position":"0,0","size":"100,100"}
+! Covenway
+!! dark urban tale
+
+
+:: StoryInit {"position":"1800,425","size":"100,200"}
+<<set $player to {
+agility : 100, 
+will : 100,
+awareness : 100,
+day: 0,
+timecat: "night"
+} >>
+
+
+
+
+:: StoryMenu {"position":"500,0","size":"100,100"}
+Does not show text, only links - check documentation
+[[Inventory]]
+[[characters]]
+[[status]]
+
+
+:: StoryRightSidebar [UNUSED] {"position":"400,0","size":"100,100"}
+Right sidebar
+

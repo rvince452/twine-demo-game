@@ -1,0 +1,9 @@
+body {
+    background-color: #222;
+    color: #eee;
+    font-family: "Segoe UI", sans-serif;
+}
+
+a.link-internal {
+    color: #8fd;
+}

@@ -1,0 +1,22 @@
+:: Start
+You are standing in a field, $playerName.  
+
+[[Enter Main House->loc-mainhouse-entry]]
+
+:: Inventory [UNUSED] {"position":"725,125","size":"100,100"}
+* Apple
+* Knife
+
+
+:: PassageFooter {"position":"200,0","size":"100,100"}
+---------------------------------------------------------------
+<<print passage()>>
+
+
+:: characters
+[[Al Lane physician/head of household|descr-al]]
+[[Katie Lane - Al's daughter|descr-katie]]
+[[Carl Lane - Al's oldest son|descr-carl]]
+[[Heather Towers - Katie's friend|descr-heather]]
+[[Susan Masters - Al's secretary|descr-susan]]
+<<return>>
