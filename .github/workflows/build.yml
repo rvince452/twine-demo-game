@@ -49,9 +49,40 @@ jobs:
         TWEEGO_PATH=$(find . -name "tweego" -type f | head -1)
         echo "Using tweego at: $TWEEGO_PATH"
         
+        # Check passages directory contents
+        echo "Passages directory contents:"
+        ls -la passages/
+        
+        # Check twee file contents briefly
+        echo "Checking twee files:"
+        for file in passages/*.twee; do
+          echo "=== $file ==="
+          head -5 "$file"
+        done
+        
         if [ -n "$TWEEGO_PATH" ]; then
-          "$TWEEGO_PATH" -o build/game.html passages/
-          echo "Build completed successfully"
+          echo "Running tweego build..."
+          # Try building with story formats included
+          "$TWEEGO_PATH" -o build/game.html passages/ storyformats/ -v
+          
+          if [ $? -eq 0 ]; then
+            echo "Build completed successfully"
+            echo "Output file info:"
+            ls -la build/game.html
+            echo "File size: $(stat -c%s build/game.html) bytes"
+          else
+            echo "Build failed, trying without storyformats directory..."
+            "$TWEEGO_PATH" -o build/game.html passages/ -v
+            
+            if [ $? -eq 0 ]; then
+              echo "Build completed successfully without storyformats"
+              echo "Output file info:"
+              ls -la build/game.html
+            else
+              echo "Build failed completely"
+              exit 1
+            fi
+          fi
         else
           echo "ERROR: Could not find tweego executable for build"
           exit 1
