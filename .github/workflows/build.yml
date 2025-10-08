@@ -60,25 +60,36 @@ jobs:
         done
         
         echo "Running tweego build..."
+        
         # Try building with all directories
+        echo "Attempting: tweego -o build/game.html passages/ scripts/ styles/ storyformats/ -v"
         if tweego -o build/game.html passages/ scripts/ styles/ storyformats/ -v; then
-          echo "Build completed successfully with all directories"
+          echo "✅ Build completed successfully with all directories"
           echo "Output file info:"
           ls -la build/game.html
           echo "File size: $(stat -c%s build/game.html) bytes"
-        elif tweego -o build/game.html passages/ scripts/ styles/ -v; then
-          echo "Build completed successfully without storyformats"
-          echo "Output file info:"
-          ls -la build/game.html
-        elif tweego -o build/game.html passages/ -v; then
-          echo "Build completed successfully with passages only"
-          echo "Output file info:"
-          ls -la build/game.html
         else
-          echo "Build failed completely"
-          echo "Trying with verbose error output:"
-          tweego -o build/game.html passages/ --verbose || true
-          exit 1
+          echo "❌ First attempt failed, trying without storyformats..."
+          echo "Attempting: tweego -o build/game.html passages/ scripts/ styles/ -v"
+          if tweego -o build/game.html passages/ scripts/ styles/ -v; then
+            echo "✅ Build completed successfully without storyformats"
+            echo "Output file info:"
+            ls -la build/game.html
+          else
+            echo "❌ Second attempt failed, trying with passages only..."
+            echo "Attempting: tweego -o build/game.html passages/ -v"
+            if tweego -o build/game.html passages/ -v; then
+              echo "✅ Build completed successfully with passages only"
+              echo "Output file info:"
+              ls -la build/game.html
+            else
+              echo "❌ All build attempts failed"
+              echo "Final attempt with verbose error output:"
+              echo "Command: tweego -o build/game.html passages/ --verbose"
+              tweego -o build/game.html passages/ --verbose || true
+              exit 1
+            fi
+          fi
         fi
         
     - name: List build contents
