@@ -22,8 +22,7 @@ Covenway
 @import url("styles/custom.css");
 
 :: Story JavaScript
-importScripts("scripts/custom.js");
-importScripts("scripts/macros.js");
+/* Import custom JavaScript files */
 
 
 

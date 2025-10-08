@@ -1,4 +1,5 @@
 :: Start
+<<set $playerName to "Player">>
 You are standing in a field, $playerName.  
 
 [[Enter Main House->loc-mainhouse-entry]]
