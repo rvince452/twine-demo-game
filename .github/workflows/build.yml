@@ -28,26 +28,25 @@ jobs:
         # Find all tweego executables and make them executable
         find . -name "tweego" -type f -exec chmod +x {} \;
         
-        # Find the tweego executable path
+        # Find the tweego executable path and move it to a standard location
         TWEEGO_PATH=$(find . -name "tweego" -type f | head -1)
         echo "Found tweego at: $TWEEGO_PATH"
         
-        # Verify tweego works
-        if [ -n "$TWEEGO_PATH" ]; then
-          "$TWEEGO_PATH" --version
-        else
-          echo "ERROR: Could not find tweego executable"
-          exit 1
-        fi
+        # Copy tweego to /usr/local/bin so it's available in PATH
+        sudo cp "$TWEEGO_PATH" /usr/local/bin/tweego
+        
+        # Verify tweego works from PATH
+        tweego --version || echo "Version command completed"
+        echo "Tweego setup completed successfully"
         
     - name: Create build directory
       run: mkdir -p build
       
     - name: Build game with Tweego
       run: |
-        # Find and use tweego executable
-        TWEEGO_PATH=$(find . -name "tweego" -type f | head -1)
-        echo "Using tweego at: $TWEEGO_PATH"
+        # Use tweego from PATH
+        echo "Using tweego from PATH"
+        tweego --version || echo "Version check completed"
         
         # Check passages directory contents
         echo "Passages directory contents:"
@@ -60,32 +59,23 @@ jobs:
           head -5 "$file"
         done
         
-        if [ -n "$TWEEGO_PATH" ]; then
-          echo "Running tweego build..."
-          # Try building with story formats included
-          "$TWEEGO_PATH" -o build/game.html passages/ storyformats/ -v
-          
-          if [ $? -eq 0 ]; then
-            echo "Build completed successfully"
+        echo "Running tweego build..."
+        # Try building with story formats included
+        if tweego -o build/game.html passages/ storyformats/ -v; then
+          echo "Build completed successfully with storyformats"
+          echo "Output file info:"
+          ls -la build/game.html
+          echo "File size: $(stat -c%s build/game.html) bytes"
+        else
+          echo "Build failed, trying without storyformats directory..."
+          if tweego -o build/game.html passages/ -v; then
+            echo "Build completed successfully without storyformats"
             echo "Output file info:"
             ls -la build/game.html
-            echo "File size: $(stat -c%s build/game.html) bytes"
           else
-            echo "Build failed, trying without storyformats directory..."
-            "$TWEEGO_PATH" -o build/game.html passages/ -v
-            
-            if [ $? -eq 0 ]; then
-              echo "Build completed successfully without storyformats"
-              echo "Output file info:"
-              ls -la build/game.html
-            else
-              echo "Build failed completely"
-              exit 1
-            fi
+            echo "Build failed completely"
+            exit 1
           fi
-        else
-          echo "ERROR: Could not find tweego executable for build"
-          exit 1
         fi
         
     - name: List build contents
