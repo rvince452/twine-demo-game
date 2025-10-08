@@ -1,0 +1,46 @@
+name: Build Twine Game
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Download and setup Tweego
+      run: |
+        # Download Tweego for Linux
+        wget https://github.com/tmedwards/tweego/releases/download/v2.1.1/tweego-2.1.1-linux-x64.tar.gz
+        tar -xzf tweego-2.1.1-linux-x64.tar.gz
+        chmod +x tweego-2.1.1-linux-x64/tweego
+        
+    - name: Create build directory
+      run: mkdir -p build
+      
+    - name: Build game with Tweego
+      run: |
+        ./tweego-2.1.1-linux-x64/tweego -o build/game.html passages/
+        
+    - name: List build contents
+      run: ls -la build/
+      
+    - name: Upload game artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: twine-game
+        path: build/game.html
+        
+    - name: Deploy to GitHub Pages (if on main branch)
+      if: github.ref == 'refs/heads/main'
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./build
+        destination_dir: game

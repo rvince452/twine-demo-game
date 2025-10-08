@@ -10,11 +10,23 @@ Explore the Lane Residence, a 1960s-1970s farmhouse with authentic period detail
 
 This project uses Tweego to compile the Twee source files into a playable HTML game.
 
-### Prerequisites
+### Automated Builds
+
+The game is automatically built using GitHub Actions whenever changes are pushed to the main branch:
+
+- ✅ **Continuous Integration**: Automatically compiles the game on every push
+- ✅ **GitHub Pages Deployment**: Game is automatically deployed and playable online
+- ✅ **Artifact Downloads**: Compiled game files are available as downloadable artifacts
+
+**Play Online**: [https://rvince452.github.io/twine-demo-game/](https://rvince452.github.io/twine-demo-game/)
+
+### Manual Build (Local Development)
+
+#### Prerequisites
 
 - [Tweego](https://www.motoslave.net/tweego/) - Twee compiler
 
-### Build Instructions
+#### Build Instructions
 
 1. Navigate to the game directory
 2. Run Tweego to compile:
