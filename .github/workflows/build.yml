@@ -16,17 +16,47 @@ jobs:
       
     - name: Download and setup Tweego
       run: |
-        # Download Tweego for Linux
-        wget https://github.com/tmedwards/tweego/releases/download/v2.1.1/tweego-2.1.1-linux-x64.tar.gz
-        tar -xzf tweego-2.1.1-linux-x64.tar.gz
-        chmod +x tweego-2.1.1-linux-x64/tweego
+        # Try to download Tweego - first attempt with zip
+        if wget -q https://github.com/tmedwards/tweego/releases/download/v2.1.1/tweego-2.1.1-linux-x64.zip; then
+          echo "Downloaded zip file"
+          unzip -q tweego-2.1.1-linux-x64.zip
+          chmod +x tweego-2.1.1-linux-x64/tweego
+        # Fallback: try tar.gz format
+        elif wget -q https://github.com/tmedwards/tweego/releases/download/v2.1.1/tweego-2.1.1-linux-x64.tar.gz; then
+          echo "Downloaded tar.gz file"
+          tar -xzf tweego-2.1.1-linux-x64.tar.gz
+          chmod +x tweego-2.1.1-linux-x64/tweego
+        # Final fallback: use GitHub API to find correct URL
+        else
+          echo "Trying GitHub API to find download URL"
+          DOWNLOAD_URL=$(curl -s https://api.github.com/repos/tmedwards/tweego/releases/latest | \
+            grep "browser_download_url.*linux" | head -1 | cut -d '"' -f 4)
+          echo "Found URL: $DOWNLOAD_URL"
+          wget "$DOWNLOAD_URL"
+          
+          # Extract based on file extension
+          if [[ "$DOWNLOAD_URL" == *.zip ]]; then
+            unzip -q $(basename "$DOWNLOAD_URL")
+          else
+            tar -xzf $(basename "$DOWNLOAD_URL")
+          fi
+          
+          # Find the tweego executable
+          find . -name "tweego" -type f -exec chmod +x {} \;
+        fi
+        
+        # Verify tweego works
+        ./tweego-2.1.1-linux-x64/tweego --version || find . -name "tweego" -type f -exec {} --version \;
         
     - name: Create build directory
       run: mkdir -p build
       
     - name: Build game with Tweego
       run: |
-        ./tweego-2.1.1-linux-x64/tweego -o build/game.html passages/
+        # Find and use tweego executable
+        TWEEGO_PATH=$(find . -name "tweego" -type f | head -1)
+        echo "Using tweego at: $TWEEGO_PATH"
+        "$TWEEGO_PATH" -o build/game.html passages/
         
     - name: List build contents
       run: ls -la build/
