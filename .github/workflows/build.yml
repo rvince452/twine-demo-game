@@ -84,9 +84,9 @@ jobs:
               ls -la build/game.html
             else
               echo "❌ All build attempts failed"
-              echo "Final attempt with verbose error output:"
-              echo "Command: tweego -o build/game.html passages/ --verbose"
-              tweego -o build/game.html passages/ --verbose || true
+              echo "Final attempt for error diagnosis:"
+              echo "Command: tweego -o build/game.html passages/"
+              tweego -o build/game.html passages/ || true
               exit 1
             fi
           fi

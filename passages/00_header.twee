@@ -6,7 +6,7 @@ Covenway
 {
   "ifid": "B0B33293-3C30-4270-A509-DA797296FF91",
   "format": "SugarCube",
-  "format-version": "2.37.3",
+  "format-version": "2.30.0",
   "start": "Start",
   "tag-colors": {
     "REVIEW": "orange",
