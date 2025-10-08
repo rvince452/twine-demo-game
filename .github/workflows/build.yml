@@ -62,23 +62,23 @@ jobs:
         echo "Running tweego build..."
         
         # Try building with all directories
-        echo "Attempting: tweego -o build/game.html passages/ scripts/ styles/ storyformats/ -v"
-        if tweego -o build/game.html passages/ scripts/ styles/ storyformats/ -v; then
+        echo "Attempting: tweego -o build/game.html passages/ scripts/ styles/ storyformats/"
+        if tweego -o build/game.html passages/ scripts/ styles/ storyformats/; then
           echo "✅ Build completed successfully with all directories"
           echo "Output file info:"
           ls -la build/game.html
           echo "File size: $(stat -c%s build/game.html) bytes"
         else
           echo "❌ First attempt failed, trying without storyformats..."
-          echo "Attempting: tweego -o build/game.html passages/ scripts/ styles/ -v"
-          if tweego -o build/game.html passages/ scripts/ styles/ -v; then
+          echo "Attempting: tweego -o build/game.html passages/ scripts/ styles/"
+          if tweego -o build/game.html passages/ scripts/ styles/; then
             echo "✅ Build completed successfully without storyformats"
             echo "Output file info:"
             ls -la build/game.html
           else
             echo "❌ Second attempt failed, trying with passages only..."
-            echo "Attempting: tweego -o build/game.html passages/ -v"
-            if tweego -o build/game.html passages/ -v; then
+            echo "Attempting: tweego -o build/game.html passages/"
+            if tweego -o build/game.html passages/; then
               echo "✅ Build completed successfully with passages only"
               echo "Output file info:"
               ls -la build/game.html
