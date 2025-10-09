@@ -64,6 +64,10 @@ jobs:
         echo "Passages directory contents:"
         ls -la passages/
         
+        # Check img directory contents
+        echo "Images directory contents:"
+        ls -la img/ || echo "No img directory found"
+        
         # Check twee file contents briefly
         echo "Checking twee files:"
         for file in passages/*.twee; do
@@ -73,18 +77,18 @@ jobs:
         
         echo "Running tweego build..."
         
-        # Try building with all directories
-        echo "Attempting: tweego -o build/game.html passages/ scripts/ styles/ "
-        if tweego -o build/game.html passages/ scripts/ styles/; then
+        # Try building with all directories including images
+        echo "Attempting: tweego -o build/game.html passages/ scripts/ styles/ img/"
+        if tweego -o build/game.html passages/ scripts/ styles/ img/; then
           echo "✅ Build completed successfully with all directories"
           echo "Output file info:"
           ls -la build/game.html
           echo "File size: $(stat -c%s build/game.html) bytes"
         else
-          echo "❌ First attempt failed, trying without storyformats..."
+          echo "❌ First attempt failed, trying without img folder..."
           echo "Attempting: tweego -o build/game.html passages/ scripts/ styles/"
           if tweego -o build/game.html passages/ scripts/ styles/; then
-            echo "✅ Build completed successfully without storyformats"
+            echo "✅ Build completed successfully without img folder"
             echo "Output file info:"
             ls -la build/game.html
           else
