@@ -74,8 +74,8 @@ jobs:
         echo "Running tweego build..."
         
         # Try building with all directories
-        echo "Attempting: tweego -o build/game.html passages/ scripts/ styles/ storyformats/"
-        if tweego -o build/game.html passages/ scripts/ styles/ storyformats/; then
+        echo "Attempting: tweego -o build/game.html passages/ scripts/ styles/ "
+        if tweego -o build/game.html passages/ scripts/ styles/; then
           echo "✅ Build completed successfully with all directories"
           echo "Output file info:"
           ls -la build/game.html
