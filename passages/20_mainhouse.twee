@@ -56,14 +56,18 @@ You are in a room within Coventree Real Estate
 
 :: loc-mainhouse-basement-bedroom {"position":"1525,1200","size":"100,100"}
 <<include "loc-main-house-descr">>
+Carl's basement bedroom feels more like a bunker than a living space. Electronics from the early 80s are stacked everywhere—a Commodore 64, multiple Walkman players in various states of disrepair, and a small TV with a VHS player that only seems to play static-filled tapes. Pin-up calendars from auto parts stores cover the paneled walls, their subjects watching visitors with eyes that seem too knowing. The air smells of stale cigarettes and machine oil, and sometimes you can hear electronic beeping coming from devices that appear to be turned off.
 <<return>>
 
+::loc-mainhouse-porch
+Wraparound porch with rocking chairs, tables. Wraps around the side of the house to the kitchen
 
 :: loc-mainhouse-basement-utility {"position":"1650,1325","size":"100,100"}
 <<include "loc-main-house-descr">>
 <<return>>
 
-
+::loc-mainhouse-linen-closet
+The narrow linen closet appears ordinary at first glance, with shelves stacked with yellowed sheets and moth-eaten towels that smell of lavender and something less pleasant. However, the back panel is actually a hidden door that swings inward when the right combination of towels is moved. Beyond lies a cramped crawlspace that runs beneath the eaves, accessible only by crawling. Strange scratches mark the wooden beams, and the air carries the scent of something that died long ago but refuses to fully decay. 
 
 :: loc-mainhouse-entry {"position":"1650,1075","size":"100,100"}
 <<include "loc-main-house-descr">>
@@ -100,7 +104,11 @@ You are in a room within Coventree Real Estate
 
 :: loc-mainhouse-recroom {"position":"1525,1075","size":"100,100"}
 <<include "loc-main-house-descr">>
+The rec room serves as Al's private casino, complete with a felt-covered poker table bearing permanent stains from years of late-night games. A small bar in the corner displays bottles of whiskey with names you don't recognize, and the pool table's green felt is torn in several places, revealing darker fabric beneath. Casino chips are scattered across surfaces, some bearing symbols that don't match any known gambling establishment. The room's single window is always kept curtained, and the overhead light casts everything in a sickly yellow glow that makes everyone look jaundiced. 
 
+
+::loc-mainhouse-utility-closet
+Lines with boxes, cables, cords, ets. A simple table with a lamp and a chair.
 
 
 :: loc-mainhouse-upstairs-bath {"position":"1525,1325","size":"100,100"}
@@ -108,8 +116,9 @@ You are in a room within Coventree Real Estate
 
 
 
-:: loc-mainhouse-upstairs-bedroom-1 {"position":"1525,1450","size":"100,100"}
+:: loc-mainhouse-upstairs-katie {"position":"1525,1450","size":"100,100"}
 <<include "loc-main-house-descr">>
+Katie's room is a shrine to her past glories, with gymnastics trophies crowding every surface and faded ribbons hanging from the mirror. Fashion magazines from the mid-80s are stacked in precarious towers, their pages yellowed and brittle. A small collection of modeling photos shows Katie in various frozen poses, but something about the images seems off—her smile never quite reaches her eyes, and shadows fall in directions that don't match the lighting. Lottery tickets are scattered across her desk like fallen leaves, all scratched off to reveal nothing but losing numbers.
 
 
 
@@ -124,7 +133,7 @@ You are in a room within Coventree Real Estate
 
 :: loc-mainhouse-upstairs-master {"position":"1650,1450","size":"100,100"}
 <<include "loc-main-house-descr">>
-
+Al and Susan's bedroom reflects their divergent obsessions. Susan's side features exercise equipment from the early aerobics craze—leg warmers draped over a stationary bike, workout videos stacked beside a VCR, and health food cookbooks with pages marked by food stains that look suspiciously like blood. Al's side is dominated by mechanical manuals, poker chips in glass jars, and a gun safe that's always kept locked. The bed between them sags in the middle, as if something heavy regularly sleeps there that neither of them acknowledges. 
 
 
 :: loc-mainhouse-upstairs-master-bath {"position":"1775,1450","size":"100,100"}

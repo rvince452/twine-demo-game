@@ -32,12 +32,15 @@ function makeSpeakerMacro(name, cssClass) {
         }
     });
 }
+makeSpeakerMacro("Doug")
+
 makeSpeakerMacro("Katie")
 makeSpeakerMacro("nar")
 makeSpeakerMacro("Heather")
 makeSpeakerMacro("Susan")
 makeSpeakerMacro("Al")
 makeSpeakerMacro("You")
+makeSpeakerMacro("Hal")
 
 
 Macro.add('qspeak', {

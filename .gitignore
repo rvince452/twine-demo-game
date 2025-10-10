@@ -1,5 +1,5 @@
-# Build output (keep index.html for GitHub Pages)
-build/game.html
+# Build output - entire build directory
+build/
 
 # OS generated files
 .DS_Store

@@ -4,6 +4,8 @@ You are standing in a field, $playerName.
 
 [[Enter Main House->loc-mainhouse-entry]]
 
+<<katie>>Did you see that?<</katie>>
+
 :: Inventory [UNUSED] {"position":"725,125","size":"100,100"}
 * Apple
 * Knife
