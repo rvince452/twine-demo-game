@@ -1,38 +1,12 @@
 
 :: loc-main-house-descr {"position":"1650,950","size":"100,100"}
-!!!Lane Residence
+!!!Lancaster Family Farmhouse
 <<nobr>>
 <<switch passage()>>
 <<case "loc-mainhouse-entry">>
-You are in the entry hall of the Lane house. This simple hallway is flanked by picture-lined walls. The wooden floor is covered by a rug and leads deeper into the house.
-<<case "loc-mainhouse-living">>
-The living room features wood-paneled walls and a stone fireplace that shows its age with some minor cracks in the mortar. Orange shag carpeting from the original construction covers most of the hardwood floor beneath. The large picture window facing the front yard has older aluminum frames that could use fresh caulking.
-<<case "loc-mainhouse-kitchen">>
-The galley-style kitchen retains its original avocado green appliances and Formica countertops with gold flecks. Cabinet doors hang slightly askew on their hinges, and the linoleum flooring shows wear patterns near the sink. Despite its dated appearance, everything still functions adequately.
-<<case "loc-mainhouse-attic">>
-The unfinished attic space has exposed wooden beams and pink fiberglass insulation between the joists. A single bare bulb provides minimal lighting, casting shadows between stored boxes and forgotten furniture. The plywood flooring creaks underfoot, and you can feel the temperature difference from the rest of the house.
-<<case "loc-mainhouse-basement">>
-The concrete block basement has that typical musty smell of older homes, though it remains dry. Exposed ceiling joists show some water stains from minor past leaks, now long since repaired. The concrete floor is painted gray but shows chips and wear in high-traffic areas.
-<<case "loc-mainhouse-basement-bedroom">>
-This converted basement bedroom has wood paneling on the walls and industrial carpeting over the concrete floor. The small ground-level windows provide limited natural light, and the ceiling is lower than upstairs rooms. It's functional but feels somewhat cramped and dated.
-<<case "loc-mainhouse-basement-utility">>
-The utility room houses the original oil furnace, water heater, and electrical panel from the home's construction era. Copper pipes run along the ceiling showing some green patina, and the concrete walls display minor efflorescence staining. Everything appears to be in working order despite showing its age.
-<<case "loc-mainhouse-recroom">>
-The family room features the same wood paneling as the living room but with built-in shelving along one wall. The carpet here is a brown shag that's seen better days, with some visible traffic patterns. A sliding glass door leads to the back patio, though the track occasionally sticks.
-<<case "loc-mainhouse-upstairs-bath">>
-The hall bathroom has original ceramic tile in harvest gold with matching fixtures. The grout shows some discoloration and the medicine cabinet mirror has silvering spots around the edges. The exhaust fan is loud but functional, and water pressure is adequate if not impressive.
-<<case "loc-mainhouse-upstairs-bedroom-1">>
-This medium-sized bedroom has hardwood floors that could use refinishing and walls that need fresh paint. The single window faces east, providing good morning light through its slightly drafty frame. The original built-in closet has sliding doors that sometimes jump their track.
-<<case "loc-mainhouse-upstairs-bedroom-1-bath">>
-This small en-suite bathroom has basic fixtures in almond color, showing the typical wear of a 1970s installation. The shower tile has some missing grout, and the vanity shows water damage around the base. Despite these cosmetic issues, everything functions properly.
-<<case "loc-mainhouse-upstairs-bedroom-guest">>
-The guest bedroom is the smallest upstairs room, with sloped ceilings following the roofline. Hardwood floors peek out from under an old area rug, and the wallpaper shows its age with some peeling at the seams. The dormer window provides a charming view of the property.
-<<case "loc-mainhouse-upstairs-master">>
-The master bedroom is spacious with good natural light from two windows, though the frames show some paint peeling. The hardwood floors are in decent condition but could benefit from refinishing. Original built-in dressers line one wall, their hardware showing tarnish from decades of use.
-<<case "loc-mainhouse-upstairs-master-bath">>
-The master bathroom features a combination tub and shower with ceramic tile surround in avocado green. The fixtures are original to the house and show mineral deposits, but water pressure remains good. A small window provides ventilation, though the paint around it shows moisture damage.
+""
 <<default>>
-You are in a room within Coventree Real Estate
+    You are in passage() within the main house 
 <</switch>>
 <</nobr>>
 
@@ -57,35 +31,28 @@ You are in a room within Coventree Real Estate
 :: loc-mainhouse-basement-bedroom {"position":"1525,1200","size":"100,100"}
 <<include "loc-main-house-descr">>
 Carl's basement bedroom feels more like a bunker than a living space. Electronics from the early 80s are stacked everywhere—a Commodore 64, multiple Walkman players in various states of disrepair, and a small TV with a VHS player that only seems to play static-filled tapes. Pin-up calendars from auto parts stores cover the paneled walls, their subjects watching visitors with eyes that seem too knowing. The air smells of stale cigarettes and machine oil, and sometimes you can hear electronic beeping coming from devices that appear to be turned off.
+Investigation finds binoculars, a polaroid camera, and the crowbar and a step ladder 
 <<return>>
 
-::loc-mainhouse-porch
-Wraparound porch with rocking chairs, tables. Wraps around the side of the house to the kitchen
 
 :: loc-mainhouse-basement-utility {"position":"1650,1325","size":"100,100"}
 <<include "loc-main-house-descr">>
 <<return>>
 
-::loc-mainhouse-linen-closet
-The narrow linen closet appears ordinary at first glance, with shelves stacked with yellowed sheets and moth-eaten towels that smell of lavender and something less pleasant. However, the back panel is actually a hidden door that swings inward when the right combination of towels is moved. Beyond lies a cramped crawlspace that runs beneath the eaves, accessible only by crawling. Strange scratches mark the wooden beams, and the air carries the scent of something that died long ago but refuses to fully decay. 
+
+
+
 
 :: loc-mainhouse-entry {"position":"1650,1075","size":"100,100"}
 <<include "loc-main-house-descr">>
 [[Living room->loc-mainhouse-living]]
 
-[[Main house basement->loc-mainhouse-basement]]
-[[Main house basement bedroom->loc-mainhouse-basement-bedroom]]
-[[Main house basement utility->loc-mainhouse-basement-utility]]
-
-[[Main house attic->loc-mainhouse-attic]]
-
-[[Main house upstairs bath->loc-mainhouse-upstairs-bath]]
-[[Main house upstairs master->loc-mainhouse-upstairs-master]]
-[[Main house upstairs master bath->loc-mainhouse-upstairs-master-bath]]
-
-[[Main house upstairs bedroom 1->loc-mainhouse-upstairs-bedroom-1]]
-[[Main house upstairs bedroom 1 bath->loc-mainhouse-upstairs-bedroom-1-bath]]
-[[Main house upstairs bedroom guest->loc-mainhouse-upstairs-bedroom-guest]]
+:: loc-mainhouse-living {"position":"1775,1075","size":"100,100"}
+<<include "loc-main-house-descr">>
+[[Entryway->loc-mainhouse-entry]]
+[[Kitchen->loc-mainhouse-kitchen]]
+[[Rec room->loc-mainhouse-recroom]]
+[[Upstairs hallway->loc-mainhouse-upstairs-hallway]]
 
 
 :: loc-mainhouse-kitchen {"position":"1650,1200","size":"100,100"}
@@ -93,48 +60,61 @@ The narrow linen closet appears ordinary at first glance, with shelves stacked w
 [[Living room->loc-mainhouse-living]]
 [[Basement->loc-mainhouse-basement]]
 
-
-
-:: loc-mainhouse-living {"position":"1775,1075","size":"100,100"}
-<<include "loc-main-house-descr">>
-[[Entryway->loc-mainhouse-entry]]
-[[Kitchen->loc-mainhouse-kitchen]]
-
-
-
 :: loc-mainhouse-recroom {"position":"1525,1075","size":"100,100"}
 <<include "loc-main-house-descr">>
 The rec room serves as Al's private casino, complete with a felt-covered poker table bearing permanent stains from years of late-night games. A small bar in the corner displays bottles of whiskey with names you don't recognize, and the pool table's green felt is torn in several places, revealing darker fabric beneath. Casino chips are scattered across surfaces, some bearing symbols that don't match any known gambling establishment. The room's single window is always kept curtained, and the overhead light casts everything in a sickly yellow glow that makes everyone look jaundiced. 
+Loaded dice, marked cards, looks like he played with the lent money 
+[[Downstairs bathroom->loc-mainhouse-downstairs-bath-1]]
+[[Living room->loc-mainhouse-living]]
 
 
-::loc-mainhouse-utility-closet
-Lines with boxes, cables, cords, ets. A simple table with a lamp and a chair.
-
-
-:: loc-mainhouse-upstairs-bath {"position":"1525,1325","size":"100,100"}
+:: loc-mainhouse-downstairs-bath-1 {"position":"1650,1575","size":"100,100"}
 <<include "loc-main-house-descr">>
+
+Investigation will show the removed electric receptable accessable from below
+<<return>>
+
+
+
+
+:: loc-mainhouse-upstairs-hallway {"position":"1650,1325","size":"100,100"}
+<<include "loc-main-house-descr">>
+[[Master bedroom->loc-mainhouse-upstairs-master]]
+[[Katie's room->loc-mainhouse-upstairs-katie]]
+[[Guest bedroom->loc-mainhouse-upstairs-bedroom-guest]]
+[[Attic->loc-mainhouse-attic]]
+[[Linen closet->loc-mainhouse-linen-closet]]
+
+
+:: loc-mainhouse-linen-closet
+The narrow linen closet appears ordinary at first glance, with shelves stacked with yellowed sheets and moth-eaten towels that smell of lavender and something less pleasant. However, the back panel is actually a hidden door that swings inward when the right combination of towels is moved. Beyond lies a cramped crawlspace that runs beneath the eaves, accessible only by crawling. Strange scratches mark the wooden beams, and the air carries the scent of something that died long ago but refuses to fully decay. 
+<<return>>
+
+
 
 
 
 :: loc-mainhouse-upstairs-katie {"position":"1525,1450","size":"100,100"}
 <<include "loc-main-house-descr">>
-Katie's room is a shrine to her past glories, with gymnastics trophies crowding every surface and faded ribbons hanging from the mirror. Fashion magazines from the mid-80s are stacked in precarious towers, their pages yellowed and brittle. A small collection of modeling photos shows Katie in various frozen poses, but something about the images seems off—her smile never quite reaches her eyes, and shadows fall in directions that don't match the lighting. Lottery tickets are scattered across her desk like fallen leaves, all scratched off to reveal nothing but losing numbers.
+Katie's room is a shrine to her past glories, with gymnastics trophies crowding every surface and faded ribbons hanging from the mirror alongside her confirmation certificate from Ephrata Reformed Church and a photo of her in a white dress from her first communion. Fashion magazines from the mid-80s are stacked in precarious towers, their pages yellowed and brittle, competing for space with church youth group newsletters and a dusty Bible given to her on her 16th birthday. A small collection of modeling photos shows Katie in various frozen poses, but something about the images seems off—her smile never quite reaches her eyes, and shadows fall in directions that don't match the lighting. Lottery tickets are scattered across her desk like fallen leaves, all scratched off to reveal nothing but losing numbers, a stark contrast to the motivational scripture cards from Sunday school that are pinned to her bulletin board.
+Investigation will show a trove of shoplifted and purchased cosmetics, jewelry, etc 
+Also will find copied checks and practiced handwriting samples. Some forms match the address next door.
+<<return>>
 
 
-
-:: loc-mainhouse-upstairs-bedroom-1-bath {"position":"1650,1575","size":"100,100"}
-<<include "loc-main-house-descr">>
 
 
 
 :: loc-mainhouse-upstairs-bedroom-guest {"position":"1775,1575","size":"100,100"}
 <<include "loc-main-house-descr">>
-
+Susan's office - nothing strange here, just a half-empty glass of something red but seems it is vegatable juice
+<<return>>
 
 :: loc-mainhouse-upstairs-master {"position":"1650,1450","size":"100,100"}
 <<include "loc-main-house-descr">>
-Al and Susan's bedroom reflects their divergent obsessions. Susan's side features exercise equipment from the early aerobics craze—leg warmers draped over a stationary bike, workout videos stacked beside a VCR, and health food cookbooks with pages marked by food stains that look suspiciously like blood. Al's side is dominated by mechanical manuals, poker chips in glass jars, and a gun safe that's always kept locked. The bed between them sags in the middle, as if something heavy regularly sleeps there that neither of them acknowledges. 
-
+Al and Susan's bedroom reflects their divergent obsessions alongside their shared faith. Susan's side features exercise equipment from the early aerobics craze—leg warmers draped over a stationary bike, workout videos stacked beside a VCR, and health food cookbooks with pages marked by food stains that look suspiciously like blood. Next to these sits her daily devotional book "Our Daily Bread" with highlighted passages and handwritten prayers in the margins. Al's side is dominated by mechanical manuals, poker chips in glass jars, and a gun safe that's always kept locked, but also features a leather-bound Bible passed down from his father and a small framed photo of him shaking hands with the church bishop during last year's stewardship drive. The bed between them sags in the middle, as if something heavy regularly sleeps there that neither of them acknowledges. On both nightstands rest matching wooden crosses carved by Al during the church's men's retreat. 
+[[Master bathroom->loc-mainhouse-upstairs-master-bath]]
 
 :: loc-mainhouse-upstairs-master-bath {"position":"1775,1450","size":"100,100"}
 <<include "loc-main-house-descr">>
+<<return>>

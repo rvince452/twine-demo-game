@@ -1,3 +1,6 @@
+:: object-note {"position":"600,100","size":"150,100"}
+
+
 :: object-voodoo-doll-al {"position":"100,100","size":"150,100"}
 This weathered figure is constructed from corn husks bound with twine, dressed in a miniature version of Al's signature coveralls made from actual denim fabric. Gray thread has been carefully stitched to represent his beard, and the doll's hands are stained with what appears to be motor oil. Multiple pin holes pierce the figure's back and shoulders, and one arm hangs at an odd angle as if it's been repeatedly twisted. The button eyes are mismatched—one brown, one milky white.
 
@@ -16,5 +19,38 @@ The simplest of the dolls, this figure is made entirely from farm materials—co
 :: object-fate-clock {"position":"250,100","size":"150,100"}
 This tarnished brass clock stands about two feet tall, its face replaced with a circular window that displays different fate cards as the hours pass. The mechanism clicks and whirs with an unsettling rhythm that doesn't quite match standard timepiece movements. Instead of numbers, the clock face bears symbols that correspond to the nine fate cards, and at midnight, all cards appear at once in a swirling pattern before settling on one ominous card for the coming day.
 
-:: object-hal-2000 {"position":"400,100","size":"150,100"}
+:: object-hal-Q5 {"position":"400,100","size":"150,100"}
 A primitive handheld device that looks like someone tried to build a futuristic phone using 1980s Radio Shack parts. The green LCD screen flickers with pixelated text, and the membrane keyboard responds with wet clicking sounds. When activated, it displays messages that no one has sent, videos of locations around the farm from impossible angles, and occasionally types responses to questions that haven't been asked yet. The battery never seems to die, despite being plugged into nothing.
+The HAL Q5 unit has a 'thining' button, a 'overheat' warning light as well as a on/off toggle switch. HAL is entagled with something and it does not know what. There is a label on the back that reads "from a Fine Man"
+
+:: oija-board
+In the corner of the room is a dark board with gold lettering. On further inspection it is an oija board.
+
+:: oija-board-notes 
+A pad of lined paper sits on the floor and a pen on top. Some notes have been scribbled.
+"Are you sure you understand the rules of the game?"
+"Sure you want to play?"
+"There is no draw"
+
+:: lent-cards
+You have noted some white pieces of paper. They are distinct as the paper is folder several times and taped. There is a word or words written on them. But why not just write on a piece of paper, why several pieces of paper folded? Perhaps someone was making a flash card?
+
+:: crowbar
+Old, scuffed, heavy crowbar
+
+:: large-metal-mailbox
+The white metal mailbox seems new and although you have seen these over-sized mailboxes before, you haven't noticed many along this road. Looking back toward the corresponding house, you don't see one, just a copse of dead trees. Maybe the house is further back.
+
+:: object-lent-calendar {"position":"400,300","size":"150,100"}
+This is a large wall calendar, the kind that would hang in a kitchen or workshop. The calendar is from the year 1974, and each month features a different pastoral scene typical of the era—rolling hills, farm animals, and quaint country cottages. The days are marked with handwritten notes in faded ink, some indicating church events, family gatherings, and other personal reminders. Several dates are circled in red, particularly those leading up to and including Lent.
+:: object-lent-envelope {"position":"400,450","size":"150,100"}
+The envelope is a standard manila type, but it has a worn and aged appearance, as if it's been handled many times over the years. The word "Lent" is written across the front in bold, black marker. The envelope is sealed, but it doesn't seem to be empty. Any inspection of the envelope shows that it has been opened and resealed.
+
+:: object-unused-fate-cards
+-Pile of unused Fate cards
+
+:: object-your-service-revolver
+This .38 Special revolver has a blued finish and wooden grips that show signs of wear
+
+:: object-your-walkie-talkie
+A standard-issue police walkie-talkie with a worn leather case and a long antenna.

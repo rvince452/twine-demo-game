@@ -16,7 +16,7 @@ A white stick figure stands close to the side of a house (simple rectangle with 
 :: card-the-goat {"position":"400,250","size":"150,100"}
 The center of the card shows a large four-legged animal shape with two small triangular horns. A white stick figure kneels beside it, one arm extended toward the animal. Several black stick figures stand at a distance in a circle around them. Simple vertical lines in the background represent a fence, and a barn with an X-pattern door is visible.
 
-:: card-the-stranger {"position":"100,400","size":"150,100"}
+:: card-the-trespasser {"position":"100,400","size":"150,100"}
 A white stick figure stands at the end of a long path (simple lines leading to the distance), holding a rectangular shape (briefcase or bag). At the other end of the path, near a small house, multiple black stick figures are grouped together. Above, birds are drawn as simple V-shapes flying away from the scene. A fence post with horizontal lines marks the property boundary.
 
 :: card-the-witch {"position":"250,400","size":"150,100"}
@@ -27,3 +27,17 @@ A white stick figure kneels beside a simple house shape, holding a brush or tool
 
 :: fate-card-game 
 The rules are written in faded ink on yellowed paper, the handwriting growing more erratic toward the end. "The game demands three or more players—those who sow and one who reaps. Shuffle the cards while thinking of what you truly desire, for the cards will know if you lie. Each sower draws one card and whispers their deepest want to the leather. The reaper must grant these desires before the moon sets, but in the exact order the cards demand. Success brings the reaper everything the sowers possess—their land, their kin, their very breath. Failure..." The writing trails off into illegible scratches, but at the bottom, in different handwriting: "We should never have played. The scarecrows used to be people. —M.L. 1962" 
+
+:: fate-card-constable
+A man turning a blind eye to a crime 
+
+:: fate-cards-lose-key
+The Lecher spies or leers
+The Inebriate drinks
+The miser funnels money 
+The thief steals 
+The fools takes a lethal risk 
+The goat - special - sacrifice card, no special actions required beyond accepting the card
+The trespasser - trespasses 
+The servant - disobeys their master
+The witch - special - judges the game

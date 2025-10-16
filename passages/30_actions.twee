@@ -1,0 +1,111 @@
+
+:: action-enter-the-police-station {"position":"400,350","size":"150,100"} 
+As you enter the old police station, you explain to yourself that no one is normally there, the town does not have a police force, it falls on area police and state troopers to cover the area. Today it is your turn to check in. But no one is there and there is only a note for you. It directs you to the Lancaster farm.
+
+:: action-prepare-for-farm 
+
+Before you leave, you check your equipment.
+
+[[Note in plastic->object-police-note]]   <<link "Take the note" "action-prepare-for-farm">> <<set $secret_ready_for_farm to true>> <</link>>
+
+
+[[Service Revolver->object-revolver]] [[Take it]]
+
+[[Handcuffs -> object-handcuffs]] [[Take it]]
+
+[[Charge Hal -> object-hal-Q5]] [[Charge it]]
+You pull the retractable plug out of Hal's case and plug it in. The charging light blinks while you get a coffee. You wait for it to finish.
+
+<<if $secret_ready_for_farm>>\
+[[Drive to the Marlowe Farm->action-drive-to-lancaster-farm]]
+<</if>>\
+
+:: action-drive-to-lancaster-farm
+You leave the abandoned police station and drive south to [[County Road 66->loc-county-road-6]].
+
+You wonder if it's a holiday because you haven't seen anyone or any cars.
+
+You turn east on County Road 66 and you approach what must be the [[Lancaster Farm->loc-lancaster-farm]].
+
+You pull into the driveway. You note a few cars but you don't see anyone, not even a barking dog coming to greet you. It is late afternoon but there is still enough light that you can't tell if any lights are on in the house or if it too is abandoned.
+
+You take one last look around and then [[step onto the large wraparound porch.->action-start-chapter-porch]]
+
+:: action-start-chapter-porch 
+<<set $chapter to $chapters[1]>>
+
+You knock on the door and wait.
+
+No response.
+
+You walk along the large, wrap-around porch. The porch extends west and then wraps to the north. There are some rocking chairs but no sign anyone has been here recently.
+
+You look through a window and can make out some furniture but no lights, no activity.
+
+Finally, you come to a back door. 
+
+You start to knock on the door. Your fist hits the wood once and you hear the reverberation.
+Your hand is already descending for a second time when you are startled by a sound.
+
+A shriek fills the air. It is a strange voice, a mixture of surprise, anger and frustration. It dies away almost as as suddenly as it began.
+
+Not sure of the source, your turn your head back the way you came and then North toward the back yard. It is then that you see a figure. It disappears around a building, quickly but silently.
+
+This triggers your instincts and you leap into [[pursuit->action-porch-pursuit]]
+
+:: action-porch-pursuit
+
+There is a pool in the backyard and it is in your way, so you run around it, now heading north, towards a small structure in the back of the pool - it is probably a poolhouse. You hurry past it and find a path, this is where you last saw the mysterious figure. You look down the path.
+
+But you don't see anything now. Still, you continue the pursuit.
+
+Along the path to a machine shed. You check the door, it is padlocked. You continue on, along a dirt road, trees on your left and crops on your right.
+
+You are beginning to tire but you are sure you have plenty of endurance left. You continue.
+
+The path swings back to the South and now you can see much further ahead but you don't see anyone. You are pretty sure this dirt road will end on the main road, County Road 66, and you are right.
+
+You are on the main road, you can see the Lancaster house to your right and to the left you see a large field of some crop. Your eye catches the glint of a neighbor's mailbox. 
+
+You slow to a walk and proceed back toward the main house, past your car and back onto the porch.
+
+You return back where you started.
+
+Your heart beats hard in your chest, because now the back door is ajar.
+
+[[Enter the house through the backdoor->action-enter-kitchen]]
+
+:: action-enter-kitchen
+you are in the kitchen
+
+:: object-police-note {"position":"400,500","size":"150,100"}
+The note is a folded card enclosed in a plastic sleeve. SOmeone has drawn a detailed, almost too detailed, map to the Lancaster farm and a note urgently asking for help. No other details. You've decided to leave the note in the plastic just in case.
+
+
+:: action-driving-on-route-6
+You drive on route 6 toward the Lancaster Farm.
+
+
+:: action-approach-lancaster-farm {"position":"400,200","size":"150,100"}
+You drive down the long, winding country road flanked by tall cornfields that rustle in the autumn breeze. The sky is a crisp blue, dotted with fluffy white clouds, and the sun casts a warm golden light over the landscape. As you approach the Lancaster Farm, the familiar sight of the two-story farmhouse comes into view, its white paint slightly weathered but still charming against the backdrop of rolling hills and dense forest. The old barn stands proudly nearby, its red paint faded but still vibrant, with hex signs adorning its facade. You can see the swimming pool nestled between the house and the forest, its water shimmering in the sunlight despite being abandoned. The corn maze is visible in the distance, a three-acre labyrinth that has become a local attraction during the fall season. You pull into the gravel driveway, the crunch of tires on stones breaking the serene silence of the countryside.
+
+You note the farm has multiiple driveways, but you take the one that seems to lead to the house. There are a few cars in the driveway but no sign of activity. You can't tell if the lights are on. 
+
+
+:: scream-1
+You hear a scream or a moan or something in between. Your instincts kick in and you pull your service revolver and start moving through the house. This is not a time for careful investigation, you must cover the property and find the source of the disturbance.
+
+:: witch-convo-six-fingers
+I will not divulge the name of the player but I have to admit some admiration for the planning and the skill in entrapping the victims. The use of lent as a device to lure them into the game is inventive and deliciously ironic on multiple layers.
+BUT...in seems they got a little too greedy and miscalculated when they invited you to join. And as I am the sole arbitrator of the fate game, it seems a critical and costly failure.
+You see, although you certainly align with the intention of the constable card, the entire premise of the game is one of renouncing oaths. You have not broken any vows, and honestly your presense hasn't made any difference that I can see.
+Still that doens't mean you should just walk away. I am of two minds on this. I'll make you a simple wager, answer me this simple query:
+"all digits spread wide on my little left hand, none curled or hid, so how many could there be?"
+Sorry, it is the best I will do.
+
+'HAL...answer please?'
+
+The answer is six. 
+
+
+

@@ -1,0 +1,59 @@
+:: map {"position":"100,100","size":"200,150"}
+<h2>Lancaster Farm Map</h2>
+
+You pull out a hand-drawn map of the property, its edges worn from handling. The locations are organized by area:
+
+<h3>Main House</h3>
+The two-story farmhouse sits at the heart of the property:
+
+**Ground Floor:**
+* [[Entry Hall|loc-mainhouse-entry]]
+* [[Living Room|loc-mainhouse-living]]
+* [[Kitchen|loc-mainhouse-kitchen]]
+* [[Recreation Room|loc-mainhouse-recroom]]
+
+**Upstairs:**
+* [[Master Bedroom|loc-mainhouse-upstairs-master]]
+* [[Master Bathroom|loc-mainhouse-upstairs-master-bath]]
+* [[Katie's Room|loc-mainhouse-upstairs-katie]]
+* [[Guest Bedroom|loc-mainhouse-upstairs-bedroom-guest]]
+* [[Bedroom 1 Bath|loc-mainhouse-upstairs-bedroom-1-bath]]
+* [[Upstairs Bathroom|loc-mainhouse-upstairs-bath]]
+
+**Basement:**
+* [[Basement|loc-mainhouse-basement]]
+* [[Basement Bedroom|loc-mainhouse-basement-bedroom]]
+* [[Utility Room|loc-mainhouse-basement-utility]]
+
+**Other:**
+* [[Attic|loc-mainhouse-attic]]
+
+<h3>Farm Buildings & Structures</h3>
+The working buildings scattered across the property:
+
+* [[The Barn|loc-barn]] - Two-story structure with hex signs
+* [[Machine Shed|loc-machine-shed]] - Equipment storage and workshop
+* [[Swimming Pool|loc-pool]] - Abandoned pool between house and forest
+* [[Pool House|loc-poolhouse]] - Weathered structure by the pool
+
+<h3>Farm Grounds & Fields</h3>
+The open areas and cultivated land:
+
+* [[Lancaster Farm|loc-lancaster-farm]] - The main 50-acre property
+* [[Corn Maze|loc-corn-maze]] - Three-acre maze with scarecrows
+
+<h3>Natural Areas</h3>
+The wilder parts of the property:
+
+* [[The Forest|loc-forest]] - Dense band of trees behind the house
+* [[Forest Clearing|loc-forest-clearing-firepits]] - Hidden clearing with fire pits
+* [[Old Cemetery|loc-cemetery]] - Pre-existing burial ground
+
+<h3>Other Locations</h3>
+Additional points of interest:
+
+* [[Doug's Cabin|loc-dougs-cabin]] - Isolated cabin 2,000 feet from main house
+* [[Abandoned Police Station|loc-police-station-abandoned]] - Former law enforcement outpost
+
+---
+*The map's paper crackles as you fold it back up, some locations circled in faded pencil, others marked with cryptic symbols you don't recognize.*

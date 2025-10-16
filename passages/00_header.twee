@@ -1,5 +1,5 @@
 :: StoryTitle
-Covenway
+Card game
 
 
 :: StoryData
@@ -35,18 +35,18 @@ Covenway
 
 
 :: StoryDisplayTitle {"position":"0,0","size":"100,100"}
-! Covenway
-!! dark urban tale
+!! Game of Cards
+!!! a dark rural tale
 
 
 :: StoryInit {"position":"1800,425","size":"100,200"}
-<<set $player to {
-agility : 100, 
-will : 100,
-awareness : 100,
-day: 0,
-timecat: "night"
-} >>
+<<set $debug to true>>
+<<set $inventory to ["pistol","handcuffs"]>>
+
+<<set $secret_ready_for_farm to false>>
+
+<<set $chapters = ["beginning","porch"]>>
+<<set $chapter to $chapters[0]>>
 
 
 

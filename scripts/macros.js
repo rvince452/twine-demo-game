@@ -16,6 +16,12 @@ function makeSpeakerMacro(name, cssClass) {
             // Create wrapper element
             const wrapper = document.createElement("div");
             wrapper.classList.add("speaker", finalClass);
+            
+            // Add box styling similar to qspeak macro
+            wrapper.style.border = "1px solid #33C";
+            wrapper.style.padding = "8px";
+            wrapper.style.margin = "6px 0";
+            wrapper.style.borderRadius = "4px";
 
             // Only show the label if not 'nar'
             if (name.toLowerCase() !== "nar") {
