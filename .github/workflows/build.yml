@@ -23,39 +23,38 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - name: Install Tweego
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Download and setup Tweego
       run: |
-        # Download and install Tweego
-        echo "Downloading Tweego..."
+        # Download Tweego zip file
         wget -q https://github.com/tmedwards/tweego/releases/download/v2.1.1/tweego-2.1.1-linux-x64.zip
         echo "Downloaded zip file"
         
-        # Extract Tweego
+        # Extract and list contents to see structure
         unzip -q tweego-2.1.1-linux-x64.zip
-        echo "Extracted Tweego"
+        echo "Archive contents:"
+        ls -la
         
-        # Find tweego executable and make it executable
+        # Find all tweego executables and make them executable
         find . -name "tweego" -type f -exec chmod +x {} \;
         
-        # Find the tweego executable path
+        # Find the tweego executable path and move it to a standard location
         TWEEGO_PATH=$(find . -name "tweego" -type f | head -1)
         echo "Found tweego at: $TWEEGO_PATH"
         
         # Copy tweego to /usr/local/bin so it's available in PATH
         sudo cp "$TWEEGO_PATH" /usr/local/bin/tweego
         
-        # Verify tweego installation
-        echo "Verifying Tweego installation..."
-        tweego --version || echo "Version check completed"
-        echo "✅ Tweego installation completed successfully"
+        # Verify tweego works from PATH
+        tweego --version || echo "Version command completed"
+        echo "Tweego setup completed successfully"
         
-    - name: Checkout repository
-      uses: actions/checkout@v4
-      
     - name: Create build directory
       run: mkdir -p build
       
-    - name: Run Tweego
+    - name: Build game with Tweego
       run: |
         # Use tweego from PATH
         echo "Using tweego from PATH"
@@ -119,7 +118,7 @@ jobs:
             fi
           fi
         fi
-
+        
     - name: List build contents
       run: ls -la build/
       
