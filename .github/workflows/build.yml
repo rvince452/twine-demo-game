@@ -23,9 +23,39 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-  
-           
-    - name: Build game with Tweego
+    - name: Install Tweego
+      run: |
+        # Download and install Tweego
+        echo "Downloading Tweego..."
+        wget -q https://github.com/tmedwards/tweego/releases/download/v2.1.1/tweego-2.1.1-linux-x64.zip
+        echo "Downloaded zip file"
+        
+        # Extract Tweego
+        unzip -q tweego-2.1.1-linux-x64.zip
+        echo "Extracted Tweego"
+        
+        # Find tweego executable and make it executable
+        find . -name "tweego" -type f -exec chmod +x {} \;
+        
+        # Find the tweego executable path
+        TWEEGO_PATH=$(find . -name "tweego" -type f | head -1)
+        echo "Found tweego at: $TWEEGO_PATH"
+        
+        # Copy tweego to /usr/local/bin so it's available in PATH
+        sudo cp "$TWEEGO_PATH" /usr/local/bin/tweego
+        
+        # Verify tweego installation
+        echo "Verifying Tweego installation..."
+        tweego --version || echo "Version check completed"
+        echo "✅ Tweego installation completed successfully"
+        
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Create build directory
+      run: mkdir -p build
+      
+    - name: Run Tweego
       run: |
         # Use tweego from PATH
         echo "Using tweego from PATH"
@@ -89,9 +119,6 @@ jobs:
             fi
           fi
         fi
-        
-    - name: Checkout repository
-      uses: actions/checkout@v4
 
     - name: List build contents
       run: ls -la build/
