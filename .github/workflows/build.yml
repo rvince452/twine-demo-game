@@ -23,68 +23,42 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
     - name: Download and setup Tweego
       run: |
-        # Create tweego subfolder
-        mkdir tweego
-        
         # Download Tweego zip file
         wget -q https://github.com/tmedwards/tweego/releases/download/v2.1.1/tweego-2.1.1-linux-x64.zip
         echo "Downloaded zip file"
         
-        # Extract to tweego subfolder
-        unzip -q tweego-2.1.1-linux-x64.zip -d tweego/
-        echo "Extracted to tweego/ subfolder"
+        # Extract and list contents to see structure
+        unzip -q tweego-2.1.1-linux-x64.zip
+        echo "Archive contents:"
+        ls -la
         
         # Find all tweego executables and make them executable
-        find tweego/ -name "tweego" -type f -exec chmod +x {} \;
+        find . -name "tweego" -type f -exec chmod +x {} \;
         
-        # Find the tweego executable path and copy it to PATH
-        TWEEGO_PATH=$(find tweego/ -name "tweego" -type f | head -1)
+        # Find the tweego executable path and move it to a standard location
+        TWEEGO_PATH=$(find . -name "tweego" -type f | head -1)
         echo "Found tweego at: $TWEEGO_PATH"
         
         # Copy tweego to /usr/local/bin so it's available in PATH
         sudo cp "$TWEEGO_PATH" /usr/local/bin/tweego
         
-        # Set up story format directories
-        echo "Setting up story formats..."
-        TWEEGO_DIR=$(dirname "$TWEEGO_PATH")
-        echo "Tweego directory: $TWEEGO_DIR"
-        
-        # Create story formats directory and copy formats
-        sudo mkdir -p /usr/local/share/tweego/storyformats
-        if [ -d "$TWEEGO_DIR/storyformats" ]; then
-          sudo cp -r "$TWEEGO_DIR/storyformats"/* /usr/local/share/tweego/storyformats/
-          echo "✅ Story formats copied"
-          ls -la /usr/local/share/tweego/storyformats/
-        else
-          echo "❌ No storyformats directory found in tweego package"
-          ls -la "$TWEEGO_DIR"
-        fi
-        
-        # Set environment variable for story formats
-        echo "export TWEEGO_PATH=/usr/local/share/tweego" >> $GITHUB_ENV
-        export TWEEGO_PATH=/usr/local/share/tweego
-        
         # Verify tweego works from PATH
         tweego --version || echo "Version command completed"
-        tweego --list-formats || echo "Format list completed"
         echo "Tweego setup completed successfully"
-        
-    - name: Checkout repository
-      uses: actions/checkout@v4
         
     - name: Create build directory
       run: mkdir -p build
       
     - name: Build game with Tweego
       run: |
-        # Use tweego from PATH with story formats
+        # Use tweego from PATH
         echo "Using tweego from PATH"
-        echo "TWEEGO_PATH environment: $TWEEGO_PATH"
-        export TWEEGO_PATH=/usr/local/share/tweego
         tweego --version || echo "Version check completed"
-        tweego --list-formats || echo "Available formats check completed"
         
         # Check passages directory contents
         echo "Passages directory contents:"
@@ -103,7 +77,7 @@ jobs:
         
         echo "Running tweego build..."
         
-        # First try to use story formats from standard location
+        # Build without embedding images
         echo "Attempting: tweego -o build/game.html passages/ scripts/ styles/"
         if tweego -o build/game.html passages/ scripts/ styles/; then
           echo "✅ Build completed successfully"
@@ -117,23 +91,9 @@ jobs:
           echo "✅ Images copied to build/img/"
           ls -la build/img/
         else
-          echo "❌ Build failed, trying with explicit story format path..."
-          echo "Attempting: tweego --format-path=../tweego/tweego-*/storyformats -o build/game.html passages/ scripts/ styles/"
-          if tweego --format-path=../tweego/tweego-*/storyformats -o build/game.html passages/ scripts/ styles/; then
-            echo "✅ Build completed successfully with explicit format path"
-            echo "Output file info:"
-            ls -la build/game.html
-            echo "File size: $(stat -c%s build/game.html) bytes"
-            
-            # Copy image files to build directory
-            echo "Copying image files to build directory..."
-            cp -r img/ build/img/
-            echo "✅ Images copied to build/img/"
-            ls -la build/img/
-          else
-            echo "❌ Build with explicit format path failed, trying with passages only..."
-            echo "Attempting: tweego -o build/game.html passages/"
-            if tweego -o build/game.html passages/; then
+          echo "❌ Build failed, trying with passages only..."
+          echo "Attempting: tweego -o build/game.html passages/"
+          if tweego -o build/game.html passages/; then
             echo "✅ Build completed successfully with passages only"
             echo "Output file info:"
             ls -la build/game.html
