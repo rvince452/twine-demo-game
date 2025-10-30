@@ -4,7 +4,6 @@ A small rural town nestled in the rolling hills of central Pennsylvania, Marlowe
 
 
 :: loc-police-station-abandoned
-d
 The station was closed down but is used by troopers passing through to rest or make some phone calls. Today there is a strange note awaiting the next trooper. It directs them to the Lancaster farm. 
 Note: Marlowe can't afforcd their own police station so have to rely on traveling state troopers who stop in or are called in and use this office as temporary base.
 
@@ -18,8 +17,7 @@ You wish they had left a phone number, but you are already in Marlowe, so you mi
 
 :: loc-county-road-6 {"position":"100,550","size":"150,100"}
 County Road 6 stretches through the rural Pennsylvania countryside, a narrow two-lane blacktop road that winds between rolling hills and farmland. The asphalt is cracked and patched in places, with grass growing through the edges where maintenance has been deferred. Wooden fence posts mark property boundaries, and the occasional mailbox on a leaning post indicates the scattered rural residences. The road carries the quiet hum of distant farm machinery and the occasional pickup truck, but traffic is sparse in this remote area.
-[[Lancaster farm turnoff->loc-county-road-6-lancaster-farm]]
-
+<<return>>
 :: loc-county-road-6-lancaster-farm
 County Road 6 stretches through the rural Pennsylvania countryside, a narrow two-lane blacktop road that winds between rolling hills and farmland. The asphalt is cracked and patched in places, with grass growing through the edges where maintenance has been deferred. Wooden fence posts mark property boundaries, and the occasional mailbox on a leaning post indicates the scattered rural residences. The road carries the quiet hum of distant farm machinery and the occasional pickup truck, but traffic is sparse in this remote area.
 [[House driveway->loc-lancaster-house-driveway]]
@@ -45,7 +43,7 @@ The northern section of the wraparound porch extends along the side of the house
 
 :: loc-lancaster-farm {"position":"100,100","size":"150,100"}
 The 50-acre Lancaster farm stretches across rolling hills planted mostly with soybeans, though weeds have begun to reclaim the edges where the old equipment can't quite reach. Rusted fence posts lean at odd angles, connected by sagging wire that hums strangely in the wind. The property has an unsettling quality in the early morning mist, as if the land itself remembers things better left forgotten.
-
+<<return>>
 :: loc-pool {"position":"250,100","size":"150,100"}
 The swimming pool sits between the main house and the forest like an abandoned promise from better times. The once-blue water has turned a murky green-brown, with leaves and debris floating on the surface that ripples without any apparent cause. The concrete edges are cracked and stained, and the diving board hangs at a precarious angle, its metal joints corroded by years of neglect.
 [[Pool house->loc-poolhouse]]

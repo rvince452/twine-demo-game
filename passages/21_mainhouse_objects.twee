@@ -1,0 +1,49 @@
+:: obj-mainhouse-refrigerator {"position":"1700,1225","size":"100,100"}
+You open the old lime-green refrigerator. Inside, you find a few jars of homemade pickles and preserves, a carton of milk past its expiration date, and a half-eaten loaf of bread. There is also a note magnetically attached to the door that reads: "Don't forget to pick up eggs on your way home!" Nothing else of interest here.
+<<return>>
+
+:: obj-mainhouse-cupboards {"position":"1750,1250","size":"100,100"}
+You rummage through the kitchen cupboards. Most of the contents are typical pantry items: canned vegetables, boxes of pasta, and spices. However, you also find a small stash of old family recipes handwritten on yellowed index cards, including one for "Grandma's Secret Apple Pie." There is also a dusty bottle of homemade hot sauce labeled "Carl's Fiery Brew," but it looks like it's been sitting there for years. Nothing else unusual is found in the cupboards.
+<<return>>
+
+:: obj-mainhouse-pool-table {"position":"1550,1100","size":"100,100"}
+The pool table is covered in a thick layer of dust, and the green felt is torn in several places, revealing darker fabric beneath. Scattered across the table are various casino chips, some bearing symbols that don't match any known gambling establishment. A set of loaded dice and a deck of marked cards lie haphazardly on one corner of the table, suggesting that Al may have used this space for more than just casual games. The overhead light casts everything in a sickly yellow glow, making the room feel even more oppressive.
+<<return>>
+
+:: obj-mainhouse-poker-table {"position":"1580,1125","size":"100,100"}
+The poker table is a felt-covered surface bearing permanent stains from years of late-night games. Around the table are several chairs, some with worn cushions and others missing entirely. On the table, you notice a few scattered playing cards, some of which appear to be marked, as well as a pile of casino chips that look suspiciously like they might be counterfeit. A half-empty bottle of whiskey and a couple of shot glasses sit on a nearby side table, suggesting that Al may have indulged in more than just gambling during his games.
+<<return>>
+
+:: obj-mainhouse-bar {"position":"1530,1080","size":"100,100"}
+The small bar in the corner of the rec room displays bottles of whiskey with names you don't recognize. The labels are faded, and some bottles appear to be quite old, possibly dating back several decades. A couple of shot glasses and a cocktail shaker sit on the counter, along with a dusty corkscrew. There is also a small stack of coasters with various logos from local bars and breweries. The bar seems to be more of a decorative piece than a functional one, as there are no signs of recent use.
+[[Look in front of the bar->obj-nothing-of-interest]]
+[[Look on top of the bar->obj-top-of-bar]]
+<<return>>
+
+:: obj-behind-bar {"position":"1520,1090","size":"100,100"}
+Behind the bar, on the ground, you find a [[pile of clothes->obj-pile-of-clothes]] that looks like it was hastily discarded.
+You look behind the bar and find a small safe embedded in the wall. The safe is old and rusty, with a combination lock that looks like it hasn't been touched in years.
+
+[[Return->loc-mainhouse-recroom]]
+
+:: obj-pile-of-clothes {"position":"1510,1100","size":"100,100"}
+The pile of clothes appears to be a mix of casual wear, including a pair of jeans, a t-shirt with a faded logo, and a flannel shirt. There is also a pair of worn-out sneakers and a baseball cap. The clothes look like they were hastily discarded, as if someone left in a hurry. You also find an [[envelope->obj-al-envelope]]
+
+<<return>>
+
+:: obj-al-envelope
+A plain, white piece of card stock. One side is blank. On the other side someone has written a sentence in lavender-colored marker: "Thou shall not engage in games of chance". The card is encased in plastic, as if intended to survive normal wear and tear.
+<<if $secret_hidden_cards is false>>\
+    Within the card, is another [[card->card-the-fool]]
+<</if>>\
+<<return>>
+
+:: obj-top-of-bar {"position":"1540,1070","size":"100,100"}
+It looks like someone was playing poker, because you find two hands of cards as well as poker chips. It looks like the person [[behind the bar->obj-behind-bar]] was winning...
+<<return>>
+
+:: obj-nothing-of-interest {"position":"1540,1080","size":"100,100"}
+You look in front of the bar but don't find anything of particular interest.
+<<return>>
+
+

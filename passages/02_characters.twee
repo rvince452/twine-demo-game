@@ -1,3 +1,12 @@
+
+:: characters
+[[Alan Lancaster->character-al-lancaster]]
+[[Susan Lancaster->character-susan-lancaster]]
+[[Carl Lancaster->character-carl-lancaster]]
+[[Katie Lancaster->character-katie-lancaster]]
+[[Doug Longview->character-doug-longview]]
+[[Bernadette->character-bernadette]]
+
 :: character-al-lancaster {"position":"100,100","size":"150,100"}
 Al Lancaster is a weathered 58-year-old farmer with calloused hands stained by decades of engine grease and honest work. His salt-and-pepper beard frames a face lined by years under the sun, and he's rarely seen without his worn John Deere cap and coveralls. Known throughout the county as both an expert mechanic who can coax life from any failing farm engine and a formidable poker player at the weekly games in town.
 
@@ -12,3 +21,6 @@ Katie Lancaster, 25, works as the town librarian and represents the changing fac
 
 :: character-doug-longview {"position":"250,250","size":"150,100"}
 Doug Longview, 42, is a quiet, dependable farmhand who lives in the small cabin on the Lancaster property. His weathered denim jacket and work boots tell the story of a man who's found his place in the simple rhythms of farm life. He keeps to himself mostly, preferring the company of the farm animals to the complications of town social life, and has become as much a fixture of the property as the old oak trees.
+
+:: character-bernadette
+Bernadette is a neighbor of the Lancaster family. She appears to be of middle age, tall with short dark hair and brown eyes. She has a ruddy, natural complexion of one who works with the land, she often wears gardening gloves even when inside.

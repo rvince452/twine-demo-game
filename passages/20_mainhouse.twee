@@ -3,10 +3,13 @@
 !!!Lancaster Family Farmhouse
 <<nobr>>
 <<switch passage()>>
-<<case "loc-mainhouse-entry">>
-""
+<<case "loc-mainhouse-kitchen">>
+    You are in the kitchen.
+    <<if $openhouse is true>>\
+    It is an old and simple kitchen. The range and refrigerator are lime-green and the floor is a simple planked wood. A wooden table is surrounded by empty chairs and holds some discarded silverware.
+    <</if>>\
 <<default>>
-    You are in passage() within the main house 
+    You are in room within the main house 
 <</switch>>
 <</nobr>>
 
@@ -31,7 +34,14 @@
 :: loc-mainhouse-basement-bedroom {"position":"1525,1200","size":"100,100"}
 <<include "loc-main-house-descr">>
 Carl's basement bedroom feels more like a bunker than a living space. Electronics from the early 80s are stacked everywhere—a Commodore 64, multiple Walkman players in various states of disrepair, and a small TV with a VHS player that only seems to play static-filled tapes. Pin-up calendars from auto parts stores cover the paneled walls, their subjects watching visitors with eyes that seem too knowing. The air smells of stale cigarettes and machine oil, and sometimes you can hear electronic beeping coming from devices that appear to be turned off.
-Investigation finds binoculars, a polaroid camera, and the crowbar and a step ladder 
+Investigation finds binoculars, a polaroid camera, and the crowbar and a step ladder.
+
+In back of the stepladder you find more clothes. The clothes are damp due to a leaking pipe from above.
+
+From theh top of the ladder your head can fit into a space in the ceiling between pipes and beams and you can see light. An outlet receptacle hangs from the ceiling. It has been removed and you can see into the bathroom.
+
+Look - view of the shower. A robe hangs on towel rack. 
+[[card->card-the-lecher]]
 <<return>>
 
 
@@ -60,12 +70,23 @@ Investigation finds binoculars, a polaroid camera, and the crowbar and a step la
 [[Living room->loc-mainhouse-living]]
 [[Basement->loc-mainhouse-basement]]
 
+<<if $openhouse is true>>\
+    [[look in the refrigerator->obj-mainhouse-refrigerator]]
+    [[search the cupboards->obj-mainhouse-cupboards]]
+<</if>>\
+
 :: loc-mainhouse-recroom {"position":"1525,1075","size":"100,100"}
 <<include "loc-main-house-descr">>
 The rec room serves as Al's private casino, complete with a felt-covered poker table bearing permanent stains from years of late-night games. A small bar in the corner displays bottles of whiskey with names you don't recognize, and the pool table's green felt is torn in several places, revealing darker fabric beneath. Casino chips are scattered across surfaces, some bearing symbols that don't match any known gambling establishment. The room's single window is always kept curtained, and the overhead light casts everything in a sickly yellow glow that makes everyone look jaundiced. 
 Loaded dice, marked cards, looks like he played with the lent money 
 [[Downstairs bathroom->loc-mainhouse-downstairs-bath-1]]
 [[Living room->loc-mainhouse-living]]
+
+<<if $openhouse is true>>\
+    [[Inspect the pool table->obj-mainhouse-pool-table]]
+    [[Look over the poker table->obj-mainhouse-poker-table]]
+    [[Examine the bar->obj-mainhouse-bar]]
+<</if>>\
 
 
 :: loc-mainhouse-downstairs-bath-1 {"position":"1650,1575","size":"100,100"}

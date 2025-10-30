@@ -1,0 +1,42 @@
+:: Start
+
+<<if $debug>>\
+[[Enter Main House->loc-mainhouse-entry][$openhouse to true]]
+[[Check Map->map][$openhouse to true]]
+<</if>>\
+
+You are a Pennsylvania State Trooper driving near the small, rural, town of [[Marlowe->loc-town-of-marlowe]].
+You haven't ever stopped here, but today is your day. Your dispatcher has informed that there is some issue to be assigned to the next available trooper and that is you.
+[[Marlowe Police Station ->loc-police-station-abandoned]]
+
+<<addinventory "HAL Q5 Assistant" "object-hal-Q5">>
+
+<<set $hashal to setup.ininventory("HAL Q5 Assistant")>>
+<<print $hashal>>
+<<if $hashal is false>>
+    Where is HAL?
+<<else>>
+    You have your HAL Q5 Assistant with you.
+<</if>>
+
+
+:: StoryInit {"position":"1800,425","size":"100,200"}
+
+
+<<set $debug to true>>
+<<set $inventory to []>>
+
+<<set $secret_ready_for_farm to false>>
+<<set $secret_hidden_cards to false>>
+<<set $time to 0>>
+
+<<set $chapters = ["beginning","porch","bernadette","hunt1"]>>
+<<set $chapter to $chapters[0]>>
+
+<<set $hal to {"charged":97}>>
+<<set $openhouse to false>>
+
+
+:: Inventory [UNUSED] {"position":"725,125","size":"100,100"}
+<<showinventory>>
+<<return>>

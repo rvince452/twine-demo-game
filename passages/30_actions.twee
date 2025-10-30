@@ -38,6 +38,9 @@ You knock on the door and wait.
 
 No response.
 
+While you are waiting, you see a strange object pinned under the door. It seems to be a card, like a playing card. You kneel and pick it up.
+[[strange card->card-the-servant]]
+
 You walk along the large, wrap-around porch. The porch extends west and then wraps to the north. There are some rocking chairs but no sign anyone has been here recently.
 
 You look through a window and can make out some furniture but no lights, no activity.
@@ -51,21 +54,32 @@ A shriek fills the air. It is a strange voice, a mixture of surprise, anger and 
 
 Not sure of the source, your turn your head back the way you came and then North toward the back yard. It is then that you see a figure. It disappears around a building, quickly but silently.
 
-This triggers your instincts and you leap into [[pursuit->action-porch-pursuit]]
+This triggers your instincts and you leap into [[pursuit->action-pursuit-1]]
 
-:: action-porch-pursuit
+:: action-pursuit-1
 
 There is a pool in the backyard and it is in your way, so you run around it, now heading north, towards a small structure in the back of the pool - it is probably a poolhouse. You hurry past it and find a path, this is where you last saw the mysterious figure. You look down the path.
 
 But you don't see anything now. Still, you continue the pursuit.
 
+[[Continue the pursuit->action-pursuit-2]]
+
+:: action-pursuit-2
+
+
 Along the path to a machine shed. You check the door, it is padlocked. You continue on, along a dirt road, trees on your left and crops on your right.
 
 You are beginning to tire but you are sure you have plenty of endurance left. You continue.
 
+[[Continue the pursuit->action-pursuit-3]]
+:: action-pursuit-3
+
 The path swings back to the South and now you can see much further ahead but you don't see anyone. You are pretty sure this dirt road will end on the main road, County Road 66, and you are right.
 
 You are on the main road, you can see the Lancaster house to your right and to the left you see a large field of some crop. Your eye catches the glint of a neighbor's mailbox. 
+
+[[Continue the pursuit->action-pursuit-4]]
+:: action-pursuit-4 
 
 You slow to a walk and proceed back toward the main house, past your car and back onto the porch.
 
@@ -76,7 +90,40 @@ Your heart beats hard in your chest, because now the back door is ajar.
 [[Enter the house through the backdoor->action-enter-kitchen]]
 
 :: action-enter-kitchen
-you are in the kitchen
+<<set $chapter to $chapters[2]>>
+<<include "loc-mainhouse-kitchen">>
+
+You are in, what appears to be, the kitchen of the Lancaster house. To your surprise there is [[woman->character-bernadette]] standing on the other side of a short kitchen counter. She looks up, surprised as well.
+
+<<bern>>Well, hello there...officer?<</bern>>
+
+You breate a sigh of relief and introduce yourself and the reason for your visit - you do not mention the pursuit. She explains that she is a neighbor and that a piece of Lancaster mail was misdelivered to her. The door was open. She gestures to a small stack of mail.
+
+You walk over to the kitchen island and take a quick look before looking back at her. She seems to be studying you carefully as if she doesn't believe you are really a police officer.
+
+<<you>>Would you like to see my identifcation Ma'am?<</you>>
+You reach inside your jacket...
+
+<<bern>>Oh, no need for that, officer. I believe you. I'm just surprised to see you. The family is probably at some church function...they are very active.<</bern>>
+
+She gestures to various calendars and announcements on the refrigerator door and to a calendar proudly announcing the season of lent.
+But now she is staring at your hand and you realize your other hand still holds that strange card.
+
+<<you>>Um, I found this card pinned under the door when I knocked. Do you know anything about it?<</you>>
+
+<<bern>>Actually...I do. It's an old card game. Did...someone give this to you or did you find it?<</bern>>
+
+<<you>>I found it under the door when I knocked. Do you know what it means?<</you>>
+
+<<bern>>I suppose...the Lancasters were playing? Strange as it's kind of a pagan thing and they are so devout. Well, I guess you can ask them when they get back? It was nice to meet you, officer.<</bern>>
+
+And then she was gone. 
+
+Also, the strange card seems to be missing as well. You decide to search through the house.
+
+[[Continues->loc-mainhouse-kitchen][$chapter to $chapters[3]; $time += 1; $openhouse to true]]
+
+
 
 :: object-police-note {"position":"400,500","size":"150,100"}
 The note is a folded card enclosed in a plastic sleeve. SOmeone has drawn a detailed, almost too detailed, map to the Lancaster farm and a note urgently asking for help. No other details. You've decided to leave the note in the plastic just in case.
@@ -92,20 +139,6 @@ You drive down the long, winding country road flanked by tall cornfields that ru
 You note the farm has multiiple driveways, but you take the one that seems to lead to the house. There are a few cars in the driveway but no sign of activity. You can't tell if the lights are on. 
 
 
-:: scream-1
-You hear a scream or a moan or something in between. Your instincts kick in and you pull your service revolver and start moving through the house. This is not a time for careful investigation, you must cover the property and find the source of the disturbance.
-
-:: witch-convo-six-fingers
-I will not divulge the name of the player but I have to admit some admiration for the planning and the skill in entrapping the victims. The use of lent as a device to lure them into the game is inventive and deliciously ironic on multiple layers.
-BUT...in seems they got a little too greedy and miscalculated when they invited you to join. And as I am the sole arbitrator of the fate game, it seems a critical and costly failure.
-You see, although you certainly align with the intention of the constable card, the entire premise of the game is one of renouncing oaths. You have not broken any vows, and honestly your presense hasn't made any difference that I can see.
-Still that doens't mean you should just walk away. I am of two minds on this. I'll make you a simple wager, answer me this simple query:
-"all digits spread wide on my little left hand, none curled or hid, so how many could there be?"
-Sorry, it is the best I will do.
-
-'HAL...answer please?'
-
-The answer is six. 
 
 
 

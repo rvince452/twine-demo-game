@@ -1,0 +1,22 @@
+Wiki - use CTRL + [ to indent 
+
+[[Choose red|next passage][$color to "red"]]
+[[Enter house->inside][$location to "house"; $time += 1]]
+
+
+
+:: Code Notes {"position":"1975,400","size":"200,200"}
+StoryDisplayTitle - my title
+StoryDisplayAuthor - me
+StoryBanner - image at top of left menu
+StoryMenu - links in the left menu
+PassageFooter - for debugging, so I can see my variables change as I test
+
+StoryInit
+
+tags starting with loc - describe a location
+tags ending in descr - are a description of something
+
+loc-descr - meant to include, describe based on current passage()
+loc-main-house-descr: describe locations inside the main house
+

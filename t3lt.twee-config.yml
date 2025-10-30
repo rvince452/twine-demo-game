@@ -1,0 +1,14 @@
+sugarcube-2:
+  macros:
+    showinventory:
+      name: showinventory
+    addinventory:
+      name: addinventory
+    ininventory:
+      name: ininventory
+    bern:
+      name: bern
+      container: true
+    you:
+      name: you
+      container: true

@@ -39,14 +39,6 @@ Card game
 !!! a dark rural tale
 
 
-:: StoryInit {"position":"1800,425","size":"100,200"}
-<<set $debug to true>>
-<<set $inventory to ["pistol","handcuffs"]>>
-
-<<set $secret_ready_for_farm to false>>
-
-<<set $chapters = ["beginning","porch"]>>
-<<set $chapter to $chapters[0]>>
 
 
 
@@ -58,6 +50,16 @@ Does not show text, only links - check documentation
 [[status]]
 
 
-:: StoryRightSidebar [UNUSED] {"position":"400,0","size":"100,100"}
-Right sidebar
+// StoryRightSidebar [UNUSED] moved to 99_unused.twee
+
+
+:: PassageFooter {"position":"200,0","size":"100,100"}
+<<if $debug is true>>\
+<<print "-----">>
+<<print "passage=" + passage() + " chapter=" + $chapter + " time=" + $time>>
+<</if>>\
+<div style="border:1px solid #33C; padding:8px; margin:6px 0; border-radius:4px;"> 
+HAL Display  $hal.charged% Charged Alert Busy 
+</div>
+
 
