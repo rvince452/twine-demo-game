@@ -47,6 +47,12 @@ jobs:
         # Copy tweego to /usr/local/bin so it's available in PATH
         sudo cp "$TWEEGO_PATH" /usr/local/bin/tweego
         
+        # Clean up extracted tweego files to avoid conflicts
+        echo "Cleaning up tweego extraction files..."
+        rm -rf tweego-*
+        rm -f LICENSE README.md CHANGELOG.md || true
+        echo "Cleanup completed"
+        
         # Verify tweego works from PATH
         tweego --version || echo "Version command completed"
         echo "Tweego setup completed successfully"
