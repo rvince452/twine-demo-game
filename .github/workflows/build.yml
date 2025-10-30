@@ -23,9 +23,6 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-      
     - name: Download and setup Tweego
       run: |
         # Download Tweego zip file
@@ -47,15 +44,20 @@ jobs:
         # Copy tweego to /usr/local/bin so it's available in PATH
         sudo cp "$TWEEGO_PATH" /usr/local/bin/tweego
         
-        # Clean up extracted tweego files to avoid conflicts
+        # Clean up ALL extracted tweego files to avoid conflicts
         echo "Cleaning up tweego extraction files..."
         rm -rf tweego-*
+        rm -f tweego-2.1.1-linux-x64.zip
         rm -f LICENSE README.md CHANGELOG.md || true
-        echo "Cleanup completed"
+        echo "Cleanup completed - working directory cleared"
+        ls -la
         
         # Verify tweego works from PATH
         tweego --version || echo "Version command completed"
         echo "Tweego setup completed successfully"
+        
+    - name: Checkout repository
+      uses: actions/checkout@v4
         
     - name: Create build directory
       run: mkdir -p build
