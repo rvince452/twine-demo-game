@@ -127,7 +127,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: twine-game
-        path: build/game.html
+        path: build/
         
     - name: Setup Pages
       if: github.ref == 'refs/heads/main'
