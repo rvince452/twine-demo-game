@@ -62,8 +62,13 @@ jobs:
           ls -la "$TWEEGO_DIR"
         fi
         
+        # Set environment variable for story formats
+        echo "export TWEEGO_PATH=/usr/local/share/tweego" >> $GITHUB_ENV
+        export TWEEGO_PATH=/usr/local/share/tweego
+        
         # Verify tweego works from PATH
         tweego --version || echo "Version command completed"
+        tweego --list-formats || echo "Format list completed"
         echo "Tweego setup completed successfully"
         
     - name: Checkout repository
@@ -74,9 +79,12 @@ jobs:
       
     - name: Build game with Tweego
       run: |
-        # Use tweego from PATH
+        # Use tweego from PATH with story formats
         echo "Using tweego from PATH"
+        echo "TWEEGO_PATH environment: $TWEEGO_PATH"
+        export TWEEGO_PATH=/usr/local/share/tweego
         tweego --version || echo "Version check completed"
+        tweego --list-formats || echo "Available formats check completed"
         
         # Check passages directory contents
         echo "Passages directory contents:"
