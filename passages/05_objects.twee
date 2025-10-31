@@ -3,6 +3,9 @@
 A primitive handheld device that looks like someone tried to build a futuristic phone using 1980s Radio Shack parts. The green LCD screen flickers with pixelated text, and the membrane keyboard responds with wet clicking sounds. When activated, it displays messages that no one has sent, videos of locations around the farm from impossible angles, and occasionally types responses to questions that haven't been asked yet. The battery never seems to die, despite being plugged into nothing.
 The HAL Q5 unit has a 'thining' button, a 'overheat' warning light as well as a on/off toggle switch. HAL is entagled with something and it does not know what. There is a label on the back that reads "from a Fine Man"
 
-:: card-the-servant {"position":"400,400","size":"150,100"}
-A white stick figure kneels beside a simple house shape, holding a brush or tool toward the wall. Above, in a square window of the house, a black stick figure can be seen looking down. Nearby on the ground are simple objects: a bucket (circle), and what appears to be paint or liquid spilling from it in wavy lines.
-<<return>>
+
+
+:: object-police-note {"position":"400,500","size":"150,100"}
+The note is a folded card enclosed in a plastic sleeve. SOmeone has drawn a detailed, almost too detailed, map to the Lancaster farm and a note urgently asking for help. No other details. You've decided to leave the note in the plastic just in case.
+
+

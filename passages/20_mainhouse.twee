@@ -67,12 +67,14 @@ Look - view of the shower. A robe hangs on towel rack.
 
 :: loc-mainhouse-kitchen {"position":"1650,1200","size":"100,100"}
 <<include "loc-main-house-descr">>
-[[Living room->loc-mainhouse-living]]
-[[Basement->loc-mainhouse-basement]]
 
 <<if $openhouse is true>>\
     [[look in the refrigerator->obj-mainhouse-refrigerator]]
     [[search the cupboards->obj-mainhouse-cupboards]]
+
+[[Living room->loc-mainhouse-living]]
+[[Basement->loc-mainhouse-basement]]
+
 <</if>>\
 
 :: loc-mainhouse-recroom {"position":"1525,1075","size":"100,100"}

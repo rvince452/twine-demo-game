@@ -86,11 +86,20 @@ jobs:
           ls -la build/game.html
           echo "File size: $(stat -c%s build/game.html) bytes"
           
-          # Copy image files to build directory
+          # Copy image files to build directory (matching build.bat)
           echo "Copying image files to build directory..."
           cp -r img/ build/img/
           echo "✅ Images copied to build/img/"
           ls -la build/img/
+          
+          # Copy index.html for landing page (matching build.bat)
+          if [ -f "index.html" ]; then
+            echo "Copying index.html for landing page..."
+            cp index.html build/index.html
+            echo "✅ Landing page copied"
+          else
+            echo "No index.html found in root directory"
+          fi
         else
           echo "❌ Build failed, trying with passages only..."
           echo "Attempting: tweego -o build/game.html passages/"
@@ -103,6 +112,15 @@ jobs:
             echo "Copying image files to build directory..."
             cp -r img/ build/img/
             echo "✅ Images copied to build/img/"
+            
+            # Copy index.html for landing page (matching build.bat)
+            if [ -f "index.html" ]; then
+              echo "Copying index.html for landing page..."
+              cp index.html build/index.html
+              echo "✅ Landing page copied"
+            else
+              echo "No index.html found in root directory"
+            fi
           else
             echo "❌ Second attempt failed, trying with passages only..."
             echo "Attempting: tweego -o build/game.html passages/"

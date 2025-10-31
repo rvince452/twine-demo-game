@@ -90,44 +90,27 @@ Your heart beats hard in your chest, because now the back door is ajar.
 [[Enter the house through the backdoor->action-enter-kitchen]]
 
 :: action-enter-kitchen
-<<set $chapter to $chapters[2]>>
+<<set $chapter to $chapters[2]>>\
 <<include "loc-mainhouse-kitchen">>
-
 You are in, what appears to be, the kitchen of the Lancaster house. To your surprise there is [[woman->character-bernadette]] standing on the other side of a short kitchen counter. She looks up, surprised as well.
-
 <<bern>>Well, hello there...officer?<</bern>>
-
 You breate a sigh of relief and introduce yourself and the reason for your visit - you do not mention the pursuit. She explains that she is a neighbor and that a piece of Lancaster mail was misdelivered to her. The door was open. She gestures to a small stack of mail.
 
 You walk over to the kitchen island and take a quick look before looking back at her. She seems to be studying you carefully as if she doesn't believe you are really a police officer.
-
 <<you>>Would you like to see my identifcation Ma'am?<</you>>
 You reach inside your jacket...
-
 <<bern>>Oh, no need for that, officer. I believe you. I'm just surprised to see you. The family is probably at some church function...they are very active.<</bern>>
-
 She gestures to various calendars and announcements on the refrigerator door and to a calendar proudly announcing the season of lent.
 But now she is staring at your hand and you realize your other hand still holds that strange card.
-
 <<you>>Um, I found this card pinned under the door when I knocked. Do you know anything about it?<</you>>
-
 <<bern>>Actually...I do. It's an old card game. Did...someone give this to you or did you find it?<</bern>>
-
 <<you>>I found it under the door when I knocked. Do you know what it means?<</you>>
-
 <<bern>>I suppose...the Lancasters were playing? Strange as it's kind of a pagan thing and they are so devout. Well, I guess you can ask them when they get back? It was nice to meet you, officer.<</bern>>
 
 And then she was gone. 
 
 Also, the strange card seems to be missing as well. You decide to search through the house.
-
 [[Continues->loc-mainhouse-kitchen][$chapter to $chapters[3]; $time += 1; $openhouse to true]]
-
-
-
-:: object-police-note {"position":"400,500","size":"150,100"}
-The note is a folded card enclosed in a plastic sleeve. SOmeone has drawn a detailed, almost too detailed, map to the Lancaster farm and a note urgently asking for help. No other details. You've decided to leave the note in the plastic just in case.
-
 
 :: action-driving-on-route-6
 You drive on route 6 toward the Lancaster Farm.
