@@ -1,0 +1,10 @@
+:: check-has-all-cards {"position":"1600,1500","size":"100,100"}
+<<if $secret_has_all_cards is false>>\
+    <<set _count to $inventory.filter(i => i.name && i.name.startsWith("strange card")).length>>\
+    <<if _count >= 1>>\
+        <<if $secret_hidden_cards is true>>\
+            You have found all the hidden cards!
+        <</if>>\
+        <<set $secret_has_all_cards to true>>\
+<</if>>\
+<</if>>\

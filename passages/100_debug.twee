@@ -1,0 +1,79 @@
+:: debug-passage {"position":"0,0","size":"100,100"}
+<<return>>
+
+<<for _key, _value range State.variables>>
+    '_key': '_value'<br>
+<</for>>
+
+choices: 
+<div id="choices">
+<<link "hunting for cards">>
+	<<set $chapter to "hunt1">>
+<</link>>
+<<link "bern in attic">>
+    <<set $chapter to "hunt1">>
+    <<set $secret_has_all_cards to true>>
+    <<set $secret_hidden_cards to true>>
+<</link>>
+	<<link "You agree but show your annoyance..">>
+		<<replace "#choices">>Fine, you huff.<</replace>>
+	<</link>>
+	<<link "You quickly agree">>
+		<<replace "#choices">>Sure thing, Katie!<</replace>>
+	<</link>>
+</div>
+
+cycle:
+---cycle
+<<set _owner to "none">>
+<<cycle "_owner" autoselect>>
+	<<option "Rec Room" "Al">>
+	<<option "Basement" "Carl">>
+	<<option "Master Bedroom" "Susan">>
+<</cycle>>
+
+--Example, I have a link, the user can click it and then I can perform some actions and show next text
+--The link goes away and link text is replaced.
+The room looks empty. 
+<<linkreplace "Look closer">>\
+You notice a hidden door behind the curtain.
+<</linkreplace>>
+
+---Example similar to the above, but in this case I append text to the link text
+<<linkappend "Show">>
+More text.
+<</linkappend>>
+
+timed example 
+<<set _hours to 2>>\
+<span id="status">\
+<<back>>
+</span>\
+<span id="work">\
+<<link "Begin work">>\
+<<set $hour += _hours>>\
+<<replace "#status">>working<</replace>>\
+<<timed "2s">><<replace "#status">>working<</replace>>\
+<<next>><<replace "#status">>working.<</replace>>\
+<<next>><<replace "#status">>working..<</replace>>\
+<<next>><<replace "#status">>working...<</replace>>\
+<<next>><<replace "#status">>You got alot done in _hours hours. <<return>><</replace>>\
+<</timed>>
+<<replace "#work">><</replace>>\
+<</link>>
+</span>
+
+<<set _playerStartSkill to "none">>
+<<button "skill description">>
+  <<set $score += 10>>
+  <<if _playerStartSkill == "hacker">>
+	<<goto "descr-hacker">>
+   <<elseif _playerStartSkill == "detective">>
+    	<<goto "descr-detective">>
+   <</if>>
+<</button>>
+
+<<set _dial1 to 0>>\
+Combination1: <<set _dial1 to 10>><span id="stats-str"><<print _dial1>></span> \
+( <<button "[+]">><<set _dial1++>><<replace "#stats-str">><<print _dial1>><</replace>><</button>> \
+| <<button "[-]">><<set _dial1-->><<replace "#stats-str">><<print _dial1>><</replace>><</button>> )

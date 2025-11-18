@@ -10,26 +10,14 @@ a:link, .link-internal {
     text-decoration: none;
 }
 
-/* SugarCube visited link classes */
-a:visited, .link-visited {
-    color: #1E3A8A !important; /* Darker blue for visited links */
-    text-decoration: none;
-}
 
-/* Alternative selector for SugarCube visited links */
-.passage a[data-passage].link-visited {
-    color: #1E3A8A !important;
-}
 
 /* Force <<link>> macros to use unvisited styling by default */
 .macro-link {
     color: #DC143C !important; /* Crimson red for <<link>> macros */
 }
 
-/* Only apply visited styling to <<link>> if it has visited class */
-.macro-link.link-visited {
-    color: #1E3A8A !important; /* Darker blue for visited <<link>> */
-}
+
 
 a:hover {
     text-decoration: underline;

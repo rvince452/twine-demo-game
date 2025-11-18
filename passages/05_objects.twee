@@ -2,10 +2,23 @@
 :: object-hal-Q5 {"position":"400,100","size":"150,100"}
 A primitive handheld device that looks like someone tried to build a futuristic phone using 1980s Radio Shack parts. The green LCD screen flickers with pixelated text, and the membrane keyboard responds with wet clicking sounds. When activated, it displays messages that no one has sent, videos of locations around the farm from impossible angles, and occasionally types responses to questions that haven't been asked yet. The battery never seems to die, despite being plugged into nothing.
 The HAL Q5 unit has a 'thining' button, a 'overheat' warning light as well as a on/off toggle switch. HAL is entagled with something and it does not know what. There is a label on the back that reads "from a Fine Man"
+<<back>>
+
+:: object-hal-Q5-back
+HAL is entagled with something and it does not know what. There is a label on the back that reads "Eternal thanks from a Fine Man"
+<<back>>
+
+:: object-richard-feynman-biograph
+TODO 
+
 
 
 
 :: object-police-note {"position":"400,500","size":"150,100"}
 The note is a folded card enclosed in a plastic sleeve. SOmeone has drawn a detailed, almost too detailed, map to the Lancaster farm and a note urgently asking for help. No other details. You've decided to leave the note in the plastic just in case.
+<<back>>
 
+:: object-voodoo-doll-carl {"position":"300,100","size":"150,100"}
+This doll is assembled from electronic components—circuit boards form the torso, copper wire creates the limbs, and a small transistor serves as the head. Scraps of polyester shirt fabric are wrapped around the figure, and tiny wires protrude from its head like unruly hair. The most disturbing feature is the collection of pin-up magazine cutouts glued to its body, their faces scratched out with something sharp. Burn marks suggest it's been subjected to electrical current multiple times.
+<<back>>
 

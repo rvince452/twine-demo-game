@@ -27,15 +27,55 @@ You look behind the bar and find a small safe embedded in the wall. The safe is 
 [[Return->loc-mainhouse-recroom]]
 
 :: obj-pile-of-clothes {"position":"1510,1100","size":"100,100"}
-The pile of clothes appears to be a mix of casual wear, including a pair of jeans, a t-shirt with a faded logo, and a flannel shirt. There is also a pair of worn-out sneakers and a baseball cap. The clothes look like they were hastily discarded, as if someone left in a hurry. You also find an [[envelope->obj-al-envelope]]
+The pile of clothes appears to be a mix of casual wear, including a pair of jeans, a t-shirt with a faded logo, and a flannel shirt. There is also a pair of worn-out sneakers and a baseball cap. The clothes look like they were hastily discarded, as if someone left in a hurry. 
+You also find a [[white card->obj-al-envelope]] among the clothes. 
 
-<<return>>
+<<if $secret_hidden_cards is true>>\
+<<if setup.ininventory("strange card from rec room") is false>>\
+<<addinventory "strange card from rec room" "card-the-fool">>\
+You realize that the white card contains another, smaller object within. You find a [[strange card->card-the-fool]] and take it - perhaps it means something...
+<<include "check-has-all-cards">>\
+<</if>>\
+<</if>>\
+
+
+[[return to rec room->loc-mainhouse-recroom]]
 
 :: obj-al-envelope
 A plain, white piece of card stock. One side is blank. On the other side someone has written a sentence in lavender-colored marker: "Thou shall not engage in games of chance". The card is encased in plastic, as if intended to survive normal wear and tear.
-<<if $secret_hidden_cards is false>>\
-    Within the card, is another [[card->card-the-fool]]
+<<back>>
+
+:: obj-carl-envelopez
+A plain, white piece of card stock. One side is blank. On the other side someone has written a sentence in lavender-colored marker: "Anyone who looks at a woman with lustful intent has already committed adultery with her in his heart." The card is encased in plastic, as if intended to survive normal wear and tear.
+<<if $secret_hidden_cards is true>>\
+    Within the card, is another [[card->card-the-lecher]]
 <</if>>\
+<<back>>
+
+:: obj-susan-envelope
+A plain, white piece of card stock. One side is blank. On the other side someone has written a sentence in lavender-colored marker: "The innocent goat will be sacrified so that the other can escape." The card is encased in plastic, as if intended to survive normal wear and tear.
+<<if $secret_hidden_cards is true>>\
+    Within the card, is another [[card->card-the-goat]]
+<</if>>\
+<<back>>
+
+:: obj-doug-envelope
+A plain, white piece of card stock. One side is blank. On the other side someone has written a sentence in lavender-colored marker: "Wine is a mocker, strong drink is raging: and whosoever is deceived thereby is not wise." The card is encased in plastic, as if intended to survive normal wear and tear.
+<<if $secret_hidden_cards is true>>\
+    Within the card, is another [[card->card-the-inebriate]]
+<</if>>\
+<<back>>
+
+:: obj-katie-envelope
+A plain, white piece of card stock. One side is blank. On the other side someone has written a sentence in lavender-colored marker: "Money is the root of all evil." The card is encased in plastic, as if intended to survive normal wear and tear.
+<<back>>
+
+:: obj--photo-pentagram {"position":"1600,1400","size":"100,100"}
+Carved into the wooden floorboards is a pentagram surrounded by various symbols and markings. The carving appears to be old, with some of the lines faded and worn. In the center of the pentagram, there is a small circular indentation that looks like it may have held an object at one time. The overall appearance of the carving gives off an eerie and unsettling vibe, suggesting that it may have been used for ritualistic purposes.
+
+Only the witch card will open the game. Once it is open, it becomes a pentagram with five slots around it and one in the middle - the devil's card. One slot is filled in. You must place four cards and leave one in the center. 
+
+If you have all five
 <<return>>
 
 :: obj-top-of-bar {"position":"1540,1070","size":"100,100"}

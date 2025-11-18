@@ -4,7 +4,12 @@ A small rural town nestled in the rolling hills of central Pennsylvania, Marlowe
 
 
 :: loc-police-station-abandoned
-The station was closed down but is used by troopers passing through to rest or make some phone calls. Today there is a strange note awaiting the next trooper. It directs them to the Lancaster farm. 
+The building is devoid of people without any downtime but is used by troopers passing through to rest or make some phone calls. It feels strange entering a building that must have built to be used, to host living, breathing people. Today the lights are off until you turn them on. The building is cold and will stay that way until you decide to turn on the heat.
+The thought doesn't even cross your mind. You do fix yourself a cup of coffee from the ancient machine in the corner and sit at one of the metal tables, the vinyl seats cracked and worn from years of use.
+There is a single inbox on the front desk, next to an old rotary phone. Within the tray is a single piece of paper.
+
+
+ Today there is a strange note awaiting the next trooper. It directs them to the Lancaster farm. 
 Note: Marlowe can't afforcd their own police station so have to rely on traveling state troopers who stop in or are called in and use this office as temporary base.
 
 The small building is empty with a strange combination lock on the the side door. Fortuantely you were provided the code so you can get it. 
@@ -32,12 +37,14 @@ The gravel driveway leading to the Lancaster house is lined with overgrown lilac
 The southern end of the wraparound porch faces the main driveway and serves as the primary entrance to the Lancaster farmhouse. Wooden steps painted white but now peeling lead up to the covered porch, which features traditional turned spindles and decorative brackets. Two old rocking chairs sit beside a small table where the morning newspaper is usually left, and hanging baskets with wilted plants sway gently in the breeze. The porch boards creak underfoot, and the ceiling is painted sky blue—a traditional Pennsylvania practice meant to ward off insects and evil spirits.
 [[North porch->loc-mainhouse-porch-north]]
 [[Main house entry->loc-mainhouse-entry]]
-[[Barn->loc-barn]]
+[[House driveway->loc-lancaster-house-driveway]]
+
 
 :: loc-mainhouse-porch-north {"position":"100,700","size":"150,100"}
 The northern section of the wraparound porch extends along the side of the house toward the kitchen area, offering a more private sitting area away from the main driveway. This section is furnished with a wooden porch swing that hangs from heavy chains, its cushions faded from years of weather. A small side table holds an assortment of farm-related items—work gloves, a thermos, and agricultural magazines. From here, you can see across the farm property toward the pool area and the dense forest beyond.
 [[Kitchen->loc-mainhouse-kitchen]]
 [[Swimming pool->loc-pool]]
+[[Main house porch south->loc-mainhouse-porch-south]]
 
 
 
@@ -46,13 +53,29 @@ The 50-acre Lancaster farm stretches across rolling hills planted mostly with so
 <<return>>
 :: loc-pool {"position":"250,100","size":"150,100"}
 The swimming pool sits between the main house and the forest like an abandoned promise from better times. The once-blue water has turned a murky green-brown, with leaves and debris floating on the surface that ripples without any apparent cause. The concrete edges are cracked and stained, and the diving board hangs at a precarious angle, its metal joints corroded by years of neglect.
+
+There is also a hot tub adjacent to the pool, and unlike the former, it seems to be reasonably maintained and even working. At the bottom of the tub you can see some gold jewelry glinting. To the side of the tub is an elegant purse. In the water you also find a red, one-piece swimsuit. Sticking out of the purse is a [[white card->obj-katie-envelope]]
+<<if $secret_hidden_cards is false>>\
+<<if $chapter is "hunt1">>\
+<<set $secret_hidden_cards to true>>\
+But the humidity has caused the card to become transparent and it is clear to you that a second card is within. You tear it open to find another [[strange card->card-the-miser]]. You decide to keep it. 
+<<addinventory "strange card from hottub" "card-the-miser">>
+<<include "check-has-all-cards">>\
+<</if>>\
+<</if>>\
+
+
 [[Pool house->loc-poolhouse]]
+
+
+[[South to the porch->loc-mainhouse-porch-north]]
 
 :: loc-poolhouse {"position":"400,100","size":"150,100"}
 The poolhouse stands as a weathered monument to the family's former prosperity, its wood siding warped and paint peeling in long strips. Inside, the air is thick with mustiness and the scent of something indefinably wrong—perhaps old chlorine mixed with decay. Broken pool equipment leans against the walls like sleeping creatures, and strange shadows seem to move in the corners even on bright days.
-[[Corn maze->loc-corn-maze]]
-[[Machine shed->loc-machine-shed]]
-[[Swimming pool->loc-pool]]
+<<if $chapter is "gameboardopen">>
+    [[You find a large, strange web here->action-talk-carl-web]]
+<</if>>
+[[Enter walking path->loc-old-walking-path-west]]
 
 :: loc-forest {"position":"100,250","size":"150,100"}
 A dense band of trees stretches from behind the main house to the northern edge of the property, their branches intertwining overhead to create an unnatural twilight beneath. The forest floor is carpeted with rotting leaves that squelch underfoot, releasing an earthy smell tinged with something sickly sweet. Local wildlife seems to avoid this area, leaving an eerie silence broken only by the occasional crack of dead wood settling.
@@ -60,28 +83,60 @@ A dense band of trees stretches from behind the main house to the northern edge 
 
 :: loc-cemetery {"position":"250,250","size":"150,100"}
 The old cemetery predates the Lancaster family's ownership, its weathered headstones tilting at unsettling angles like broken teeth. The legal agreement requires its preservation, but nature and time have made their own modifications—vines curl around crumbling monuments and sinkholes have opened where the earth has settled strangely. On foggy evenings, the place seems to breathe with its own rhythm, separate from the living world.
+<<if $chapter is "gameboardopen">>
+    [[You find a large, strange web here->action-talk-you-web]]
+<</if>>
+
 [[Forest->loc-forest]]
 
 :: loc-machine-shed {"position":"400,250","size":"150,100"}
 The machine shed houses a graveyard of farm equipment in various states of decay and repair, their metal surfaces bearing the orange-brown patina of rust and time. Oil stains on the concrete floor form patterns that seem almost deliberate, and the workshop area is cluttered with tools that look like they haven't been properly organized since the Carter administration. The fluorescent lights flicker erratically, casting moving shadows that make the machinery appear to shift and breathe. Along the walls hang an extensive collection of farming implements that double as weapons—rusted scythes with edges still sharp enough to gleam, pitchforks with tines bent at unnatural angles, chainsaws that start on the first pull despite their age, and shovels whose blades bear stains that soap can't seem to wash away.
 [[Doug's cabin->loc-dougs-cabin]]
+[[Exit->loc-lancaster-machine-barn-driveway]]
 
 
 :: loc-barn {"position":"100,400","size":"150,100"}
 The two-story barn looms near the main house, its weathered wood siding adorned with faded hex signs—traditional wards against ill fortune and spirits that now seem more desperate than protective. The structure creaks and settles with sounds that don't quite match the wind patterns, and the second-story window that aligns with the main house bedroom has a strange quality to its glass, distorting views in unsettling ways. Hay bales are stacked haphazardly inside, some showing signs of inexplicable moisture despite the sound roof.
-<<return>>
+<<if $chapter is "gameboardopen">>
+    [[You find a large, strange web here->action-talk-katie-web]]
+<</if>>
+
+[[Exit->loc-lancaster-machine-barn-driveway]]
 
 :: loc-dougs-cabin {"position":"250,400","size":"150,100"}
 Doug's cabin sits 2,000 feet from the main house like a hermit's retreat, its log walls chinked with a mixture of mud and what might be other materials. The structure appears solid but somehow wrong—windows that don't quite align, a roof that seems to sag in the middle despite strong supports, and a front porch that groans under even light footsteps. Inside, the single room is cluttered with an eclectic mix of strange tools whose purposes aren't immediately clear—modified wrenches with extra joints, homemade measuring devices, and contraptions that seem part farming implement, part something else entirely. Stacks of both vintage farm manuals from the 1940s and crisp new engine repair guides create precarious towers throughout the space, interspersed with well-thumbed issues of Popular Mechanics and Motor Trend. The walls are adorned with an incongruous collection of posters: Farrah Fawcett's famous red swimsuit smile beams down from above a workbench, while Lynda Carter as Wonder Woman strikes a heroic pose near the wood stove. Smoke from the chimney sometimes drifts in directions that defy the wind, and strange sounds emanate from within during the quiet hours—the scrape of metal on metal, the whisper of turning pages, and occasionally what sounds like quiet conversation with no second voice to answer.
 
 Investigation will reveal hidden cache of hard whiskey.
 Casual investigation shows two glasses in a bin 
-<<return>>
+[[Exit->loc-lancaster-machine-barn-driveway]]
 
 :: loc-corn-maze {"position":"400,400","size":"150,100"}
 The three-acre corn maze north of the main house has evolved beyond human planning, as countless footpaths to Doug's cabin and the machine shed have created a labyrinthine network through the stalks. Six figures stand guard throughout the field, supposedly scarecrows but wearing an odd assortment of human clothing—a woman's floral dress, a man's suit jacket with the sleeves cut off, children's winter coats in bright colors now faded by seasons of weather. Their faces are stitched burlap, but the expressions seem to shift when you're not looking directly at them. Sometimes, on still days, you can see them turning their heads to track your movement through the maze, their straw-stuffed limbs creaking softly in the absence of any wind.
+
+You walk around a bit but get confused. There doesn't seem any point in continuing.
+[[Old walking path->loc-old-walking-path-west]]
+
+:: loc-old-walking-path-west {"position":"550,400","size":"150,100"}
+
+[[Corn maze->loc-corn-maze]]
+[[Poolhouse->loc-poolhouse]]
+[[Walk east->loc-old-walking-path-east]]
+
+:: loc-old-walking-path-east {"position":"400,400","size":"150,100"}
+
+[[Walk west->loc-old-walking-path-west]]
+
+[[Barn Driveway->loc-lancaster-machine-barn-driveway]]
+
+
+:: loc-corn-maze-inner {"position":"550,400","size":"150,100"}
+
 [[Cemetery->loc-cemetery]]
 [[Forest->loc-forest]]
+
+<<if $chapter is "gameboardopen">>
+    [[You find a large, strange web here->action-talk-susan-web]]
+<</if>>
 
 :: loc-forest-clearing-firepits
 Deep within the forest lies a circular clearing where three large fire pits are arranged in a triangular pattern. Each pit is carefully constructed from local fieldstone and filled with partially burned logs and kindling that never seems to fully turn to ash. The surrounding trees bear strange carvings—symbols that don't match any known language, carved deep enough to weep sap that has hardened into amber-colored tears. The ground around the pits is packed hard from many feet, and sometimes you can find small bones scattered in the ashes, too small to be human but too large to belong to any local wildlife.
@@ -89,12 +144,21 @@ Deep within the forest lies a circular clearing where three large fire pits are 
 
 :: loc-lancaster-machine-barn-driveway {"position":"250,700","size":"150,100"}
 A separate gravel drive branches off from the main road, leading directly to the machine shed and barn area. This working driveway is wider than the house drive to accommodate large farm equipment, and the gravel is mixed with hay chaff and motor oil stains from decades of agricultural use. Tire tracks from tractors, combines, and trucks create permanent ruts in the earth, and the air carries the scent of diesel fuel and hay. Metal gates on either side can be closed to contain livestock when needed.
+[[Road->loc-county-road-6-lancaster-farm]]
 [[Machine shed->loc-machine-shed]]
+[[Barn->loc-barn]]
+
 
 :: loc-neighbors-mailbox {"position":"400,700","size":"150,100"}
 At the eastern edge of the Lancaster property, a cluster of rural mailboxes marks the boundary with neighboring farms. The collection includes the Lancaster box alongside several others serving the scattered rural residences in the area. The mailboxes are mounted on a shared wooden post that leans slightly from years of wind and weather. Tall grass and wildflowers grow around the base, and a narrow dirt path leads from here toward the neighbor's property through a break in the fence line.
 [[Neighbor's grove->loc-neighbors-copse]]
+[[County Road 6->loc-county-road-6-lancaster-farm]]
 
 :: loc-neighbors-copse {"position":"100,850","size":"150,100"}
 A small grove of mixed hardwood trees creates a natural boundary between properties, serving as both windbreak and privacy screen. The copse consists primarily of oak, maple, and birch trees with dense underbrush that provides cover for wildlife. Fallen logs and leaf litter create a soft carpet underfoot, and the dappled sunlight filtering through the canopy gives the area a peaceful, secluded feeling. However, there's something unsettling about the silence here—no bird songs, no rustling of small animals, just an oppressive quiet that seems to muffle even your own footsteps.
+<<if $chapter is "gameboardopen">>
+    [[You find a large, strange web here->action-talk-al-web]]
+<</if>>
+
+
 <<return>>

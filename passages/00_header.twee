@@ -55,11 +55,16 @@ Does not show text, only links - check documentation
 
 :: PassageFooter {"position":"200,0","size":"100,100"}
 <<if $debug is true>>\
-<<print "-----">>
-<<print "passage=" + passage() + " chapter=" + $chapter + " time=" + $time>>
+<div style="border:1px solid #33C; padding:8px; margin:6px 0; border-radius:4px;"> \
+<<print "DEBUG  passage=" + passage() + " chapter=" + $chapter + " time=" + $time>>
+[[debug-passage]]
+[[Enter Main House as open->loc-mainhouse-entry][$openhouse to true]]
+[[Check Map->map][$openhouse to true]]
+[[Test Decrypt->action-decrypt-card ]]
+</div>\
 <</if>>\
-<div style="border:1px solid #33C; padding:8px; margin:6px 0; border-radius:4px;"> 
+<div style="border:1px solid #33C; padding:8px; margin:6px 0; border-radius:4px;"> \
 HAL Display  $hal.charged% Charged Alert Busy 
-</div>
+</div>\
 
 

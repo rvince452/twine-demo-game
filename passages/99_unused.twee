@@ -10,37 +10,36 @@
 // - Other unreferenced content
 // ==================================================================
 
-:: card-the-inebriate {"position":"100,100","size":"150,100"}
-A simple drawing shows a white stick figure slumped against a barn, one arm hanging loosely at its side. A bottle lies tipped over near its feet, with liquid spilling onto the ground. In the background, a black stick figure stands in the doorway of a small house, arms raised as if calling out. The barn has a simple peaked roof and the house shows a single square window.
-
 
 :: card-the-trapped-man {"position":"400,100","size":"150,100"}
 A white stick figure sits crouched inside a simple rectangular cage or stocks, with vertical and horizontal lines forming the bars. Its arms are pressed against the bars above its head. Outside the cage, two black stick figures stand on either side, one holding what appears to be a key. A barn structure is visible in the background with crossed lines indicating wooden boards.
+<<back>>
 
 :: card-the-miser {"position":"100,250","size":"150,100"}
 The drawing shows a white stick figure seated at a simple table (rectangular shape), with small circles scattered across the surface representing coins. The figure's arms are positioned as if counting or gathering the coins. A black stick figure stands behind it, one arm extended as if reaching for the coins. A small house with a chimney releasing wavy smoke lines sits nearby.
+<<back>>
 
-:: card-the-lecher {"position":"250,250","size":"150,100"}
-A white stick figure stands close to the side of a house (simple rectangle with a square window), with one arm raised toward the window. Through the window, black stick figures can be seen inside. In the foreground, farming tools are scattered - a simple hoe (line with perpendicular line) and what appears to be a bucket (small circle). 
-
-:: card-the-goat {"position":"400,250","size":"150,100"}
-The center of the card shows a large four-legged animal shape with two small triangular horns. A white stick figure kneels beside it, one arm extended toward the animal. Several black stick figures stand at a distance in a circle around them. Simple vertical lines in the background represent a fence, and a barn with an X-pattern door is visible.
 
 :: card-the-trespasser {"position":"100,400","size":"150,100"}
 A white stick figure stands at the end of a long path (simple lines leading to the distance), holding a rectangular shape (briefcase or bag). At the other end of the path, near a small house, multiple black stick figures are grouped together. Above, birds are drawn as simple V-shapes flying away from the scene. A fence post with horizontal lines marks the property boundary.
+<<back>>
 
 :: card-the-witch {"position":"250,400","size":"150,100"}
 A white stick figure stands over a large circular shape (cauldron or pot), with one arm extended downward as if stirring. Around the figure, various simple objects are scattered: bottles (small rectangles), herbs (wavy lines), and a wand (straight line). In the background, a black stick figure approaches carrying what appears to be a bundle of sticks or herbs.
+<<back>>
 
 
 :: fate-card-game 
 The rules are written in faded ink on yellowed paper, the handwriting growing more erratic toward the end. "The game demands three or more players—those who sow and one who reaps. Shuffle the cards while thinking of what you truly desire, for the cards will know if you lie. Each sower draws one card and whispers their deepest want to the leather. The reaper must grant these desires before the moon sets, but in the exact order the cards demand. Success brings the reaper everything the sowers possess—their land, their kin, their very breath. Failure..." The writing trails off into illegible scratches, but at the bottom, in different handwriting: "We should never have played. The scarecrows used to be people. —M.L. 1962" 
+<<back>>
 
 :: fate-card-constable
 A man turning a blind eye to a crime
+<<back>>
 
 :: fate-cards-lose-key
 A crude illustration depicts a white stick figure on hands and knees, searching the ground around a simple house shape. Small oval objects scattered around represent rocks or debris being moved in the search. A black stick figure stands in the doorway of the house, pointing downward at the searching figure. In the background, more house shapes suggest a small community or settlement.
+<<back>>
 
 :: object-note {"position":"600,100","size":"150,100"}
 
@@ -51,8 +50,6 @@ This weathered figure is constructed from corn husks bound with twine, dressed i
 :: object-voodoo-doll-susan {"position":"200,100","size":"150,100"}
 Crafted from dried corn silk and twigs, this doll wears a tiny aerobics outfit cut from bright spandex fabric. Its stick-thin limbs are wrapped in miniature leg warmers, and plastic beads serve as a makeshift exercise headband. The figure shows signs of repeated burning around the midsection, with singed holes that never seem to heal completely. Its mouth is sewn shut with red thread, and health food magazine clippings are glued to its chest like armor.
 
-:: object-voodoo-doll-carl {"position":"300,100","size":"150,100"}
-This doll is assembled from electronic components—circuit boards form the torso, copper wire creates the limbs, and a small transistor serves as the head. Scraps of polyester shirt fabric are wrapped around the figure, and tiny wires protrude from its head like unruly hair. The most disturbing feature is the collection of pin-up magazine cutouts glued to its body, their faces scratched out with something sharp. Burn marks suggest it's been subjected to electrical current multiple times.
 
 :: object-voodoo-doll-katie {"position":"400,100","size":"150,100"}
 Delicately constructed from braided wheat stalks, this doll wears a miniature outfit fashioned from fabric that matches Katie's favorite dress. Its hair is made from actual human hair—blonde strands that shimmer unnaturally in the light. The figure is posed in a gymnastic position, but several joints have been broken and crudely rebound with black thread. Lottery ticket fragments are embedded in its chest like scales, and its face bears the permanent smile of someone who's given up hope.

@@ -23,7 +23,7 @@ Macro.add("shout", {
     }
 });
 
-function makeSpeakerMacro(name, cssClass) {
+function makeSpeakerMacro(name, speakername, cssClass) {
     const finalClass = cssClass || name.toLowerCase();
 
     Macro.add(name.toLowerCase(), {
@@ -44,7 +44,7 @@ function makeSpeakerMacro(name, cssClass) {
             // Only show the label if not 'nar'
             if (name.toLowerCase() !== "nar") {
                 const bold = document.createElement("b");
-                bold.textContent = name + ": ";
+                bold.textContent = speakername + ": ";
                 wrapper.appendChild(bold);
             }
 
@@ -56,16 +56,15 @@ function makeSpeakerMacro(name, cssClass) {
         }
     });
 }
-makeSpeakerMacro("Doug")
-
-makeSpeakerMacro("Katie")
-makeSpeakerMacro("nar")
-makeSpeakerMacro("Heather")
-makeSpeakerMacro("Susan")
-makeSpeakerMacro("Al")
-makeSpeakerMacro("You")
-makeSpeakerMacro("Hal")
-makeSpeakerMacro("Bern")
+makeSpeakerMacro("doug", "Doug")
+makeSpeakerMacro("katie", "Katie")
+makeSpeakerMacro("nar", "Narrator")
+makeSpeakerMacro("heather", "Heather")
+makeSpeakerMacro("susan", "Susan")
+makeSpeakerMacro("al", "Al")
+makeSpeakerMacro("you", "You")
+makeSpeakerMacro("hal", "Hal")
+makeSpeakerMacro("bern", "Bernadette")
 
 
 Macro.add('qspeak', {

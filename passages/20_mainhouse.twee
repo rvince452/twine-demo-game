@@ -19,7 +19,39 @@
 
 :: loc-mainhouse-attic {"position":"1775,1325","size":"100,100"}
 <<include "loc-main-house-descr">>
-<<return>>
+You are in a dusty attic space filled with old furniture covered in white sheets, cobwebs hanging from the rafters, and a few scattered boxes labeled with faded handwriting. The air is thick with the smell of dust and aged wood. A small window lets in a sliver of light, illuminating motes of dust dancing in the air. Old family heirlooms, forgotten toys, and vintage clothing are strewn about, hinting at the lives once lived in this house.
+<<if $secret_has_all_cards is true>>\
+
+You find an ornately-carved wooden board. Hinges imply that it opens up and so you open it. Now you are staring a pentagram design. 
+The board has rectangular indents at various locations - as if something should be placed there. In total there are six: one at each point of the pentagram and two more near the center. One of those is already filled.
+
+There is a strange board hastily covered with an old blanket. Inscribed in it is a pentagram. The board has rectangular indents at various locations - as if something should be placed there. In total there are six: one at each point of the pentagram and two more near the center. One of those is already filled.
+The board is folded and on top is a slick gameboard with a planchette. Nearby is a notepad with strange symbols and translations. The last line is "I am ready" please send the judge. 
+
+<<if $chapter is "hunt1">>
+[[You place all the cards on the board->action-start-game-rules]]
+
+<<elseif $chapter is "gameboardopen">>
+Card on the left side:
+[[Card on the left size->card-the-devil]]
+Choose the card to place on the right side:
+<<cycle "$chosen_game_owner" autoselect>>
+	<<option "card-from-recroom" "Al">>
+	<<option "card-from-basement" "Carl">>
+	<<option "card-from-susans-room" "Susan">>
+<</cycle>>
+Choose the card to place over Al:
+
+Choose the card to place over yourself:
+
+[[Done placing cards - close the board-->action-board-closed]]
+
+<<elseif $chapter is "gameboardset-complete">>
+[[Card on the left size->card-the-devil]]
+
+<</if>>
+<</if>>\
+[[Downstairs hallway->loc-mainhouse-upstairs-hallway]]
 
 
 
@@ -41,12 +73,16 @@ In back of the stepladder you find more clothes. The clothes are damp due to a l
 From theh top of the ladder your head can fit into a space in the ceiling between pipes and beams and you can see light. An outlet receptacle hangs from the ceiling. It has been removed and you can see into the bathroom.
 
 Look - view of the shower. A robe hangs on towel rack. 
-[[card->card-the-lecher]]
+[[white card->obj-carl-envelope]]
 <<return>>
 
 
 :: loc-mainhouse-basement-utility {"position":"1650,1325","size":"100,100"}
 <<include "loc-main-house-descr">>
+<<if $chapter is "gameboardopen">>
+    [[You find a large, strange web here->action-talk-doug-web]]
+<</if>>
+
 <<return>>
 
 
@@ -72,6 +108,7 @@ Look - view of the shower. A robe hangs on towel rack.
     [[look in the refrigerator->obj-mainhouse-refrigerator]]
     [[search the cupboards->obj-mainhouse-cupboards]]
 
+[[Exit via the back door->loc-mainhouse-porch-north]]
 [[Living room->loc-mainhouse-living]]
 [[Basement->loc-mainhouse-basement]]
 
@@ -107,6 +144,7 @@ Investigation will show the removed electric receptable accessable from below
 [[Guest bedroom->loc-mainhouse-upstairs-bedroom-guest]]
 [[Attic->loc-mainhouse-attic]]
 [[Linen closet->loc-mainhouse-linen-closet]]
+[[Downstairs->loc-mainhouse-living]]
 
 
 :: loc-mainhouse-linen-closet
@@ -122,6 +160,7 @@ The narrow linen closet appears ordinary at first glance, with shelves stacked w
 Katie's room is a shrine to her past glories, with gymnastics trophies crowding every surface and faded ribbons hanging from the mirror alongside her confirmation certificate from Ephrata Reformed Church and a photo of her in a white dress from her first communion. Fashion magazines from the mid-80s are stacked in precarious towers, their pages yellowed and brittle, competing for space with church youth group newsletters and a dusty Bible given to her on her 16th birthday. A small collection of modeling photos shows Katie in various frozen poses, but something about the images seems off—her smile never quite reaches her eyes, and shadows fall in directions that don't match the lighting. Lottery tickets are scattered across her desk like fallen leaves, all scratched off to reveal nothing but losing numbers, a stark contrast to the motivational scripture cards from Sunday school that are pinned to her bulletin board.
 Investigation will show a trove of shoplifted and purchased cosmetics, jewelry, etc 
 Also will find copied checks and practiced handwriting samples. Some forms match the address next door.
+[[strange doll under pillow->object-voodoo-doll-carl]]
 <<return>>
 
 

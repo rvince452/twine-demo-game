@@ -122,6 +122,130 @@ You drive down the long, winding country road flanked by tall cornfields that ru
 You note the farm has multiiple driveways, but you take the one that seems to lead to the house. There are a few cars in the driveway but no sign of activity. You can't tell if the lights are on. 
 
 
+:: action-start-game-rules 
+<<set $chapter to "bern2" >>
+As you place the cards on the board, they flip upside down and silently and quickly slide around the board, the pentagram flashes and the cards stop where they were. One by one they flip.
+
+The room is silent but in the distance you heard foot steps, a door opoen. The sounnd is getting closer.
+
+Finally a woman appears. From your positoin, she seems to tower over you. You recognize her as Bernadette but now she is dressed in a hat, a robe and boots.
+
+She opens her mouth and begins to speak, her eyes forward, but you don't understand her words. You are more than confused and are pondering what to do when she stop, lowers herself to the ground, crosses her legs and begins.
+
+<<bern>>
+    I am required to recite the rules in the original language of the game. BUT, as you probably don't speak xxxxx, I can give you a rough translation.
+<</bern>>
+
+    She asks you who are the players and you assume it is you and her.
+
+    She corrects you. The players are represented by the two cards on the left and right of the board. One of them is known, the other is not known to you. It is your first task to guess the other.
+
+    Each card is associated with a person. There is the other player, the 5 pawns and the judge. 
+    I am the judge and called her to arbitrate as required... and to make sure you understand the rules.
+
+    The other has made a wager with the former. I will judge who is the victor. I have to stake in this game beyond my own amusement. 
+
+    You ask about the wager.
+<<bern>>
+
+    The wager has to do with the pawns and their cards. If all pawns are judged to have satisied the conditions of their cards then the other has won. 
 
 
+    You must decide which cards belong to whom but most importantly, who is the other. The other's card is false because they are false. 
 
+    The other chooses the pawns.
+    One pawn opposes the other.
+    The judge chooses the winner.
+
+    Identifying the other does not block its victory. But it might help you in opposing it. 
+
+    I have moved all of the pawns to their staging area. They cannot leave their location and, if you can find them, it may help you to speak with them. 
+    But some may not wishto speak of you, some may blame you, some may fear you or frantically beg for help that you cannot give.
+
+<</bern>>
+<<set $chapter to "gameboardopen" >>
+[[continue->loc-mainhouse-attic]]
+:: action-board-closed
+Check if all assignments were made. If not, give an error and let them go back.
+Else the game continues.
+Game ends
+
+
+:: action-talk-susan-web
+Susan is trapped in a web 
+TODO 
+<<return>>
+
+:: action-talk-carl-web
+Carl is trapped in a web 
+TODO 
+<<return>>
+
+:: action-talk-doug-web
+Susan is trapped in a web 
+TODO 
+<<return>>
+
+:: action-talk-katie-web
+Susan is trapped in a web 
+TODO 
+<<return>>
+
+:: action-talk-al-web
+Susan is trapped in a web 
+TODO 
+<<return>>
+
+:: action-talk-you-web
+You are trapped in a web 
+TODO 
+<<return>>
+
+
+:: action-decrypt-card 
+<<set _lastpassage to  State.history[State.history.length - 2].title>>
+TODO - use Q5 and wait for it to decrypt the card.
+Use last passage to find the name of the card.
+
+You ask Hal to decrypt the card. You know it will take some time and might tax its resources.
+<span id="status">\
+<<back>>
+</span>\
+<span id="work">\
+<<link "exegete">>\
+<<replace "#status">>working<</replace>>\
+<<timed "2s">><<replace "#status">>working<</replace>>\
+<<next>><<replace "#status">>working.<</replace>>\
+<<next>><<replace "#status">>working..<</replace>>\
+<<next>><<replace "#status">>working...<</replace>>\
+<<next>><<replace "#status">>Exegesis complete. The meaning is...<</replace>>\
+<</timed>>
+<<replace "#work">><</replace>>\
+<<set $hal.charged -= 5>>
+<</link>>
+</span>
+Hal charge is now $hal.charged 
+
+Need to return to the calling page. 
+<<link "done">>
+    <<goto _lastpassage>>
+<</link>>
+
+::action-hal-analyze-bernadette
+Seer Neighbor Stranger Visitor Walker   witch
+
+::action-hal-analyze-fingers-puzzle
+Urgency high. Checking. Double checking... Self check. Checking again.
+
+6
+
+::action-hal-rules-analysis
+game --> wager
+players --> not players --> pawns
+sell short/bet short 
+pawns will violate their promoise or their vows 
+
+::action-hal-anomaly
+
+Something in the cornfield.
+Something in the attic.
