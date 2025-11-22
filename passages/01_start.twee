@@ -6,35 +6,32 @@ You are a Pennsylvania State Trooper driving near the small, rural, town of [[Ma
 You haven't ever stopped here before, sure you have seen the sign many times but you never actually chose the single exit that leads through the small town. But today is your day. 
 Marlowe is so small that they don't even have their own police force - instead relying on the State Troopers for any law enforcement needs. The dispatcher routes available troopers to calls as needed and today, today there is some issue and you are the one who must respond.
 [[Marlowe Police Station ->loc-police-station-abandoned]]
-
-<<addinventory "HAL Q5 Assistant" "object-hal-Q5">>
-
-<<set $hashal to setup.ininventory("HAL Q5 Assistant")>>
-<<print $hashal>>
-<<if $hashal is false>>
-    Where is HAL?
-<<else>>
-    You have your HAL Q5 Assistant with you.
-<</if>>
-
-
 :: StoryInit {"position":"1800,425","size":"100,200"}
 
 
 <<set $debug to true>>
 <<set $inventory to []>>
 
+<<set $cardForInebriate to "??">>
+<<set $cardForFool to "??">>
+<<set $cardForMiser to "??">>
+<<set $cardForSacrifice to "??">>
+<<set $cardForLecher to "??">>
+<<set $cardForSamaritan to "??">>
+<<set $playerID to "??">>
+
+
 <<set $secret_ready_for_farm to false>>
 <<set $secret_hidden_cards to false>>
 <<set $secret_has_all_cards to false>>
+<<set $gameboard_is_set to false>>
 <<set $time to 0>>
-<<set $chosen_game_owner to "none">>
 
 <<set $chapters = ["beginning","porch","bernadette","hunt1","bern2","gameboardopen","gameboardset"]>>
 <<set $chapter to $chapters[0]>>
-<<set $chosen_game_owner to "">>
 
-<<set $hal to {"charged":97}>>
+<<set $hal to {"charged":3}>>
+<<set $invehicle to true>>
 <<set $openhouse to false>>
 
 

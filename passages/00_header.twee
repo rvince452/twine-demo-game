@@ -63,8 +63,11 @@ Does not show text, only links - check documentation
 [[Test Decrypt->action-decrypt-card ]]
 </div>\
 <</if>>\
+<<set _halInInv to setup.ininventory("HAL Q5 Assistant")>>\
+<<if _halInInv is true>>\
 <div style="border:1px solid #33C; padding:8px; margin:6px 0; border-radius:4px;"> \
 HAL Display  $hal.charged% Charged Alert Busy 
 </div>\
+<</if>>\
 
 

@@ -29,23 +29,19 @@ There is a strange board hastily covered with an old blanket. Inscribed in it is
 The board is folded and on top is a slick gameboard with a planchette. Nearby is a notepad with strange symbols and translations. The last line is "I am ready" please send the judge. 
 
 <<if $chapter is "hunt1">>
-[[You place all the cards on the board->action-start-game-rules]]
+
+<<if setup.ininventory("strange card from kitchen") is true>>\
+    The strange card from the kitchen falls from your inventory and onto the board.
+[[You place the rest of the cards on the board->action-start-game-rules]]
+<</if>>
 
 <<elseif $chapter is "gameboardopen">>
-Card on the left side:
-[[Card on the left size->card-the-devil]]
-Choose the card to place on the right side:
-<<cycle "$chosen_game_owner" autoselect>>
-	<<option "card-from-recroom" "Al">>
-	<<option "card-from-basement" "Carl">>
-	<<option "card-from-susans-room" "Susan">>
-<</cycle>>
-Choose the card to place over Al:
+The game is waiting on your turn.
+[[Configure the board->object-board]]
 
-Choose the card to place over yourself:
-
+<<if $gameboard_is_set is true>>\
 [[Done placing cards - close the board-->action-board-closed]]
-
+<</if>>\
 <<elseif $chapter is "gameboardset-complete">>
 [[Card on the left size->card-the-devil]]
 
@@ -73,7 +69,7 @@ In back of the stepladder you find more clothes. The clothes are damp due to a l
 From theh top of the ladder your head can fit into a space in the ceiling between pipes and beams and you can see light. An outlet receptacle hangs from the ceiling. It has been removed and you can see into the bathroom.
 
 Look - view of the shower. A robe hangs on towel rack. 
-[[white card->obj-carl-envelope]]
+[[white card->object-carl-envelope]]
 <<return>>
 
 
@@ -104,9 +100,21 @@ Look - view of the shower. A robe hangs on towel rack.
 :: loc-mainhouse-kitchen {"position":"1650,1200","size":"100,100"}
 <<include "loc-main-house-descr">>
 
+On the counter you see:
+[[A white card->object-bernadette-card]]
+[[A pamphlet about Lent->object-lent-description]]
+<<if $secret_hidden_cards is true>>\
+<<if setup.ininventory("strange card from kitchen") is false>>\
+<<addinventory "strange card from kitchen" "card-the-witch">>\
+You realize that the white card contains another, smaller object within. You find a [[strange card->card-the-witch]] and take it - perhaps it means something...
+<<include "check-has-all-cards">>\
+<</if>>\
+<</if>>\
+
+
 <<if $openhouse is true>>\
-    [[look in the refrigerator->obj-mainhouse-refrigerator]]
-    [[search the cupboards->obj-mainhouse-cupboards]]
+    [[look in the refrigerator->object-mainhouse-refrigerator]]
+    [[search the cupboards->object-mainhouse-cupboards]]
 
 [[Exit via the back door->loc-mainhouse-porch-north]]
 [[Living room->loc-mainhouse-living]]
@@ -122,9 +130,9 @@ Loaded dice, marked cards, looks like he played with the lent money
 [[Living room->loc-mainhouse-living]]
 
 <<if $openhouse is true>>\
-    [[Inspect the pool table->obj-mainhouse-pool-table]]
-    [[Look over the poker table->obj-mainhouse-poker-table]]
-    [[Examine the bar->obj-mainhouse-bar]]
+    [[Inspect the pool table->object-mainhouse-pool-table]]
+    [[Look over the poker table->object-mainhouse-poker-table]]
+    [[Examine the bar->object-mainhouse-bar]]
 <</if>>\
 
 

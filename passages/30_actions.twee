@@ -6,111 +6,170 @@ As you enter the old police station, you explain to yourself that no one is norm
 
 Before you leave, you check your equipment.
 
-[[Note in plastic->object-police-note]]   <<link "Take the note" "action-prepare-for-farm">> <<set $secret_ready_for_farm to true>> <</link>>
+On the desk before you are the following items:
+[[Service Revolver->object-your-service-revolver]]\
+<<linkreplace " - Equip your service revolver">>\
+<<addinventory "Service Revolver" "object-your-service-revolver">>
+You don't think you'll need this but you holster your service revolver.
+<</linkreplace>>\
 
+[[Handcuffs -> object-handcuffs]] \
+<<linkreplace " - Equip your handcuffs">>\
+<<addinventory "Handcuffs" "object-handcuffs">>
+You secure the handcuffs to your belt.
+<</linkreplace>>\
 
-[[Service Revolver->object-revolver]] [[Take it]]
+[[Flashlight -> object-your-flashlight]]\
+<<linkreplace " - Equip your flashlight">>\
+<<addinventory "Flashlight" "object-your-flashlight">>
+You secure the flashlight to your belt.
+<</linkreplace>>\
 
-[[Handcuffs -> object-handcuffs]] [[Take it]]
+[[Note in plastic->object-police-note]] \
+<<linkreplace " - Equip the strange note/map">>\
+<<addinventory "Strange note/map" "object-police-note">>
+You secure the note/map to your belt.
+<</linkreplace>>\
 
-[[Charge Hal -> object-hal-Q5]] [[Charge it]]
-You pull the retractable plug out of Hal's case and plug it in. The charging light blinks while you get a coffee. You wait for it to finish.
+[[HAL Q5 Assistant -> object-hal-Q5]]\
+<<linkreplace " - Equip the HAL Q5 Assistant">>\
+<<addinventory "HAL Q5 Assistant" "object-hal-Q5">>
+You secure the HAL Q5 Assistant to your belt.
+<</linkreplace>>\
 
-<<if $secret_ready_for_farm>>\
-[[Drive to the Marlowe Farm->action-drive-to-lancaster-farm]]
+[[Leave->action-check-leave]]
+
+:: action-check-leave 
+<<set _hasHal to setup.ininventory("HAL Q5 Assistant")>>\
+<<set _hasNote to setup.ininventory("Strange note/map")>>\
+<<if _hasHal is true and _hasNote is true>>\
+    <<set $secret_ready_for_farm to true>>\
+    <<if $hal.charged < 30>>\
+        Your HAL Q5 Assistant does not have enough charge to last the day. You should charge it before you start your investigation. Unfortunately, the adapter in the unit only works with vehicle cigarette lighters. You have one in your vehicle of course.
+    <</if>>\
+    [[Goto your vehicle->action-leave-goto-car]]
+<<else>>\
+    You stop and think for a moment. You might be missing something important.
+    <<return>>
 <</if>>\
+
+:: action-leave-goto-car 
+You enter your vehicle.
+<<if $hal.charged < 30>>\
+[[Charge HAL -> action-charge-hal]]
+<<else>>\
+[[Drive to the Lancaster Farm->action-drive-to-lancaster-farm]]
+<</if>>\
+
+:: action-charge-hal
+
+<<set $hal.charged to 100>>\
+The HAL unit is fully charged. 
+[[Continue->action-leave-goto-car]]
+
 
 :: action-drive-to-lancaster-farm
 You leave the abandoned police station and drive south to [[County Road 66->loc-county-road-6]].
 
-You wonder if it's a holiday because you haven't seen anyone or any cars.
+You wonder if it's a holiday because you haven't seen anyone or any moving cars. You have passed houses, mostly in need of repair, but no signos of life. Perhaps there is a local festival or some other event that has drawn all the people.
+
+You pass a video store, sitting alone in an empty, damaged parking lot. The store window is dark.
+
+You approach a church but it too seems deserted, the parking lot empty and the doors closed.
+There is a sign near the road that reads:
+Ephrata Church of the Brethen
+Take the Lenten Pledge
+
+Lenten? You think to yourself. You recall something about lent being a religious observance before Easter where people give up something they like for a period of time. You wonder what people in this town might give up.
 
 You turn east on County Road 66 and you approach what must be the [[Lancaster Farm->loc-lancaster-farm]].
 
 You pull into the driveway. You note a few cars but you don't see anyone, not even a barking dog coming to greet you. It is late afternoon but there is still enough light that you can't tell if any lights are on in the house or if it too is abandoned.
 
-You take one last look around and then [[step onto the large wraparound porch.->action-start-chapter-porch]]
+There is a large porch that extends from the front door across the front of the house before wrapping around the West side of the house and extending to the North side.
+
+You exit your vehicle, take one last look around and then [[step onto the large wraparound porch.->action-start-chapter-porch]]
 
 :: action-start-chapter-porch 
-<<set $chapter to $chapters[1]>>
+<<set $chapter to "porch">>
 
-You knock on the door and wait.
+You knock on the old wooden door and wait.
 
 No response.
 
-While you are waiting, you see a strange object pinned under the door. It seems to be a card, like a playing card. You kneel and pick it up.
-[[strange card->card-the-servant]]
+You listen for a moment. There is no sound from inside the house or even from the surrounding area. You are listening carefully even as you wait.
 
-You walk along the large, wrap-around porch. The porch extends west and then wraps to the north. There are some rocking chairs but no sign anyone has been here recently.
+You knock on the door a second time. You try to peer into the house, through the window next to the door, but the curtains are drawn. The door has circular window but the glass in dingy and it is dark inside. You almost think you can see something when suddenly you hear [[something->object-sound-of-a-polaroid-camera]].
 
-You look through a window and can make out some furniture but no lights, no activity.
+It was not loud, it was faint and you are unsure of what it was. You look behind you and to your left and right. Then you knock again, harder, more loud.
 
-Finally, you come to a back door. 
+It is as the door stops resonating from your knock that you hear a new sound. Louder - like a screen door shutting.
 
-You start to knock on the door. Your fist hits the wood once and you hear the reverberation.
-Your hand is already descending for a second time when you are startled by a sound.
+You walk quickly along the porch and around the corner. You can see there is another door at the end of the porch and it seems to be ajar. But more importantly, you see a figure running away, disappearing around the Northwest corner of the house.
 
-A shriek fills the air. It is a strange voice, a mixture of surprise, anger and frustration. It dies away almost as as suddenly as it began.
-
-Not sure of the source, your turn your head back the way you came and then North toward the back yard. It is then that you see a figure. It disappears around a building, quickly but silently.
-
-This triggers your instincts and you leap into [[pursuit->action-pursuit-1]]
+This triggers your instincts and you leap into [[pursuit->action-pursuit-1]].
 
 :: action-pursuit-1
 
-There is a pool in the backyard and it is in your way, so you run around it, now heading north, towards a small structure in the back of the pool - it is probably a poolhouse. You hurry past it and find a path, this is where you last saw the mysterious figure. You look down the path.
+You race to the end of the porch and jump off the steps into what must be the backyard. There is a pool in the center of the yard and you are forced to run around it, past a small structure in the back of the pool - it is probably a poolhouse. You hurry past it and find a path.
 
-But you don't see anything now. Still, you continue the pursuit.
-
-[[Continue the pursuit->action-pursuit-2]]
+The path leads East and, looking in that direction, you feel you see motion at the end of the path. It must be the figure you saw from before so you [[continue the pursuit->action-pursuit-2]]
 
 :: action-pursuit-2
 
+You run along the path and it opens up into a small clearing. You see a barn, a shed and a dirt road that heads back South.  In back of these strucutres are some sort of crop. Your hunch is that the figure either entered the shed, the barn or it is escaping along the dirt road. 
 
-Along the path to a machine shed. You check the door, it is padlocked. You continue on, along a dirt road, trees on your left and crops on your right.
+Your first bet is the shed, but it is locked. You decide to enter the barn as the door is open. You stop 10 feet into the barn, you are surrounded by hay bales and farming equipment. You look around but don't see anyone and you don't hear anything. 
 
-You are beginning to tire but you are sure you have plenty of endurance left. You continue.
+Regretfully, you conclude that the mysterious figure must have slipped away down the dirt road.
 
-[[Continue the pursuit->action-pursuit-3]]
+You are beginning to tire but you jog back out of the barn and start [[along the dirt road.->action-pursuit-3]]
+
 :: action-pursuit-3
 
-The path swings back to the South and now you can see much further ahead but you don't see anyone. You are pretty sure this dirt road will end on the main road, County Road 66, and you are right.
+The dirt road is narrow and flanked by tall crops on either side. You push forward, your footsteps muffled by the soft earth beneath you. Looking ahead, you are sure this dirt road will end on the main road, County Road 66, and you are correct. You see what must be the Lancaster's mailbox near theyir driveway.
 
-You are on the main road, you can see the Lancaster house to your right and to the left you see a large field of some crop. Your eye catches the glint of a neighbor's mailbox. 
+A check along the main road shows no sign of the mysterious figure. Your patrol vehicle is parked not far away. There is no sign of anyone. 
 
-[[Continue the pursuit->action-pursuit-4]]
+You catch your breath while you survey the area again, looking for anywhere the figure might hide. You don't see anything.
+[[Continue->action-pursuit-4]]
+
 :: action-pursuit-4 
 
-You slow to a walk and proceed back toward the main house, past your car and back onto the porch.
+You slowly walk up the front stairs and onto the porch and then along the porch until it takes you back to where you first saw the mysterious figure. You are back where you started.
+You approach the side door and find that the screen door is ajar as it was before, but now you can see that the door, also, is not fully closed. You feel justified to enter the house.
 
-You return back where you started.
-
-Your heart beats hard in your chest, because now the back door is ajar.
-
-[[Enter the house through the backdoor->action-enter-kitchen]]
+[[You announce yourself and push into the house->action-enter-kitchen]]
 
 :: action-enter-kitchen
-<<set $chapter to $chapters[2]>>\
-<<include "loc-mainhouse-kitchen">>
-You are in, what appears to be, the kitchen of the Lancaster house. To your surprise there is [[woman->character-bernadette]] standing on the other side of a short kitchen counter. She looks up, surprised as well.
+<<set $chapter to "bernadette">>\
+You are in, what appears to be, the kitchen of the Lancaster house. There are some appliances straight in front of you and a counters to your right.
+To your surprise, there is a [[woman->character-bernadette]] standing on the other side of a short kitchen counter. She looks up, surprised as well.
 <<bern>>Well, hello there...officer?<</bern>>
-You breate a sigh of relief and introduce yourself and the reason for your visit - you do not mention the pursuit. She explains that she is a neighbor and that a piece of Lancaster mail was misdelivered to her. The door was open. She gestures to a small stack of mail.
+You breate a sigh of relief and introduce yourself and the reason for your visit. The woman introduces herself as Bernadette, a neighbor who was just checking on the family as she has not seen them in church that day. 
 
-You walk over to the kitchen island and take a quick look before looking back at her. She seems to be studying you carefully as if she doesn't believe you are really a police officer.
+The woman seems like what you would expect for the area - a farmer's wife for example. She is even wearing gardening gloves. She appears at ease and you see no signs that she was the figure you were pursuing, she is not out of breath and her clothes are not ruffled. 
+<<you>>I saw someone in the back yard and they ran off when they saw me. Would you know who that was?<</you>>
+<<bern>>No. No, I didn't see anyone - no idea on who that could have been if it weren't one of the Lancasters. I walked up the main road and straight to the side door, but it was open so I called but no one answered.<</bern>>
+<<you>>Any idea where the Lancasters might be today?<</you>>
+<<bern>>Oh, I think they might be at some church function. They are very active...but it was strange not seeing them today. I know they were participating in our Lenten challenge...<</bern>>
+<<you>>Lenten challenge? What's that?<</you>>
+You walk closer to the counter. There is actually some literature on the counter about lent and the about an event called the "Lenten Challenge".
+<<bern>>Oh, it's a challenge we do every year before Easter. You give up something you like for the season of lent. The church has a list of things you can give up - like sweets, or TV, or even swearing. The Lancasters decided to give up...well, I don't know what they gave up, but they were very serious about it.<</bern>>
+The woman's tone is friendly and relaxed but you sense a remaining sense of surprise about her.
 <<you>>Would you like to see my identifcation Ma'am?<</you>>
 You reach inside your jacket...
-<<bern>>Oh, no need for that, officer. I believe you. I'm just surprised to see you. The family is probably at some church function...they are very active.<</bern>>
-She gestures to various calendars and announcements on the refrigerator door and to a calendar proudly announcing the season of lent.
-But now she is staring at your hand and you realize your other hand still holds that strange card.
-<<you>>Um, I found this card pinned under the door when I knocked. Do you know anything about it?<</you>>
-<<bern>>Actually...I do. It's an old card game. Did...someone give this to you or did you find it?<</bern>>
-<<you>>I found it under the door when I knocked. Do you know what it means?<</you>>
-<<bern>>I suppose...the Lancasters were playing? Strange as it's kind of a pagan thing and they are so devout. Well, I guess you can ask them when they get back? It was nice to meet you, officer.<</bern>>
+<<bern>>Oh, no need for that, officer. I believe you. I was just surprised to see you...but it makes sense that someone might have called with concerns as I mentioned: they didn't attend church today.<</bern>>
+<<you>>When...when was the LAST time you spoke with any of the Lancasters? How many are there in the family?<</you>>
+<<bern>>It's hard to say. But I did speak with one of them recently, not in person though.<</bern>>
+<<you>>Which one?<</you>>
+<<bern>>That is a good question. Let me think on that and I'll get back to you. It was very nice to meet you>, officer.<</bern>>
+For a moment, you are distracted by some papers on the counter and you become lost in thought. What should you do next? Search the house? Search the property? There was only a few hours of sunlight left.
 
-And then she was gone. 
+When you look up again, the woman is gone.
 
-Also, the strange card seems to be missing as well. You decide to search through the house.
-[[Continues->loc-mainhouse-kitchen][$chapter to $chapters[3]; $time += 1; $openhouse to true]]
+
+[[Search the house->loc-mainhouse-kitchen][$chapter to $chapters[3]; $time += 1; $openhouse to true]]
 
 :: action-driving-on-route-6
 You drive on route 6 toward the Lancaster Farm.
@@ -231,21 +290,46 @@ Need to return to the calling page.
     <<goto _lastpassage>>
 <</link>>
 
-::action-hal-analyze-bernadette
+:: action-hal-analyze-bernadette
 Seer Neighbor Stranger Visitor Walker   witch
 
-::action-hal-analyze-fingers-puzzle
+:: action-hal-analyze-fingers-puzzle
 Urgency high. Checking. Double checking... Self check. Checking again.
 
 6
 
-::action-hal-rules-analysis
+:: action-hal-rules-analysis
 game --> wager
 players --> not players --> pawns
 sell short/bet short 
 pawns will violate their promoise or their vows 
 
-::action-hal-anomaly
+:: action-hal-anomaly
 
 Something in the cornfield.
 Something in the attic.
+
+:: action-search-machine-shed
+You wander around, looking here and there, being careful not to trip over anything. There is a lot of junk here, old farm equipment, tools, parts, and other things that look like they have been here for years.
+
+You don't find anything. 
+
+If you do, you find a half-empty bottle of whiskey on the floor. It does not have any dust on it. There is also a pile of clothes, the jeans containing Doug's wallet with some cash in it.
+There is also an [[envelope->object-doug-envelope]] with a note inside.
+<<if $secret_hidden_cards is true>>\
+<<if setup.ininventory("strange card from machine shed") is false>>\
+<<addinventory "strange card from machine shed" "card-the-inebriate">>\
+You realize that the white card contains another, smaller object within. You find a [[strange card->card-the-fool]] and take it - perhaps it means something...
+<<include "check-has-all-cards">>\
+<</if>>\
+<</if>>\
+<<return>>
+
+:: action-check-gameboard-is-set
+Check that all the assignmetns are made.
+<<if $cardForFool != "??">>
+    <<set $gameboard_is_set to true>>\
+<<else>>\
+    <<set $gameboard_is_set to false>>\ 
+<</if>>
+[[Return->loc-mainhouse-attic]]

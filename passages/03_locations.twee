@@ -4,19 +4,22 @@ A small rural town nestled in the rolling hills of central Pennsylvania, Marlowe
 
 
 :: loc-police-station-abandoned
-The building is devoid of people without any downtime but is used by troopers passing through to rest or make some phone calls. It feels strange entering a building that must have built to be used, to host living, breathing people. Today the lights are off until you turn them on. The building is cold and will stay that way until you decide to turn on the heat.
-The thought doesn't even cross your mind. You do fix yourself a cup of coffee from the ancient machine in the corner and sit at one of the metal tables, the vinyl seats cracked and worn from years of use.
-There is a single inbox on the front desk, next to an old rotary phone. Within the tray is a single piece of paper.
+The building is devoid of people without any downtime but is used by troopers passing through to rest or make some phone calls. It feels strange entering a building that must have built to be used, to host living, breathing people. Today the lights are off until you turn them on. The building is cold and will stay that way unless you decide to turn on the heat.
+The thought doesn't even cross your mind. You do fix yourself a cup of coffee from the ancient machine in the corner. It fizzles and steams and finally shoots hot, colored water into a cup. You take the drink and wander over to a large wooden table. There is a placard labeled "Visiting" and so you know that is the desk. The other desks are covered with papers and boxes. 
 
+You can see out of the window and you stand to verify that your vehicle is still present, parked along the curb in front of the building. You sip the coffee while your eyes looks across the street. There are a few stores but they seem dark and there are no other cars parked nearby. Of course it is Sunday.
 
- Today there is a strange note awaiting the next trooper. It directs them to the Lancaster farm. 
-Note: Marlowe can't afforcd their own police station so have to rely on traveling state troopers who stop in or are called in and use this office as temporary base.
+Relaxing, you place a few items on the desk, including your portable computer. The other items, your service revolver, your flashlight and a pair of handcuffs - those are all issued by the state. But the Q5. Well there is a story behind that...
 
-The small building is empty with a strange combination lock on the the side door. Fortuantely you were provided the code so you can get it. 
+You sit for a few minutes before finally grabbing the piece of paper that is sitting in the inbox.
 
-After you arrive, you only find a strange note, asking you to investigate suspicious activity at the Lancaster Farm, but there are no details, just a crudely-drawn map. Also strange: the note is held in a plastic ziplock bag. 
+ and sit at one of the metal tables, the vinyl seats cracked and worn from years of use.
+There is a single inbox on the front desk, next to an old rotary phone. Within the tray is a single piece of paper - it is a peculiar [[request for help->object-police-note]].
 
-You wish they had left a phone number, but you are already in Marlowe, so you might as well check it out.
+You take another drink of coffee and then pull out a large, old phone book out of a desk drawer and lookup the Lancaster family. You find only a single entry for "Al and Susan Lancaster". You call the number and take another sip of coffee while it rings.
+It rings and rings and rings.
+
+Well, it seems there is nothing else to do but go to the farm and check it out. You stand and get ready to leave.
 
 [[Choose your equipment->action-prepare-for-farm]]
 
@@ -54,7 +57,7 @@ The 50-acre Lancaster farm stretches across rolling hills planted mostly with so
 :: loc-pool {"position":"250,100","size":"150,100"}
 The swimming pool sits between the main house and the forest like an abandoned promise from better times. The once-blue water has turned a murky green-brown, with leaves and debris floating on the surface that ripples without any apparent cause. The concrete edges are cracked and stained, and the diving board hangs at a precarious angle, its metal joints corroded by years of neglect.
 
-There is also a hot tub adjacent to the pool, and unlike the former, it seems to be reasonably maintained and even working. At the bottom of the tub you can see some gold jewelry glinting. To the side of the tub is an elegant purse. In the water you also find a red, one-piece swimsuit. Sticking out of the purse is a [[white card->obj-katie-envelope]]
+There is also a hot tub adjacent to the pool, and unlike the former, it seems to be reasonably maintained and even working. At the bottom of the tub you can see some gold jewelry glinting. To the side of the tub is an elegant purse. In the water you also find a red, one-piece swimsuit. Sticking out of the purse is a [[white card->object-katie-envelope]]
 <<if $secret_hidden_cards is false>>\
 <<if $chapter is "hunt1">>\
 <<set $secret_hidden_cards to true>>\
@@ -91,7 +94,12 @@ The old cemetery predates the Lancaster family's ownership, its weathered headst
 
 :: loc-machine-shed {"position":"400,250","size":"150,100"}
 The machine shed houses a graveyard of farm equipment in various states of decay and repair, their metal surfaces bearing the orange-brown patina of rust and time. Oil stains on the concrete floor form patterns that seem almost deliberate, and the workshop area is cluttered with tools that look like they haven't been properly organized since the Carter administration. The fluorescent lights flicker erratically, casting moving shadows that make the machinery appear to shift and breathe. Along the walls hang an extensive collection of farming implements that double as weapons—rusted scythes with edges still sharp enough to gleam, pitchforks with tines bent at unnatural angles, chainsaws that start on the first pull despite their age, and shovels whose blades bear stains that soap can't seem to wash away.
-[[Doug's cabin->loc-dougs-cabin]]
+
+There doesn't appear to be anyone here despite the lights being on. You sigh to yourself - would it be worthwhile to search this place with all the junk and clutter?
+
+[[Look around->action-search-machine-shed]]
+
+[[Cabin->loc-dougs-cabin]]
 [[Exit->loc-lancaster-machine-barn-driveway]]
 
 
@@ -104,11 +112,26 @@ The two-story barn looms near the main house, its weathered wood siding adorned 
 [[Exit->loc-lancaster-machine-barn-driveway]]
 
 :: loc-dougs-cabin {"position":"250,400","size":"150,100"}
-Doug's cabin sits 2,000 feet from the main house like a hermit's retreat, its log walls chinked with a mixture of mud and what might be other materials. The structure appears solid but somehow wrong—windows that don't quite align, a roof that seems to sag in the middle despite strong supports, and a front porch that groans under even light footsteps. Inside, the single room is cluttered with an eclectic mix of strange tools whose purposes aren't immediately clear—modified wrenches with extra joints, homemade measuring devices, and contraptions that seem part farming implement, part something else entirely. Stacks of both vintage farm manuals from the 1940s and crisp new engine repair guides create precarious towers throughout the space, interspersed with well-thumbed issues of Popular Mechanics and Motor Trend. The walls are adorned with an incongruous collection of posters: Farrah Fawcett's famous red swimsuit smile beams down from above a workbench, while Lynda Carter as Wonder Woman strikes a heroic pose near the wood stove. Smoke from the chimney sometimes drifts in directions that defy the wind, and strange sounds emanate from within during the quiet hours—the scrape of metal on metal, the whisper of turning pages, and occasionally what sounds like quiet conversation with no second voice to answer.
+The cabin is located behind the barn, nestled among a group of pine treets. The 'cabin' is more like a shed and seems to have been built from scavenged wood and metal siding.
+There is no lock on the door or a locking mechanism of any kind. You can [[push the door open->loc-dougs-cabin-inside]].
 
-Investigation will reveal hidden cache of hard whiskey.
-Casual investigation shows two glasses in a bin 
 [[Exit->loc-lancaster-machine-barn-driveway]]
+
+:: loc-dougs-cabin-inside {"position":"400,400","size":"150,100"}
+The inside of the cabin is simple but cluttered. Still, there is some organization to the chaos.
+
+One corner contains a microwave and an old large refrigerator. There isn't any stove.
+[[Look in the fridge->object-dougs-fridge]]
+In another corner there is a futon lying on the floor, without a frame and clothes scattered around, some falling out of an old dresser. 
+
+Another corner holds a large chair, an old television set and stacks of magazines and books. From where you are standing, you can see that that the magazines are mostly automotive repair guides and farming manuals, though some are clearly adult in nature. A large outdoor-use trashcan sits in the center of the space. 
+[[Look in the trashcan->object-dougs-trashcan]]
+
+The bed is empty.
+The television is off. 
+
+Turning back to the door, you find the ubiquitous Farrah Fawcett poster taped to the wall next to it. You never saw any of her movies...
+<<return>>
 
 :: loc-corn-maze {"position":"400,400","size":"150,100"}
 The three-acre corn maze north of the main house has evolved beyond human planning, as countless footpaths to Doug's cabin and the machine shed have created a labyrinthine network through the stalks. Six figures stand guard throughout the field, supposedly scarecrows but wearing an odd assortment of human clothing—a woman's floral dress, a man's suit jacket with the sleeves cut off, children's winter coats in bright colors now faded by seasons of weather. Their faces are stitched burlap, but the expressions seem to shift when you're not looking directly at them. Sometimes, on still days, you can see them turning their heads to track your movement through the maze, their straw-stuffed limbs creaking softly in the absence of any wind.

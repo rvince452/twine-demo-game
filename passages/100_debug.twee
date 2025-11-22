@@ -1,6 +1,7 @@
 :: debug-passage {"position":"0,0","size":"100,100"}
 <<return>>
 
+[[board->object-board]]
 <<for _key, _value range State.variables>>
     '_key': '_value'<br>
 <</for>>

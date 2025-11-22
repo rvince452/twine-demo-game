@@ -84,15 +84,19 @@ This is a large wall calendar, the kind that would hang in a kitchen or workshop
 :: object-lent-envelope {"position":"400,450","size":"150,100"}
 The envelope is a standard manila type, but it has a worn and aged appearance, as if it's been handled many times over the years. The word "Lent" is written across the front in bold, black marker. The envelope is sealed, but it doesn't seem to be empty. Any inspection of the envelope shows that it has been opened and resealed.
 
+:: object-handcuffs {"position":"400,350","size":"150,100"}
+A pair of standard-issue police handcuffs, slightly tarnished but still functional.
+
 :: object-unused-fate-cards
 -Pile of unused Fate cards
 
 :: object-your-service-revolver
 This .38 Special revolver has a blued finish and wooden grips that show signs of wear
+<<back>>
 
-:: object-your-walkie-talkie
-A standard-issue police walkie-talkie with a worn leather case and a long antenna.
-
+:: object-your-flashlight
+A sturdy, metal flashlight with a textured grip and a bright beam.
+<<back>>
 :: scream-1
 You hear a scream or a moan or something in between. Your instincts kick in and you pull your service revolver and start moving through the house. This is not a time for careful investigation, you must cover the property and find the source of the disturbance. 
 

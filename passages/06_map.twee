@@ -57,3 +57,19 @@ Additional points of interest:
 
 ---
 *The map's paper crackles as you fold it back up, some locations circled in faded pencil, others marked with cryptic symbols you don't recognize.*
+
+:: map-layout {"position":"350,100","size":"200,150"}
+The map should be laid out with North at the top and South at the bottom. 
+- The main road runes East to West along the Southern edge of the property.
+- The Western edge of the property borders a dense forest.
+- The Eastern edge of the property is fields and farmland.
+- The northern edge of the property is forest 
+- The Lancaster House is located in the SW corner of the property.
+- A paved driveway leads from the main road to the house.
+- The barn and machine shed are located along the north-south midline of the property but on the Eastern side.
+- A dirt road runs North-South and connects the barn to the main road.
+- To the immediate north of the house is the swimming pool and pool house.
+- The corn maze is located in the NE corner of the property - but not overlapping the North and West forests.
+- To the East of the corn maze is some forest, followed by cemetery followed by forest and finally farmland.
+- A East-West path runs from North of the poolhouse to the dirt road near the barn.
+- Doug's cabin in behind the barn to the NW.
