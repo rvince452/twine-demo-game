@@ -20,8 +20,19 @@ You take another drink of coffee and then pull out a large, old phone book out o
 It rings and rings and rings.
 
 Well, it seems there is nothing else to do but go to the farm and check it out. You stand and get ready to leave.
-
 [[Choose your equipment->action-prepare-for-farm]]
+
+:: loc-police-station-jail {"position":"200,50","size":"150,100"}
+TODO - it is empty 
+TODO - duty list shows "Paul Savard" but also a note that he is sick. Add his name to Katie's journal
+<<return>>
+
+:: loc-police-station-pauls-desk {"position":"350,50","size":"150,100"}
+TODO 
+
+
+
+
 
 :: loc-county-road-6 {"position":"100,550","size":"150,100"}
 County Road 6 stretches through the rural Pennsylvania countryside, a narrow two-lane blacktop road that winds between rolling hills and farmland. The asphalt is cracked and patched in places, with grass growing through the edges where maintenance has been deferred. Wooden fence posts mark property boundaries, and the occasional mailbox on a leaning post indicates the scattered rural residences. The road carries the quiet hum of distant farm machinery and the occasional pickup truck, but traffic is sparse in this remote area.
@@ -171,9 +182,13 @@ A separate gravel drive branches off from the main road, leading directly to the
 [[Machine shed->loc-machine-shed]]
 [[Barn->loc-barn]]
 
+:: loc-lancaster-mailbox {"position":"100,700","size":"150,100"}
+TODO 
+
 
 :: loc-neighbors-mailbox {"position":"400,700","size":"150,100"}
 At the eastern edge of the Lancaster property, a cluster of rural mailboxes marks the boundary with neighboring farms. The collection includes the Lancaster box alongside several others serving the scattered rural residences in the area. The mailboxes are mounted on a shared wooden post that leans slightly from years of wind and weather. Tall grass and wildflowers grow around the base, and a narrow dirt path leads from here toward the neighbor's property through a break in the fence line.
+TODO - add mailbox contents, ID theft mails 
 [[Neighbor's grove->loc-neighbors-copse]]
 [[County Road 6->loc-county-road-6-lancaster-farm]]
 

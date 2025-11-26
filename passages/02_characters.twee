@@ -9,7 +9,13 @@
 <<back>>
 
 :: character-al-lancaster {"position":"100,100","size":"150,100"}
+Alan Lancaster is apparently the patriarch of the Lancaster family.
+<<if $alanSecretBasic is true>>\
 Al Lancaster is a weathered 58-year-old farmer with calloused hands stained by decades of engine grease and honest work. His salt-and-pepper beard frames a face lined by years under the sun, and he's rarely seen without his worn John Deere cap and coveralls. Known throughout the county as both an expert mechanic who can coax life from any failing farm engine and a formidable poker player at the weekly games in town.
+<</if>>
+<<if $alanSecretProblem is true>>\
+You have learned that Alan has a problem with gambling.
+<</if>>
 <<back>>
 
 :: character-susan-lancaster {"position":"250,100","size":"150,100"}

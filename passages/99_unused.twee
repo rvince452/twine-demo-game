@@ -15,18 +15,13 @@
 A white stick figure sits crouched inside a simple rectangular cage or stocks, with vertical and horizontal lines forming the bars. Its arms are pressed against the bars above its head. Outside the cage, two black stick figures stand on either side, one holding what appears to be a key. A barn structure is visible in the background with crossed lines indicating wooden boards.
 <<back>>
 
-:: card-the-miser {"position":"100,250","size":"150,100"}
-The drawing shows a white stick figure seated at a simple table (rectangular shape), with small circles scattered across the surface representing coins. The figure's arms are positioned as if counting or gathering the coins. A black stick figure stands behind it, one arm extended as if reaching for the coins. A small house with a chimney releasing wavy smoke lines sits nearby.
-<<back>>
 
 
 :: card-the-trespasser {"position":"100,400","size":"150,100"}
 A white stick figure stands at the end of a long path (simple lines leading to the distance), holding a rectangular shape (briefcase or bag). At the other end of the path, near a small house, multiple black stick figures are grouped together. Above, birds are drawn as simple V-shapes flying away from the scene. A fence post with horizontal lines marks the property boundary.
 <<back>>
 
-:: card-the-witch {"position":"250,400","size":"150,100"}
-A white stick figure stands over a large circular shape (cauldron or pot), with one arm extended downward as if stirring. Around the figure, various simple objects are scattered: bottles (small rectangles), herbs (wavy lines), and a wand (straight line). In the background, a black stick figure approaches carrying what appears to be a bundle of sticks or herbs.
-<<back>>
+
 
 
 :: fate-card-game 
@@ -75,8 +70,7 @@ You have noted some white pieces of paper. They are distinct as the paper is fol
 :: crowbar
 Old, scuffed, heavy crowbar
 
-:: large-metal-mailbox
-The white metal mailbox seems new and although you have seen these over-sized mailboxes before, you haven't noticed many along this road. Looking back toward the corresponding house, you don't see one, just a copse of dead trees. Maybe the house is further back.
+
 
 :: object-lent-calendar {"position":"400,300","size":"150,100"}
 This is a large wall calendar, the kind that would hang in a kitchen or workshop. The calendar is from the year 1974, and each month features a different pastoral scene typical of the era—rolling hills, farm animals, and quaint country cottages. The days are marked with handwritten notes in faded ink, some indicating church events, family gatherings, and other personal reminders. Several dates are circled in red, particularly those leading up to and including Lent.
@@ -112,6 +106,14 @@ Sorry, it is the best I will do.
 
 The answer is six.
 
+:: bern-frailty
+Bernadette slides down bedside you and signs.
+<<bern>>We are not human in the same ways, but we are both that thing. And I don't mean just that I look the part, for me it is much more, I have lived in this place you all have made, I grew up here. When I cut my hair...I...even I...was anxious about it. Some days I hate that I was, that I am. And this little thing on my hand, this ussage little digit, a domiinant trait by the way, it sometimes makes me shy and I hide it fom people. Why? I don't know.
+
+But this thing you have. Yes, I know something about machines and computers. You think it is something grand and different but it is really just the same as water flowing down the mountainside, each drop finding its place. But this thing you have found, it is different and you should take care of it should you be in a position to do so.
+
+Even it's uniqueness will not protect it from time, I doubt it will live longer than myself or even you.
+<</bern>>
 
 :: StoryRightSidebar [UNUSED] {"position":"400,0","size":"100,100"}
 Right sidebar

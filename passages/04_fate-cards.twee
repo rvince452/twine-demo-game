@@ -27,3 +27,18 @@ The center of the card shows a large four-legged animal shape with two small tri
 The card shows a black stick figure, elevated above a sea of smaller, white figures. The black figure yields a whip in the direction of the others.
 [[decrypt this card->action-decrypt-card]]
 <<back>>
+
+:: card-the-miser {"position":"100,250","size":"150,100"}
+The drawing shows a white stick figure seated at a simple table (rectangular shape), with small circles scattered across the surface representing coins. The figure's arms are positioned as if counting or gathering the coins. A black stick figure stands behind it, one arm extended as if reaching for the coins. A small house with a chimney releasing wavy smoke lines sits nearby.
+<<back>>
+
+:: card-the-samaritan {"position":"550,250","size":"150,100"}
+In the center of the card, a white stick figure kneels beside another figure lying on the ground, one arm extended as if offering help. Nearby, a simple rectangular shape represents a road or path. In the background, a black stick figure stands at a distance, watching the scene. A small house and a tree are also depicted in the background.
+<<back>>
+
+:: card-the-witch {"position":"250,400","size":"150,100"}
+A white stick figure stands over a large circular shape (cauldron or pot), with one arm extended downward as if stirring. Around the figure, various simple objects are scattered: bottles (small rectangles), herbs (wavy lines), and a wand (straight line). In the background, a black stick figure approaches carrying what appears to be a bundle of sticks or herbs.
+<<back>>
+
+:: object-postit-note 
+Sorry I missed you officer. I will return 

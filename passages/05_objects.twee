@@ -20,9 +20,7 @@ TODO
 This doll is assembled from electronic components—circuit boards form the torso, copper wire creates the limbs, and a small transistor serves as the head. Scraps of polyester shirt fabric are wrapped around the figure, and tiny wires protrude from its head like unruly hair. The most disturbing feature is the collection of pin-up magazine cutouts glued to its body, their faces scratched out with something sharp. Burn marks suggest it's been subjected to electrical current multiple times.
 <<back>>
 
-:: object-sound-of-a-polaroid-camera {"position":"500,100","size":"150,100"}
-The sound is a sharp "click" followed by the faint whirring of a small motor. 
-<<back>>
+
 
 
 :: object-lent-description {"position":"600,100","size":"150,100"}
@@ -48,7 +46,7 @@ Looking under the surface, you find more whiskey bottles, some of them full and 
 <<back>>
 
 :: object-bernadette-note 
-"It #DC143Cwas nice to meet you - I forgot to leave you my card. Talk soon?"
+"It was nice to meet you - I forgot to leave you my card. Talk soon?"
 <<return>>
 
 :: object-board
@@ -113,3 +111,35 @@ But you must determine the player.
   </tr>
 </table>
 [[Return->action-check-gameboard-is-set]]
+
+::object-attic-journal {"position":"1100,100","size":"150,100"}
+TODO - talk about how easy it was to break their challenges. All 4 of them. Then the other is a GIMME
+
+::object-your-polaroid {"position":"1200,100","size":"150,100"}
+A vintage Polaroid camera from the 1980s, its plastic body is a bit
+
+::object-polaroid-film-package {"position":"1300,100","size":"150,100"}
+Discarded box 
+
+:: object-sound-of-a-polaroid-camera {"position":"500,100","size":"150,100"}
+The sound is a sharp "click" followed by the faint whirring of a small motor. 
+<<back>>
+
+:: object-polaroid-you {"position":"500,100","size":"150,100"}
+It's a poor picture but  it is of you, through the front door window. It is dated today. 
+<<back>>
+
+:: object-als-truck {"position":"1400,100","size":"150,100"}
+bobblehead
+
+:: object-dougs-truck {"position":"1500,100","size":"150,100"}
+A battered old pickup truck with faded blue paint and rust spots along the edges. The bed is filled with farming tools and a few empty crates. The interior smells of old leather and motor oil, and the dashboard is cluttered with various stickers and a small bobblehead figure on the dash.
+
+:: object-susans-car
+bobblehead
+
+:: object-old-car 
+bobblehead
+
+:: object-your-vehicle 
+somehow you can't get in here  or maybe just wont (points with bern)

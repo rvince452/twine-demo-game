@@ -31,7 +31,7 @@ Card game
 
 
 :: StoryBanner {"position":"300,0","size":"100,100"}
-<img src="img/chamber3.jpg" alt="Pod">
+<img src="img/game.jpg" alt="Pod">
 
 
 :: StoryDisplayTitle {"position":"0,0","size":"100,100"}
@@ -65,9 +65,43 @@ Does not show text, only links - check documentation
 <</if>>\
 <<set _halInInv to setup.ininventory("HAL Q5 Assistant")>>\
 <<if _halInInv is true>>\
-<div style="border:1px solid #33C; padding:8px; margin:6px 0; border-radius:4px;"> \
-HAL Display  $hal.charged% Charged Alert Busy 
-</div>\
+<div style="border:1px solid #333; padding:0px 1px; margin:1px 0; border-radius:1px; font-family:'Courier New', Courier, monospace; background:#222; color:#0f0;">
+Text
+</div> 
+<div style="border:1px solid #333; padding:0px 1px; margin:1px 0; border-radius:1px; font-family:'Courier New', Courier, monospace; background:#222; color:#0f0;">
+  <div style="display:flex; flex-direction:row; align-items:center; gap:18px;">
+    <b>HAL Display</b>
+    <span id="hal-charge">Charge: $hal.charged%</span>
+    <span style="display:flex; align-items:center;">
+      <<if $hal.alert is false>>\
+        <button style="width:80px; height:32px; border:2px solid #0f0; background:#222; color:#0f0; font-family:'Courier New', Courier, monospace;"></button>
+      <<else>>\
+        <button style="width:80px; height:32px; border:2px solid #000; background:#0f0; color:#fff; font-family:'Courier New', Courier, monospace; font-weight:bold;" onclick="SugarCube.Engine.play('action-q5-alerts')">ALERT</button>
+      <</if>>\
+    </span>
+    <span style="display:flex; align-items:center;">
+      <<if $hal.busy is false>>\
+        <button style="width:80px; height:32px; border:2px solid #0f0; background:#222; color:#0f0; font-family:'Courier New', Courier, monospace;"></button>
+      <<else>>\
+        <button style="width:80px; height:32px; border:2px solid #000; background:#0f0; color:#fff; font-family:'Courier New', Courier, monospace; font-weight:bold;">BUSY</button>
+      <</if>>\
+    </span>
+    <span style="display:flex; align-items:center;">
+      <<if $hal.temp is false>>\
+        <button style="width:80px; height:32px; border:2px solid #0f0; background:#222; color:#0f0; font-family:'Courier New', Courier, monospace;"></button>
+      <<else>>\
+        <button style="width:80px; height:32px; border:2px solid #000; background:#0f0; color:#fff; font-family:'Courier New', Courier, monospace; font-weight:bold;">TEMP</button>
+      <</if>>\
+    </span>
+  </div>
+</div>
 <</if>>\
+
+<style>
+@keyframes flash {
+  0% { opacity: 1; }
+  100% { opacity: 0.2; }
+}
+</style>
 
 

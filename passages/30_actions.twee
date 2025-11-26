@@ -12,13 +12,18 @@ On the desk before you are the following items:
 <<addinventory "Service Revolver" "object-your-service-revolver">>
 You don't think you'll need this but you holster your service revolver.
 <</linkreplace>>\
-
+<<if $hasCuffs is false>>\
 [[Handcuffs -> object-handcuffs]] \
 <<linkreplace " - Equip your handcuffs">>\
 <<addinventory "Handcuffs" "object-handcuffs">>
 You secure the handcuffs to your belt.
 <</linkreplace>>\
-
+<</if>>
+[[Polaroid -> object-your-polaroid]]\
+<<linkreplace " - Equip your camera">>\
+<<addinventory "Polaroid" "object-your-polaroid">>
+You secure the camera to your belt.
+<</linkreplace>>\
 [[Flashlight -> object-your-flashlight]]\
 <<linkreplace " - Equip your flashlight">>\
 <<addinventory "Flashlight" "object-your-flashlight">>
@@ -31,11 +36,13 @@ You secure the flashlight to your belt.
 You secure the note/map to your belt.
 <</linkreplace>>\
 
+<<if setup.ininventory("HAL Q5 Assistant") is false>>
 [[HAL Q5 Assistant -> object-hal-Q5]]\
 <<linkreplace " - Equip the HAL Q5 Assistant">>\
 <<addinventory "HAL Q5 Assistant" "object-hal-Q5">>
 You secure the HAL Q5 Assistant to your belt.
 <</linkreplace>>\
+<</if>>\
 
 [[Leave->action-check-leave]]
 
@@ -167,6 +174,7 @@ You reach inside your jacket...
 For a moment, you are distracted by some papers on the counter and you become lost in thought. What should you do next? Search the house? Search the property? There was only a few hours of sunlight left.
 
 When you look up again, the woman is gone.
+<<addinventory "??card??" "card-the-samaritan">>
 
 
 [[Search the house->loc-mainhouse-kitchen][$chapter to $chapters[3]; $time += 1; $openhouse to true]]
@@ -333,3 +341,14 @@ Check that all the assignmetns are made.
     <<set $gameboard_is_set to false>>\ 
 <</if>>
 [[Return->loc-mainhouse-attic]]
+
+:: action-q5-alerts 
+Q5 alerts
+check attic now 
+Can pull criminal records, public records, news articles, alias 
+
+:: action-dougs-aa-medal 
+Medals
+
+:: action-doug-drive-to-town-festival-partially
+he is asked to do this - it is a video

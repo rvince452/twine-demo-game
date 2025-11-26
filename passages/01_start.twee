@@ -6,6 +6,11 @@ You are a Pennsylvania State Trooper driving near the small, rural, town of [[Ma
 You haven't ever stopped here before, sure you have seen the sign many times but you never actually chose the single exit that leads through the small town. But today is your day. 
 Marlowe is so small that they don't even have their own police force - instead relying on the State Troopers for any law enforcement needs. The dispatcher routes available troopers to calls as needed and today, today there is some issue and you are the one who must respond.
 [[Marlowe Police Station ->loc-police-station-abandoned]]
+
+<<print "chapter is " + $chapter>>
+
+[[go to start passage->Start]]
+
 :: StoryInit {"position":"1800,425","size":"100,200"}
 
 
@@ -20,6 +25,13 @@ Marlowe is so small that they don't even have their own police force - instead r
 <<set $cardForSamaritan to "??">>
 <<set $playerID to "??">>
 
+<<set $hasHal to false>>
+<<set $hasNote to false>>
+<<set $hasCuffs to false>>
+
+<<set $alanSecretBasic to false>>
+<<set $alanSecretProblem to false>>
+
 
 <<set $secret_ready_for_farm to false>>
 <<set $secret_hidden_cards to false>>
@@ -27,16 +39,20 @@ Marlowe is so small that they don't even have their own police force - instead r
 <<set $gameboard_is_set to false>>
 <<set $time to 0>>
 
+<!-- If he draws his weapon or shines light it can bo down. If he does not leave it can go up. -->
+<<set $relationWithBern to 0>> 
+
 <<set $chapters = ["beginning","porch","bernadette","hunt1","bern2","gameboardopen","gameboardset"]>>
 <<set $chapter to $chapters[0]>>
 
-<<set $hal to {"charged":3}>>
+<<set $hal to {"charged":3,"busy":true,"alert":true,"temp":true}>>
 <<set $invehicle to true>>
 <<set $openhouse to false>>
 
 
 :: Inventory [UNUSED] {"position":"725,125","size":"100,100"}
 <<showinventory>>
-<<set _prevPassage to State.history[State.history.length - 2].title>>
+<<set _prevPassage to State.history[State.history.length - 2].title>>\
+<<set _prevText to "Exit Inventory">>\
 Previous passage: <<print _prevPassage>>
-<<back>>
+[[_prevText|_prevPassage]]
