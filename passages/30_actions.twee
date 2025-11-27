@@ -10,32 +10,34 @@ Back in your vehicle, you start it up and review what you should have with you w
 <<addinventory "Service Revolver" "object-your-service-revolver">>\
 You don't think you'll need this but you holster your service revolver.
 <</if>>\
-
 <</linkreplace>>\
-<<if $hasCuffs is false>>\
+
+<<if setup.ininventory("Handcuffs") is false>>\
 [[Handcuffs -> object-handcuffs]] \
-<<linkreplace " - Equip your handcuffs">>\
+<<linkreplace "Equip your handcuffs">>\
 <<addinventory "Handcuffs" "object-handcuffs">>
 You secure the handcuffs to your belt.
 <</linkreplace>>\
-<</if>>
+<</if>>\
+<<if setup.ininventory("Camera") is false>>\
 [[Polaroid -> object-your-polaroid]]\
-<<linkreplace " - Equip your camera">>\
-<<addinventory "Polaroid" "object-your-polaroid">>
+<<linkreplace "Equip your camera">>\
+<<addinventory "Camera" "object-your-polaroid">>
 You secure the camera to your belt.
+<</if>>\
+<<if setup.ininventory("Flashlight") is false>>\
 <</linkreplace>>\
 [[Flashlight -> object-your-flashlight]]\
-<<linkreplace " - Equip your flashlight">>\
+<<linkreplace "Equip your flashlight">>\
 <<addinventory "Flashlight" "object-your-flashlight">>
 You secure the flashlight to your belt.
 <</linkreplace>>\
-
-
+<</if>>\
 <<if setup.ininventory("HAL Q5 Assistant") is false>>\
 [[HAL Q5 Assistant -> object-hal-Q5]]\
-<<linkreplace " - Equip the HAL Q5 Assistant">>\
+<<linkreplace "Equip the HAL Q5 Assistant">>\
 <<addinventory "HAL Q5 Assistant" "object-hal-Q5">>
-You secure the HAL Q5 Assistant to your belt.
+You secure the HAL Q5 Assistant to your belt via a clip built into the unit.
 <</linkreplace>>\
 <</if>>\
 
@@ -49,14 +51,14 @@ You secure the HAL Q5 Assistant to your belt.
     <<if $hal.charged < 30>>\
         Your HAL Q5 Assistant does not have enough charge to last the day. You should charge it before you start your investigation. Unfortunately, the adapter in the unit only works with vehicle cigarette lighters. You have one in your vehicle of course.
     <</if>>\
-    [[Goto your vehicle->action-leave-goto-car]]
+    [[Start the car->action-leave-goto-car]]
 <<else>>\
     You stop and think for a moment. You might be missing something important.
     <<return>>
 <</if>>\
 
 :: action-leave-goto-car 
-You enter your vehicle.
+The engine roars to life as you turn the key in the ignition. The familiar hum of the engine fills the cabin, and the dashboard lights flicker on, casting a soft glow.
 <<if $hal.charged < 30>>\
 [[Charge HAL -> action-charge-hal]]
 <<else>>\
