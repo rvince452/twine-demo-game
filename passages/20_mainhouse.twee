@@ -1,4 +1,3 @@
-
 :: loc-main-house-descr {"position":"1650,950","size":"100,100"}
 !!!Lancaster Family Farmhouse
 <<nobr>>
@@ -62,6 +61,8 @@ The game is waiting on your turn.
 :: loc-mainhouse-basement-bedroom {"position":"1525,1200","size":"100,100"}
 <<include "loc-main-house-descr">>
 Carl's basement bedroom feels more like a bunker than a living space. Electronics from the early 80s are stacked everywhere—a Commodore 64, multiple Walkman players in various states of disrepair, and a small TV with a VHS player that only seems to play static-filled tapes. Pin-up calendars from auto parts stores cover the paneled walls, their subjects watching visitors with eyes that seem too knowing. The air smells of stale cigarettes and machine oil, and sometimes you can hear electronic beeping coming from devices that appear to be turned off.
+[[Inspect the old TV->object-old-tv]]
+[[Sit on the old couch->object-old-couch]]
 Investigation finds binoculars, a polaroid camera, and the crowbar and a step ladder.
 
 In back of the stepladder you find more clothes. The clothes are damp due to a leaking pipe from above.
@@ -101,6 +102,7 @@ Look - view of the shower. A robe hangs on towel rack.
 <<include "loc-main-house-descr">>
 
 On the counter you see:
+[[A yellowed microwave->object-microwave]]
 [[A white card->object-bernadette-card]]
 [[A pamphlet about Lent->object-lent-description]]
 <<if $secret_hidden_cards is true>>\
@@ -157,10 +159,9 @@ Investigation will show the removed electric receptable accessable from below
 
 :: loc-mainhouse-linen-closet
 The narrow linen closet appears ordinary at first glance, with shelves stacked with yellowed sheets and moth-eaten towels that smell of lavender and something less pleasant. However, the back panel is actually a hidden door that swings inward when the right combination of towels is moved. Beyond lies a cramped crawlspace that runs beneath the eaves, accessible only by crawling. Strange scratches mark the wooden beams, and the air carries the scent of something that died long ago but refuses to fully decay. 
-<<return>>
-
-
-
+[[Examine the pile of linen->object-pile-of-linen]]
+[[Examine the pile of towels->object-pile-of-towels]]
+[[Open the dresser->object-dresser]]
 
 
 :: loc-mainhouse-upstairs-katie {"position":"1525,1450","size":"100,100"}
@@ -168,6 +169,8 @@ The narrow linen closet appears ordinary at first glance, with shelves stacked w
 Katie's room is a shrine to her past glories, with gymnastics trophies crowding every surface and faded ribbons hanging from the mirror alongside her confirmation certificate from Ephrata Reformed Church and a photo of her in a white dress from her first communion. Fashion magazines from the mid-80s are stacked in precarious towers, their pages yellowed and brittle, competing for space with church youth group newsletters and a dusty Bible given to her on her 16th birthday. A small collection of modeling photos shows Katie in various frozen poses, but something about the images seems off—her smile never quite reaches her eyes, and shadows fall in directions that don't match the lighting. Lottery tickets are scattered across her desk like fallen leaves, all scratched off to reveal nothing but losing numbers, a stark contrast to the motivational scripture cards from Sunday school that are pinned to her bulletin board.
 Investigation will show a trove of shoplifted and purchased cosmetics, jewelry, etc 
 Also will find copied checks and practiced handwriting samples. Some forms match the address next door.
+[[Read the yearbook->object-yearbook]]
+[[Read the textbook->object-textbook]]
 TODO - track/gymnast medal, note about Paul. No journal here 
 [[strange doll under pillow->object-voodoo-doll-carl]]
 <<return>>
@@ -184,6 +187,7 @@ Susan's office - nothing strange here, just a half-empty glass of something red 
 :: loc-mainhouse-upstairs-master {"position":"1650,1450","size":"100,100"}
 <<include "loc-main-house-descr">>
 Al and Susan's bedroom reflects their divergent obsessions alongside their shared faith. Susan's side features exercise equipment from the early aerobics craze—leg warmers draped over a stationary bike, workout videos stacked beside a VCR, and health food cookbooks with pages marked by food stains that look suspiciously like blood. Next to these sits her daily devotional book "Our Daily Bread" with highlighted passages and handwritten prayers in the margins. Al's side is dominated by mechanical manuals, poker chips in glass jars, and a gun safe that's always kept locked, but also features a leather-bound Bible passed down from his father and a small framed photo of him shaking hands with the church bishop during last year's stewardship drive. The bed between them sags in the middle, as if something heavy regularly sleeps there that neither of them acknowledges. On both nightstands rest matching wooden crosses carved by Al during the church's men's retreat. 
+[[Try to open the gun safe->object-gun-safe]]
 [[Master bathroom->loc-mainhouse-upstairs-master-bath]]
 
 :: loc-mainhouse-upstairs-master-bath {"position":"1775,1450","size":"100,100"}

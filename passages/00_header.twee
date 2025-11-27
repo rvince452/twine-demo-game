@@ -28,31 +28,15 @@ Card game
 
 :: StoryAuthor {"position":"100,0","size":"100,100"}
 !!! Ed E
-
-
 :: StoryBanner {"position":"300,0","size":"100,100"}
 <img src="img/game.jpg" alt="Pod">
-
-
 :: StoryDisplayTitle {"position":"0,0","size":"100,100"}
-!! Game of Cards
-!!! a dark rural tale
-
-
-
-
-
-
+!!!!  Game of Cards - a dark rural tale
 :: StoryMenu {"position":"500,0","size":"100,100"}
 Does not show text, only links - check documentation
 [[Inventory]]
 [[characters]]
 [[status]]
-
-
-// StoryRightSidebar [UNUSED] moved to 99_unused.twee
-
-
 :: PassageFooter {"position":"200,0","size":"100,100"}
 <<if $debug is true>>\
 <div style="border:1px solid #33C; padding:8px; margin:6px 0; border-radius:4px;"> \

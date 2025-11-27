@@ -2,15 +2,15 @@
 :: action-enter-the-police-station {"position":"400,350","size":"150,100"} 
 As you enter the old police station, you explain to yourself that no one is normally there, the town does not have a police force, it falls on area police and state troopers to cover the area. Today it is your turn to check in. But no one is there and there is only a note for you. It directs you to the Lancaster farm.
 
-:: action-prepare-for-farm 
+:: action-prepare-for-farm
+Back in your vehicle, you start it up and review what you should have with you when you approach the house. From experience, you know that there sometimes a situation is already unfolding when you arrive. 
 
-Before you leave, you check your equipment.
-
-On the desk before you are the following items:
-[[Service Revolver->object-your-service-revolver]]\
-<<linkreplace " - Equip your service revolver">>\
-<<addinventory "Service Revolver" "object-your-service-revolver">>
+<<if setup.ininventory("Service Revolver") is false>>\
+<<linkreplace "Equip your service revolver">>\
+<<addinventory "Service Revolver" "object-your-service-revolver">>\
 You don't think you'll need this but you holster your service revolver.
+<</if>>\
+
 <</linkreplace>>\
 <<if $hasCuffs is false>>\
 [[Handcuffs -> object-handcuffs]] \
@@ -30,13 +30,8 @@ You secure the camera to your belt.
 You secure the flashlight to your belt.
 <</linkreplace>>\
 
-[[Note in plastic->object-police-note]] \
-<<linkreplace " - Equip the strange note/map">>\
-<<addinventory "Strange note/map" "object-police-note">>
-You secure the note/map to your belt.
-<</linkreplace>>\
 
-<<if setup.ininventory("HAL Q5 Assistant") is false>>
+<<if setup.ininventory("HAL Q5 Assistant") is false>>\
 [[HAL Q5 Assistant -> object-hal-Q5]]\
 <<linkreplace " - Equip the HAL Q5 Assistant">>\
 <<addinventory "HAL Q5 Assistant" "object-hal-Q5">>

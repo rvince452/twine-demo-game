@@ -1,16 +1,8 @@
 :: Start
-
-
-
 You are a Pennsylvania State Trooper driving near the small, rural, town of [[Marlowe->loc-town-of-marlowe]].
 You haven't ever stopped here before, sure you have seen the sign many times but you never actually chose the single exit that leads through the small town. But today is your day. 
 Marlowe is so small that they don't even have their own police force - instead relying on the State Troopers for any law enforcement needs. The dispatcher routes available troopers to calls as needed and today, today there is some issue and you are the one who must respond.
 [[Marlowe Police Station ->loc-police-station-abandoned]]
-
-<<print "chapter is " + $chapter>>
-
-[[go to start passage->Start]]
-
 :: StoryInit {"position":"1800,425","size":"100,200"}
 
 
@@ -31,6 +23,7 @@ Marlowe is so small that they don't even have their own police force - instead r
 
 <<set $alanSecretBasic to false>>
 <<set $alanSecretProblem to false>>
+
 
 
 <<set $secret_ready_for_farm to false>>

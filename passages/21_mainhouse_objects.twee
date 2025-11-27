@@ -70,7 +70,7 @@ A plain, white piece of card stock. One side is blank. On the other side someone
 :: object-police-note
 Written on a piece of white card stock is a note: "Help! I have called several times, please, please, please check on my friends, the Lancasters, their cars are there but no one answers the door...I am so, so worried!" 
 Below the note is a map to the Lancaster Farm.
-<<back>>
+<<return>>
 
 :: object--photo-pentagram {"position":"1600,1400","size":"100,100"}
 Carved into the wooden floorboards is a pentagram surrounded by various symbols and markings. The carving appears to be old, with some of the lines faded and worn. In the center of the pentagram, there is a small circular indentation that looks like it may have held an object at one time. The overall appearance of the carving gives off an eerie and unsettling vibe, suggesting that it may have been used for ritualistic purposes.
@@ -87,5 +87,51 @@ It looks like someone was playing poker, because you find two hands of cards as 
 :: object-nothing-of-interest {"position":"1540,1080","size":"100,100"}
 You look in front of the bar but don't find anything of particular interest.
 <<return>>
+
+:: object-old-couch
+A faded, sagging couch with torn upholstery and springs that creak loudly. It looks like it’s been in the house for decades, collecting dust and memories from countless family gatherings.
+<<back>>
+
+:: object-old-tv
+A bulky, wood-paneled television set from the late 1970s. The screen is clouded and the dials are stiff, but it still hums to life with static if you turn it on. It’s a relic of a time before remote controls.
+<<back>>
+
+:: object-gun-safe
+A heavy, steel gun safe with chipped paint and a stubborn lock. It’s always kept locked, and the combination is long forgotten. The safe itself is at least thirty years old.
+<<back>>
+
+:: object-microwave
+A yellowed microwave oven with a rotary dial and a cracked plastic door. The inside smells faintly of burnt popcorn and reheated leftovers from years past.
+<<back>>
+
+:: object-pile-of-linen
+A stack of yellowed sheets and pillowcases, some with faded floral patterns. The linens are stiff from age and smell faintly of lavender and mothballs.
+<<back>>
+
+:: object-pile-of-towels
+A pile of threadbare towels, their colors faded and edges frayed. Some have the initials of family members stitched in a style popular decades ago.
+<<back>>
+
+:: object-dresser
+A heavy wooden dresser with ornate handles, its drawers sticking from years of use. The finish is worn and the top is cluttered with old photographs and trinkets.
+<<back>>
+
+:: object-rubber-duck
+A small, cracked rubber duck with faded yellow coloring. It’s clearly been a bath-time companion for generations, now relegated to a dusty shelf.
+<<back>>
+
+:: object-medicine-cabinet
+A rusted metal medicine cabinet with a mirrored door. Inside are expired bottles of aspirin, cough syrup, and a few mysterious ointments from the 1980s.
+<<back>>
+
+:: object-yearbook
+A high school yearbook from the early 1970s, its pages yellowed and binding loose. The photos inside show familiar faces in their youth, with handwritten notes in the margins.
+<<back>>
+
+:: object-textbook
+A dog-eared textbook on Pennsylvania history, published in 1968. The cover is torn and the pages are filled with notes and doodles from past students.
+<<back>>
+
+
 
 

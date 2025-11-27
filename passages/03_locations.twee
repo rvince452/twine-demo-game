@@ -2,37 +2,52 @@
 A small rural town nestled in the rolling hills of central Pennsylvania, Marlowe is a community that has seen better days but still retains a certain Appalachian charm. The main street is lined with a mix of mom-and-pop shops, a diner that serves hearty Pennsylvania Dutch fare alongside classic American dishes, and a few essential services like a post office and a hardware store that doubles as a feed supply. The town square features a modest park with a weathered gazebo where local events are held, and the surrounding residential areas consist of modest homes with well-tended lawns and the occasional Pennsylvania Dutch hex sign adorning barn doors. Despite its small size, Marlowe has a tight-knit community where everyone knows each other, local German heritage runs deep, and traditions like barn raisings and church suppers are cherished.
 <<return>>
 
-
 :: loc-police-station-abandoned
-The building is devoid of people without any downtime but is used by troopers passing through to rest or make some phone calls. It feels strange entering a building that must have built to be used, to host living, breathing people. Today the lights are off until you turn them on. The building is cold and will stay that way unless you decide to turn on the heat.
-The thought doesn't even cross your mind. You do fix yourself a cup of coffee from the ancient machine in the corner. It fizzles and steams and finally shoots hot, colored water into a cup. You take the drink and wander over to a large wooden table. There is a placard labeled "Visiting" and so you know that is the desk. The other desks are covered with papers and boxes. 
+Marlowe does not have its own police force but there is a small, separate, section adjoining the city hall that can be used by the county sheriff or state troopers depending on who is passing through or can respond first. Today that is you - on behalf of the Pennsylvania State Police.
 
-You can see out of the window and you stand to verify that your vehicle is still present, parked along the curb in front of the building. You sip the coffee while your eyes looks across the street. There are a few stores but they seem dark and there are no other cars parked nearby. Of course it is Sunday.
+You park in the rear parking lot and try to enter through a side door. It is a heavy metal door with a rusty keypad lock. You try the door but it is firmly locked. There is a small slot in the door and instructions to call a number in an emergency or else slip in details for other requests. In your case, someone submitted a note and then decided it was 'important'. 
 
-Relaxing, you place a few items on the desk, including your portable computer. The other items, your service revolver, your flashlight and a pair of handcuffs - those are all issued by the state. But the Q5. Well there is a story behind that...
+You don't know the combination and are about to return to your vehicle to make a call when you remember the Q5. You pull out the strange device and quickly enter two words.
+''Marlowe code''
 
-You sit for a few minutes before finally grabbing the piece of paper that is sitting in the inbox.
+The unit blinks a bit and you start to walk back to your car when four numbers appear on the greenish screen.
+''4 2 7 1''
 
- and sit at one of the metal tables, the vinyl seats cracked and worn from years of use.
-There is a single inbox on the front desk, next to an old rotary phone. Within the tray is a single piece of paper - it is a peculiar [[request for help->object-police-note]].
+You enter the code on the keypad and the door clicks open. [[You step inside.->loc-police-station-interior]]
 
-You take another drink of coffee and then pull out a large, old phone book out of a desk drawer and lookup the Lancaster family. You find only a single entry for "Al and Susan Lancaster". You call the number and take another sip of coffee while it rings.
-It rings and rings and rings.
+:: loc-police-station-interior {"position":"200,50","size":"150,100"}
+The small room is dark and small. Your hand finds a lightswitch and you flip it on. Fluorescent lights buzz to life overhead, revealing a modest police station that seems frozen in time. There is a simple metal desk with a single chair and a large beverage dispensing machine in the corner. There is a small corridor leading out of sight in the back corner of the room.
 
-Well, it seems there is nothing else to do but go to the farm and check it out. You stand and get ready to leave.
-[[Choose your equipment->action-prepare-for-farm]]
+<<you>>Hello?<</you>>
+
+[[Follow the dark corridor->loc-police-station-jail]]
+
+[[Try the vending maching->loc-police-station-vending-machine]]
+
+[[Approach the front desk->loc-police-station-front-desk]]
 
 :: loc-police-station-jail {"position":"200,50","size":"150,100"}
-TODO - it is empty 
-TODO - duty list shows "Paul Savard" but also a note that he is sick. Add his name to Katie's journal
+The corridor leads to a small holding area with two jail cells. The metal bars are rusted and the concrete floor is stained and cracked. There is a small bench along one wall and a single overhead light flickers weakly, casting eerie shadows that dance across the walls. The air smells of dampness and neglect, and the silence is oppressive, broken only by the occasional creak of the building settling.
+
+You note a clipboard handing on the wall. It seems to be a [[duty roster->object-police-duty-roster]].
+
+[[leave->loc-police-station-interior]]
+
+:: loc-police-station-vending-machine {"position":"200,50","size":"150,100"}
+The large machine has only a few choices: coffee, tea and hot water. You choose coffee and insert some change. The machine hums and whirs before dispensing a cup of hot, black coffee into the provided cup. The aroma is strong and slightly bitter, a comforting contrast to the sterile environment of the station.
+It is here that you find a piece of paper lying on the floor. It must have slid from the door to this location. 
+You pick it up and read it. It is a [[note->object-police-note]]. The note explains where you are to go next, so you take it.
+<<addinventory "note with map" "object-police-note">>\
+
+Now that you know where you are going, you decide to leave the station and drive out to the Lancaster Farm. It is late afternoon and you want to get there before dark.
+
+[[Return to your vehicle->action-prepare-for-farm]]
+
+
+
+:: object-police-duty-roster {"position":"350,50","size":"150,100"}
+Despite the surroundings, the duty roster appears to be up to date. The current officer on duty is listed as "Paul Savard," but a handwritten note at the bottom indicates that he is out sick today. There are no other names listed for coverage, suggesting that the station is currently unmanned.
 <<return>>
-
-:: loc-police-station-pauls-desk {"position":"350,50","size":"150,100"}
-TODO 
-
-
-
-
 
 :: loc-county-road-6 {"position":"100,550","size":"150,100"}
 County Road 6 stretches through the rural Pennsylvania countryside, a narrow two-lane blacktop road that winds between rolling hills and farmland. The asphalt is cracked and patched in places, with grass growing through the edges where maintenance has been deferred. Wooden fence posts mark property boundaries, and the occasional mailbox on a leaning post indicates the scattered rural residences. The road carries the quiet hum of distant farm machinery and the occasional pickup truck, but traffic is sparse in this remote area.
