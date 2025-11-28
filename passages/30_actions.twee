@@ -6,46 +6,45 @@ As you enter the old police station, you explain to yourself that no one is norm
 Back in your vehicle, you start it up and review what you should have with you when you approach the house. From experience, you know that there sometimes a situation is already unfolding when you arrive. 
 
 <<if setup.ininventory("Service Revolver") is false>>\
-<<linkreplace "Equip your service revolver">>\
+<<linkreplace "Equip your service revolver">>
 <<addinventory "Service Revolver" "object-your-service-revolver">>\
 You don't think you'll need this but you holster your service revolver.
+<</linkreplace>>
 <</if>>\
-<</linkreplace>>\
-
 <<if setup.ininventory("Handcuffs") is false>>\
 [[Handcuffs -> object-handcuffs]] \
-<<linkreplace "Equip your handcuffs">>\
+<<linkreplace "Equip your handcuffs">>
 <<addinventory "Handcuffs" "object-handcuffs">>
 You secure the handcuffs to your belt.
-<</linkreplace>>\
+<</linkreplace>>
 <</if>>\
 <<if setup.ininventory("Camera") is false>>\
 [[Polaroid -> object-your-polaroid]]\
-<<linkreplace "Equip your camera">>\
+<<linkreplace "Equip your camera">>
 <<addinventory "Camera" "object-your-polaroid">>
 You secure the camera to your belt.
+<</linkreplace>>
 <</if>>\
 <<if setup.ininventory("Flashlight") is false>>\
-<</linkreplace>>\
 [[Flashlight -> object-your-flashlight]]\
-<<linkreplace "Equip your flashlight">>\
+<<linkreplace "Equip your flashlight">>
 <<addinventory "Flashlight" "object-your-flashlight">>
 You secure the flashlight to your belt.
-<</linkreplace>>\
+<</linkreplace>>
 <</if>>\
 <<if setup.ininventory("HAL Q5 Assistant") is false>>\
-[[HAL Q5 Assistant -> object-hal-Q5]]\
-<<linkreplace "Equip the HAL Q5 Assistant">>\
+[[HAL Q5 Assistant -> object-hal-Q5]]
+<<linkreplace "Equip the HAL Q5 Assistant">>
 <<addinventory "HAL Q5 Assistant" "object-hal-Q5">>
 You secure the HAL Q5 Assistant to your belt via a clip built into the unit.
-<</linkreplace>>\
+<</linkreplace>>
 <</if>>\
 
 [[Leave->action-check-leave]]
 
 :: action-check-leave 
 <<set _hasHal to setup.ininventory("HAL Q5 Assistant")>>\
-<<set _hasNote to setup.ininventory("Strange note/map")>>\
+<<set _hasNote to setup.ininventory("Note with map")>>\
 <<if _hasHal is true and _hasNote is true>>\
     <<set $secret_ready_for_farm to true>>\
     <<if $hal.charged < 30>>\
@@ -67,10 +66,34 @@ The engine roars to life as you turn the key in the ignition. The familiar hum o
 
 :: action-charge-hal
 
+<<set _actionprompt to "Charge HAL Q5 Assistant ">>
+<<set _actiondone to "HAL Q5 Assistant is fully charged">>
+<<set _actiondonelink to "action-leave-goto-car">>
+<<include "action-timed-action">>
+<<link _actiondone _actiondonelink>>
 <<set $hal.charged to 100>>\
-The HAL unit is fully charged. 
+<</link>>
+
 [[Continue->action-leave-goto-car]]
 
+
+:: action-timed-action 
+<<print _actionprompt>>
+<span id="status">\
+<<back>>
+</span>\
+<span id="work">\
+<<link _actionprompt>>\
+<<replace "#status">>working<</replace>>\
+<<timed "2s">><<replace "#status">>working<</replace>>\
+<<next>><<replace "#status">>working.<</replace>>\
+<<next>><<replace "#status">>working..<</replace>>\
+<<next>><<replace "#status">>working...<</replace>>\
+<<next>><<replace "#status">>_actiondone<</replace>>\
+<</timed>>
+<<replace "#work">><</replace>>\
+<</link>>
+</span>
 
 :: action-drive-to-lancaster-farm
 You leave the abandoned police station and drive south to [[County Road 66->loc-county-road-6]].
@@ -264,6 +287,8 @@ TODO
 You are trapped in a web 
 TODO 
 <<return>>
+
+
 
 
 :: action-decrypt-card 

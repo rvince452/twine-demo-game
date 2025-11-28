@@ -19,11 +19,8 @@ You enter the code on the keypad and the door clicks open. [[You step inside.->l
 The small room is dark and small. Your hand finds a lightswitch and you flip it on. Fluorescent lights buzz to life overhead, revealing a modest police station that seems frozen in time. There is a simple metal desk with a single chair and a large beverage dispensing machine in the corner. There is a small corridor leading out of sight in the back corner of the room.
 
 <<you>>Hello?<</you>>
-
 [[Follow the dark corridor->loc-police-station-jail]]
-
 [[Try the vending maching->loc-police-station-vending-machine]]
-
 [[Approach the front desk->loc-police-station-front-desk]]
 
 :: loc-police-station-jail {"position":"200,50","size":"150,100"}
@@ -37,7 +34,7 @@ You note a clipboard handing on the wall. It seems to be a [[duty roster->object
 The large machine has only a few choices: coffee, tea and hot water. You choose coffee and insert some change. The machine hums and whirs before dispensing a cup of hot, black coffee into the provided cup. The aroma is strong and slightly bitter, a comforting contrast to the sterile environment of the station.
 It is here that you find a piece of paper lying on the floor. It must have slid from the door to this location. 
 You pick it up and read it. It is a [[note->object-police-note]]. The note explains where you are to go next, so you take it.
-<<addinventory "note with map" "object-police-note">>\
+<<addinventory "Note with map" "object-police-note">>\
 
 Now that you know where you are going, you decide to leave the station and drive out to the Lancaster Farm. It is late afternoon and you want to get there before dark.
 
