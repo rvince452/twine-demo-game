@@ -1,23 +1,11 @@
-:: loc-main-house-descr {"position":"1650,950","size":"100,100"}
-!!!Lancaster Family Farmhouse
-<<nobr>>
-<<switch passage()>>
-<<case "loc-mainhouse-kitchen">>
-    You are in the kitchen.
-    <<if $openhouse is true>>\
-    It is an old and simple kitchen. The range and refrigerator are lime-green and the floor is a simple planked wood. A wooden table is surrounded by empty chairs and holds some discarded silverware.
-    <</if>>\
-<<default>>
-    You are in room within the main house 
-<</switch>>
-<</nobr>>
+
 
 
 
 
 
 :: loc-mainhouse-attic {"position":"1775,1325","size":"100,100"}
-<<include "loc-main-house-descr">>
+\
 You are in a dusty attic space filled with old furniture covered in white sheets, cobwebs hanging from the rafters, and a few scattered boxes labeled with faded handwriting. The air is thick with the smell of dust and aged wood. A small window lets in a sliver of light, illuminating motes of dust dancing in the air. Old family heirlooms, forgotten toys, and vintage clothing are strewn about, hinting at the lives once lived in this house.
 <<if $secret_has_all_cards is true>>\
 
@@ -51,7 +39,7 @@ The game is waiting on your turn.
 
 
 :: loc-mainhouse-basement {"position":"1775,1200","size":"100,100"}
-<<include "loc-main-house-descr">>
+\
 [[Basement bedroom->loc-mainhouse-basement-bedroom]]
 [[Basement utility room->loc-mainhouse-basement-utility]]
 [[Main house kitchen->loc-mainhouse-kitchen]]
@@ -59,7 +47,7 @@ The game is waiting on your turn.
 
 
 :: loc-mainhouse-basement-bedroom {"position":"1525,1200","size":"100,100"}
-<<include "loc-main-house-descr">>
+\
 Carl's basement bedroom feels more like a bunker than a living space. Electronics from the early 80s are stacked everywhere—a Commodore 64, multiple Walkman players in various states of disrepair, and a small TV with a VHS player that only seems to play static-filled tapes. Pin-up calendars from auto parts stores cover the paneled walls, their subjects watching visitors with eyes that seem too knowing. The air smells of stale cigarettes and machine oil, and sometimes you can hear electronic beeping coming from devices that appear to be turned off.
 [[Inspect the old TV->object-old-tv]]
 [[Sit on the old couch->object-old-couch]]
@@ -71,27 +59,27 @@ From theh top of the ladder your head can fit into a space in the ceiling betwee
 
 Look - view of the shower. A robe hangs on towel rack. 
 [[white card->object-carl-envelope]]
-<<return>>
+[[basement->loc-mainhouse-basement]]
 
 
 :: loc-mainhouse-basement-utility {"position":"1650,1325","size":"100,100"}
-<<include "loc-main-house-descr">>
+\
 <<if $chapter is "gameboardopen">>
     [[You find a large, strange web here->action-talk-doug-web]]
 <</if>>
+[[basement->loc-mainhouse-basement]]
 
-<<return>>
 
 
 
 
 
 :: loc-mainhouse-entry {"position":"1650,1075","size":"100,100"}
-<<include "loc-main-house-descr">>
+\
 [[Living room->loc-mainhouse-living]]
 
 :: loc-mainhouse-living {"position":"1775,1075","size":"100,100"}
-<<include "loc-main-house-descr">>
+\
 [[Entryway->loc-mainhouse-entry]]
 [[Kitchen->loc-mainhouse-kitchen]]
 [[Rec room->loc-mainhouse-recroom]]
@@ -99,7 +87,7 @@ Look - view of the shower. A robe hangs on towel rack.
 
 
 :: loc-mainhouse-kitchen {"position":"1650,1200","size":"100,100"}
-<<include "loc-main-house-descr">>
+\
 
 On the counter you see:
 [[A yellowed microwave->object-microwave]]
@@ -125,7 +113,7 @@ You realize that the white card contains another, smaller object within. You fin
 <</if>>\
 
 :: loc-mainhouse-recroom {"position":"1525,1075","size":"100,100"}
-<<include "loc-main-house-descr">>
+\
 The rec room serves as Al's private casino, complete with a felt-covered poker table bearing permanent stains from years of late-night games. A small bar in the corner displays bottles of whiskey with names you don't recognize, and the pool table's green felt is torn in several places, revealing darker fabric beneath. Casino chips are scattered across surfaces, some bearing symbols that don't match any known gambling establishment. The room's single window is always kept curtained, and the overhead light casts everything in a sickly yellow glow that makes everyone look jaundiced. 
 Loaded dice, marked cards, looks like he played with the lent money 
 [[Downstairs bathroom->loc-mainhouse-downstairs-bath-1]]
@@ -139,16 +127,16 @@ Loaded dice, marked cards, looks like he played with the lent money
 
 
 :: loc-mainhouse-downstairs-bath-1 {"position":"1650,1575","size":"100,100"}
-<<include "loc-main-house-descr">>
+\
 
 Investigation will show the removed electric receptable accessable from below
-<<return>>
+[[Rec room->loc-mainhouse-recroom]]
 
 
 
 
 :: loc-mainhouse-upstairs-hallway {"position":"1650,1325","size":"100,100"}
-<<include "loc-main-house-descr">>
+\
 [[Master bedroom->loc-mainhouse-upstairs-master]]
 [[Katie's room->loc-mainhouse-upstairs-katie]]
 [[Guest bedroom->loc-mainhouse-upstairs-bedroom-guest]]
@@ -165,7 +153,7 @@ The narrow linen closet appears ordinary at first glance, with shelves stacked w
 
 
 :: loc-mainhouse-upstairs-katie {"position":"1525,1450","size":"100,100"}
-<<include "loc-main-house-descr">>
+\
 Katie's room is a shrine to her past glories, with gymnastics trophies crowding every surface and faded ribbons hanging from the mirror alongside her confirmation certificate from Ephrata Reformed Church and a photo of her in a white dress from her first communion. Fashion magazines from the mid-80s are stacked in precarious towers, their pages yellowed and brittle, competing for space with church youth group newsletters and a dusty Bible given to her on her 16th birthday. A small collection of modeling photos shows Katie in various frozen poses, but something about the images seems off—her smile never quite reaches her eyes, and shadows fall in directions that don't match the lighting. Lottery tickets are scattered across her desk like fallen leaves, all scratched off to reveal nothing but losing numbers, a stark contrast to the motivational scripture cards from Sunday school that are pinned to her bulletin board.
 Investigation will show a trove of shoplifted and purchased cosmetics, jewelry, etc 
 Also will find copied checks and practiced handwriting samples. Some forms match the address next door.
@@ -180,16 +168,16 @@ TODO - track/gymnast medal, note about Paul. No journal here
 
 
 :: loc-mainhouse-upstairs-bedroom-guest {"position":"1775,1575","size":"100,100"}
-<<include "loc-main-house-descr">>
+\
 Susan's office - nothing strange here, just a half-empty glass of something red but seems it is vegatable juice
 <<return>>
 
 :: loc-mainhouse-upstairs-master {"position":"1650,1450","size":"100,100"}
-<<include "loc-main-house-descr">>
+\
 Al and Susan's bedroom reflects their divergent obsessions alongside their shared faith. Susan's side features exercise equipment from the early aerobics craze—leg warmers draped over a stationary bike, workout videos stacked beside a VCR, and health food cookbooks with pages marked by food stains that look suspiciously like blood. Next to these sits her daily devotional book "Our Daily Bread" with highlighted passages and handwritten prayers in the margins. Al's side is dominated by mechanical manuals, poker chips in glass jars, and a gun safe that's always kept locked, but also features a leather-bound Bible passed down from his father and a small framed photo of him shaking hands with the church bishop during last year's stewardship drive. The bed between them sags in the middle, as if something heavy regularly sleeps there that neither of them acknowledges. On both nightstands rest matching wooden crosses carved by Al during the church's men's retreat. 
 [[Try to open the gun safe->object-gun-safe]]
 [[Master bathroom->loc-mainhouse-upstairs-master-bath]]
 
 :: loc-mainhouse-upstairs-master-bath {"position":"1775,1450","size":"100,100"}
-<<include "loc-main-house-descr">>
+\
 <<return>>

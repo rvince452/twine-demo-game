@@ -117,3 +117,17 @@ Even it's uniqueness will not protect it from time, I doubt it will live longer 
 
 :: StoryRightSidebar [UNUSED] {"position":"400,0","size":"100,100"}
 Right sidebar
+
+:: loc-main-house-descr {"position":"1650,950","size":"100,100"}
+!!!Lancaster Family Farmhouse
+<<nobr>>
+<<switch passage()>>
+<<case "loc-mainhouse-kitchen">>
+    You are in the kitchen.
+    <<if $openhouse is true>>\
+    It is an old and simple kitchen. The range and refrigerator are lime-green and the floor is a simple planked wood. A wooden table is surrounded by empty chairs and holds some discarded silverware.
+    <</if>>\
+<<default>>
+    You are in room within the main house 
+<</switch>>
+<</nobr>>

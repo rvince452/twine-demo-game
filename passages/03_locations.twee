@@ -32,6 +32,14 @@ You note a clipboard handing on the wall. It seems to be a [[duty roster->object
 
 :: loc-police-station-vending-machine {"position":"200,50","size":"150,100"}
 The large machine has only a few choices: coffee, tea and hot water. You choose coffee and insert some change. The machine hums and whirs before dispensing a cup of hot, black coffee into the provided cup. The aroma is strong and slightly bitter, a comforting contrast to the sterile environment of the station.
+[[leave->loc-police-station-interior]]
+\
+<<set _actionprompt to "Examine the old vending machine">>\
+<<set _actiondone to "You found something...">>\
+<<set _actiondonelink to "action-found-note-map">>\
+<<include "action-timed-action">>\
+
+:: action-found-note-map 
 It is here that you find a piece of paper lying on the floor. It must have slid from the door to this location. 
 You pick it up and read it. It is a [[note->object-police-note]]. The note explains where you are to go next, so you take it.
 <<addinventory "Note with map" "object-police-note">>\
@@ -39,8 +47,6 @@ You pick it up and read it. It is a [[note->object-police-note]]. The note expla
 Now that you know where you are going, you decide to leave the station and drive out to the Lancaster Farm. It is late afternoon and you want to get there before dark.
 
 [[Return to your vehicle->action-prepare-for-farm]]
-
-
 
 :: object-police-duty-roster {"position":"350,50","size":"150,100"}
 Despite the surroundings, the duty roster appears to be up to date. The current officer on duty is listed as "Paul Savard," but a handwritten note at the bottom indicates that he is out sick today. There are no other names listed for coverage, suggesting that the station is currently unmanned.
@@ -89,11 +95,7 @@ But the humidity has caused the card to become transparent and it is clear to yo
 <<include "check-has-all-cards">>\
 <</if>>\
 <</if>>\
-
-
 [[Pool house->loc-poolhouse]]
-
-
 [[South to the porch->loc-mainhouse-porch-north]]
 
 :: loc-poolhouse {"position":"400,100","size":"150,100"}
@@ -101,6 +103,7 @@ The poolhouse stands as a weathered monument to the family's former prosperity, 
 <<if $chapter is "gameboardopen">>
     [[You find a large, strange web here->action-talk-carl-web]]
 <</if>>
+[[Swimming pool->loc-pool]]
 [[Enter walking path->loc-old-walking-path-west]]
 
 :: loc-forest {"position":"100,250","size":"150,100"}
@@ -122,16 +125,18 @@ There doesn't appear to be anyone here despite the lights being on. You sigh to 
 
 [[Look around->action-search-machine-shed]]
 
-[[Cabin->loc-dougs-cabin]]
 [[Exit->loc-lancaster-machine-barn-driveway]]
 
 
 :: loc-barn {"position":"100,400","size":"150,100"}
 The two-story barn looms near the main house, its weathered wood siding adorned with faded hex signs—traditional wards against ill fortune and spirits that now seem more desperate than protective. The structure creaks and settles with sounds that don't quite match the wind patterns, and the second-story window that aligns with the main house bedroom has a strange quality to its glass, distorting views in unsettling ways. Hay bales are stacked haphazardly inside, some showing signs of inexplicable moisture despite the sound roof.
+[[Enter the barn->loc-barn-inside]]
+[[There is a cabin near the barn->loc-dougs-cabin]]
+
+:: loc-barn-inside
 <<if $chapter is "gameboardopen">>
     [[You find a large, strange web here->action-talk-katie-web]]
 <</if>>
-
 [[Exit->loc-lancaster-machine-barn-driveway]]
 
 :: loc-dougs-cabin {"position":"250,400","size":"150,100"}

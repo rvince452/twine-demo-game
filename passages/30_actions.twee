@@ -70,17 +70,10 @@ The engine roars to life as you turn the key in the ignition. The familiar hum o
 <<set _actiondone to "HAL Q5 Assistant is fully charged">>
 <<set _actiondonelink to "action-leave-goto-car">>
 <<include "action-timed-action">>
-<<link _actiondone _actiondonelink>>
-<<set $hal.charged to 100>>\
-<</link>>
-
-[[Continue->action-leave-goto-car]]
 
 
 :: action-timed-action 
-<<print _actionprompt>>
 <span id="status">\
-<<back>>
 </span>\
 <span id="work">\
 <<link _actionprompt>>\
@@ -89,7 +82,10 @@ The engine roars to life as you turn the key in the ignition. The familiar hum o
 <<next>><<replace "#status">>working.<</replace>>\
 <<next>><<replace "#status">>working..<</replace>>\
 <<next>><<replace "#status">>working...<</replace>>\
-<<next>><<replace "#status">>_actiondone<</replace>>\
+<<next>><<replace "#status">>
+    [[_actiondone|_actiondonelink]]
+    <<set $hal.charged to 100>>\
+<</replace>>\
 <</timed>>
 <<replace "#work">><</replace>>\
 <</link>>
