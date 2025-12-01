@@ -60,10 +60,14 @@ You decide to take the [[note->object-police-note]] with you as you need the map
 Despite the surroundings, the duty roster appears to be up to date at least for the current month. The officer assigned to be on duty is 'Deputy Paul Savard'.But someone has written over the name, in a red pen, 'Out SICK'. You note that this is the only name found in the previous entries as well.
 <<return>>
 
-:: loc-county-road-6-lancaster-farm
+:: loc-county-road-6 {"position":"150,400","size":"150,100"}
 County Road 6 stretches through the rural Pennsylvania countryside, a narrow two-lane blacktop road that winds between rolling hills and farmland. The asphalt is cracked and patched in places, with grass growing through the edges where maintenance has been deferred. Wooden fence posts mark property boundaries, and the occasional mailbox on a leaning post indicates the scattered rural residences. The road carries the quiet hum of distant farm machinery and the occasional pickup truck, but traffic is sparse in this remote area.
+
+:: loc-county-road-6-lancaster-farm
+Country Road 6 runs East to West along the Southern edge of the Lancaster property. From the road you can see the driveway to the main house, a gravel drive leading into the fields and a few mailboxes. The main house is visible from the road though the trees.
 [[House driveway->loc-lancaster-house-driveway]]
 [[Machine barn driveway->loc-lancaster-machine-barn-driveway]]
+[[Mailbox->loc-lancaster-mailbox]]
 [[Neighbors' mailboxes->loc-neighbors-mailbox]]
 
 :: loc-lancaster-house-driveway {"position":"250,550","size":"150,100"}
@@ -183,7 +187,10 @@ Turning back to the door, you find the ubiquitous Farrah Fawcett poster taped to
 :: loc-corn-maze {"position":"400,400","size":"150,100"}
 The corn fields north of the main house seem large but the eye can still see the dense forest which bounds it. The stalks are tall and thick but do not have so many ears of corn. Some humanoid shapes can be seen elevated over the fields, scarecrows perhaps. 
 The stalks rustle in the breeze. 
+<<if $chapter is "gameboardopen">>\
+    [[Venture deeper into the maze->loc-corn-maze-inner]]
 You walk around a bit but get confused. There doesn't seem any point in continuing.
+<</if>>\
 [[Return to the old walking path->loc-old-walking-path-west]]
 
 :: loc-old-walking-path-west {"position":"550,400","size":"150,100"}
@@ -210,7 +217,8 @@ The walking path through the forest opens up into a clearing where some building
 
 
 :: loc-corn-maze-inner {"position":"550,400","size":"150,100"}
-
+You find yourself deeper within the corn maze, the rustlig of the stalks seems to have grown louder, disorienting you. A figure is present over the corn, the scarecrow is garbed in an old cloak and it's head is covered by a large, black hat.
+[[South toward the house->loc-corn-maze]]
 [[Cemetery->loc-cemetery]]
 [[Forest->loc-forest]]
 
@@ -223,26 +231,25 @@ Deep within the forest lies a circular clearing where three large fire pits are 
 <<return>>
 
 :: loc-lancaster-machine-barn-driveway {"position":"250,700","size":"150,100"}
-A separate gravel drive branches off from the main road, leading directly to the machine shed and barn area. This working driveway is wider than the house drive to accommodate large farm equipment, and the gravel is mixed with hay chaff and motor oil stains from decades of agricultural use. Tire tracks from tractors, combines, and trucks create permanent ruts in the earth, and the air carries the scent of diesel fuel and hay. Metal gates on either side can be closed to contain livestock when needed.
-[[Road->loc-county-road-6-lancaster-farm]]
+The gravel driveway that originates from the main road ends in front of a few buildings. There is large barn and a machine shed. The machind shed door is closed but the large barn doors are wide open.
+Through a crack in the forest on the west side of the clearing is what might be the start of a path through the forest. 
 [[Machine shed->loc-machine-shed]]
 [[Barn->loc-barn]]
+[[Enter walking path->loc-old-walking-path-east]]
+[[Follow the driveway back to the main road->loc-county-road-6-lancaster-farm]]
 
 :: loc-lancaster-mailbox {"position":"100,700","size":"150,100"}
-TODO 
-
+The metal mailbox is old and rusted, the Lancaster name barely legible. The warped red flag is down. 
+[[Road in front of farm->loc-county-road-6-lancaster-farm]]
 
 :: loc-neighbors-mailbox {"position":"400,700","size":"150,100"}
-At the eastern edge of the Lancaster property, a cluster of rural mailboxes marks the boundary with neighboring farms. The collection includes the Lancaster box alongside several others serving the scattered rural residences in the area. The mailboxes are mounted on a shared wooden post that leans slightly from years of wind and weather. Tall grass and wildflowers grow around the base, and a narrow dirt path leads from here toward the neighbor's property through a break in the fence line.
-TODO - add mailbox contents, ID theft mails 
+Along Route 6, at the eastern edge of the lancaster property is another mailbox, presumably that of a neighboring farm. But this mailbox stands out as it seems new and is extra-large. A dirt road runs back into a copse of trees.
+[[Road in front of farm->loc-county-road-6-lancaster-farm]]
 [[Neighbor's grove->loc-neighbors-copse]]
-[[County Road 6->loc-county-road-6-lancaster-farm]]
 
 :: loc-neighbors-copse {"position":"100,850","size":"150,100"}
 A small grove of mixed hardwood trees creates a natural boundary between properties, serving as both windbreak and privacy screen. The copse consists primarily of oak, maple, and birch trees with dense underbrush that provides cover for wildlife. Fallen logs and leaf litter create a soft carpet underfoot, and the dappled sunlight filtering through the canopy gives the area a peaceful, secluded feeling. However, there's something unsettling about the silence here—no bird songs, no rustling of small animals, just an oppressive quiet that seems to muffle even your own footsteps.
 <<if $chapter is "gameboardopen">>
     [[You find a large, strange web here->action-talk-al-web]]
 <</if>>
-
-
-<<return>>
+[[Return to the main road->loc-county-road-6-lancaster-farm]]
