@@ -116,84 +116,89 @@ You exit your vehicle, take one last look around and then [[step onto the large 
 :: action-start-chapter-porch 
 <<set $chapter to "porch">>
 
-You knock on the old wooden door and wait.
+The front door is wooden, old and blemished with a circular window, large enough to frame a face, set near the top. You knock and wait.
 
 No response.
 
-You listen for a moment. There is no sound from inside the house or even from the surrounding area. You are listening carefully even as you wait.
+You listen for a moment. There is no responding sound from inside the house, just the wind in the trees.
 
-You knock on the door a second time. You try to peer into the house, through the window next to the door, but the curtains are drawn. The door has circular window but the glass in dingy and it is dark inside. You almost think you can see something when suddenly you hear [[something->object-sound-of-a-polaroid-camera]].
+You knock on the door a second time as you try to peer into the house through the small window. But it is dark within and you only see your own reflection. But this time you hear [[something->object-sound-of-a-polaroid-camera]].
 
-It was not loud, it was faint and you are unsure of what it was. You look behind you and to your left and right. Then you knock again, harder, more loud.
+You step back, confused. More determined now, you step forward and pound on the door and clearly and loudly announce yourself.
 
-It is as the door stops resonating from your knock that you hear a new sound. Louder - like a screen door shutting.
+<<you>>Pennsylvania State Trooper! Police! Anyone home? Please respond!<</you>>
 
-You walk quickly along the porch and around the corner. You can see there is another door at the end of the porch and it seems to be ajar. But more importantly, you see a figure running away, disappearing around the Northwest corner of the house.
+It is as the door stops resonating from your knock that you hear a new sound. Louder - like a screen door slamming shut. A side door?
+
+You walk quickly along the porch and turn the corner. You can see there is another door at the end of the porch and it seems to be ajar. But more importantly, you see a figure running away, disappearing around the Northwest corner of the house.
 
 This triggers your instincts and you leap into [[pursuit->action-pursuit-1]].
 
 :: action-pursuit-1
 
-You race to the end of the porch and jump off the steps into what must be the backyard. There is a pool in the center of the yard and you are forced to run around it, past a small structure in the back of the pool - it is probably a poolhouse. You hurry past it and find a path.
+You race to the end of the porch and jump off the steps into what must be the backyard. There is a pool in the center of the yard and you are forced to run around it, past the rusted chain link fence that enloses it and past a single story building along the far side of the pool. With the fence on the left and the forest on the other side and in front, there seems no where else to go - but you see a gap in the brush and you enter and find yourself on a path in the woods.
+<<you>>Stop! Police!<</you>>
 
-The path leads East and, looking in that direction, you feel you see motion at the end of the path. It must be the figure you saw from before so you [[continue the pursuit->action-pursuit-2]]
+You try again to get the figure to stop as you continue your pursuit. The path leads eastward and you think you can hear something pushing through the brush but it's difficult to be sure because you own motions are making noise as well.
+Branches claw at your body as you [[run->action-pursuit-2]]
 
 :: action-pursuit-2
+Soon, the path opens up into a small clearing. You see a barn, a shed and a gravel road that heads back South.  In back of these strucutres are some sort of crop. Your hunch is that the figure either entered the shed, the barn or it is escaping back toward the road. 
 
-You run along the path and it opens up into a small clearing. You see a barn, a shed and a dirt road that heads back South.  In back of these strucutres are some sort of crop. Your hunch is that the figure either entered the shed, the barn or it is escaping along the dirt road. 
+Your first bet is the shed, but the door is metal and is closed - you would have heard that door close if anyone entered. You decide to enter the barn as the door is open and stop 10 feet into the building. You are surrounded by hay bales and farming equipment. You look around but don't see anyone and you don't hear anything. 
 
-Your first bet is the shed, but it is locked. You decide to enter the barn as the door is open. You stop 10 feet into the barn, you are surrounded by hay bales and farming equipment. You look around but don't see anyone and you don't hear anything. 
-
-Regretfully, you conclude that the mysterious figure must have slipped away down the dirt road.
-
-You are beginning to tire but you jog back out of the barn and start [[along the dirt road.->action-pursuit-3]]
+Regretfully, you conclude that the mysterious figure must have slipped away back toward the road. You are tired but jog out of the barn and gallop [[toward the main road.->action-pursuit-3]]
 
 :: action-pursuit-3
 
-The dirt road is narrow and flanked by tall crops on either side. You push forward, your footsteps muffled by the soft earth beneath you. Looking ahead, you are sure this dirt road will end on the main road, County Road 66, and you are correct. You see what must be the Lancaster's mailbox near theyir driveway.
+The dirt road is narrow and flanked by tall crops on either side. You push forward, your footsteps accentuate by the gravel beneath you. Looking ahead, you are sure this dirt road will end on the main road, County Road 66, and you are correct. You see what must be the Lancaster's mailbox near their driveway.
 
-A check along the main road shows no sign of the mysterious figure. Your patrol vehicle is parked not far away. There is no sign of anyone. 
+A check along the main road shows no sign of the mysterious figure. You can see the Lancaster driveway from here - your patrol vehicle is where you left it and there is no sign of any other vehicles in motion.
+With no other option you [[return to the house.->action-pursuit-4]]
 
-You catch your breath while you survey the area again, looking for anywhere the figure might hide. You don't see anything.
-[[Continue->action-pursuit-4]]
-
-:: action-pursuit-4 
-
-You slowly walk up the front stairs and onto the porch and then along the porch until it takes you back to where you first saw the mysterious figure. You are back where you started.
+:: action-pursuit-4
+You quickly climb the front stairs onto the porch walk briskly along it and along the side until you have returned to where you first saw the mysterious figure.
 You approach the side door and find that the screen door is ajar as it was before, but now you can see that the door, also, is not fully closed. You feel justified to enter the house.
 
 [[You announce yourself and push into the house->action-enter-kitchen]]
 
 :: action-enter-kitchen
 <<set $chapter to "bernadette">>\
-You are in, what appears to be, the kitchen of the Lancaster house. There are some appliances straight in front of you and a counters to your right.
+You are in, what appears to be, the kitchen of the Lancaster house. There are some appliances straight in front of you and a counter to your right.
 To your surprise, there is a [[woman->character-bernadette]] standing on the other side of a short kitchen counter. She looks up, surprised as well.
 <<bern>>Well, hello there...officer?<</bern>>
-You breate a sigh of relief and introduce yourself and the reason for your visit. The woman introduces herself as Bernadette, a neighbor who was just checking on the family as she has not seen them in church that day. 
-
-The woman seems like what you would expect for the area - a farmer's wife for example. She is even wearing gardening gloves. She appears at ease and you see no signs that she was the figure you were pursuing, she is not out of breath and her clothes are not ruffled. 
-<<you>>I saw someone in the back yard and they ran off when they saw me. Would you know who that was?<</you>>
-<<bern>>No. No, I didn't see anyone - no idea on who that could have been if it weren't one of the Lancasters. I walked up the main road and straight to the side door, but it was open so I called but no one answered.<</bern>>
+You breathe a sigh of relief and introduce yourself and the reason for your visit. The woman introduces herself as Bernadette, a neighbor who was just checking on the family as she has not seen them in church that day. 
+Bernadette has short, brunette hair and pale skin, probably in her mid-40s you would guess and has a sturdy, even athletic build, one you would expect from someone who works the land. She is even wearing a pair of gardening gloves. 
+<<you>>I saw someone in the back yard and they ran off when they saw me. Did you see anyone? Would you know who that was?<</you>>
+<<bern>>No. No, I didn't see anyone - no idea on who that could have been if it weren't one of the Lancasters. I walked up the main road and straight to the side door - I always use the side door.<</bern>>
 <<you>>Any idea where the Lancasters might be today?<</you>>
-<<bern>>Oh, I think they might be at some church function. They are very active...but it was strange not seeing them today. I know they were participating in our Lenten challenge...<</bern>>
-<<you>>Lenten challenge? What's that?<</you>>
-You walk closer to the counter. There is actually some literature on the counter about lent and the about an event called the "Lenten Challenge".
-<<bern>>Oh, it's a challenge we do every year before Easter. You give up something you like for the season of lent. The church has a list of things you can give up - like sweets, or TV, or even swearing. The Lancasters decided to give up...well, I don't know what they gave up, but they were very serious about it.<</bern>>
-The woman's tone is friendly and relaxed but you sense a remaining sense of surprise about her.
-<<you>>Would you like to see my identifcation Ma'am?<</you>>
-You reach inside your jacket...
-<<bern>>Oh, no need for that, officer. I believe you. I was just surprised to see you...but it makes sense that someone might have called with concerns as I mentioned: they didn't attend church today.<</bern>>
-<<you>>When...when was the LAST time you spoke with any of the Lancasters? How many are there in the family?<</you>>
-<<bern>>It's hard to say. But I did speak with one of them recently, not in person though.<</bern>>
-<<you>>Which one?<</you>>
-<<bern>>That is a good question. Let me think on that and I'll get back to you. It was very nice to meet you>, officer.<</bern>>
-For a moment, you are distracted by some papers on the counter and you become lost in thought. What should you do next? Search the house? Search the property? There was only a few hours of sunlight left.
+<<bern>>Oh, if they aren't here, they must be somewhere related to a church activity; they are very active...but it was strange not seeing them today. It does seem they are involved in the obervance of Lent.<</bern>>
+<<you>>Lent?<</you>>
+You walk closer to the counter and now you can see there are various documents and announcements related to the church and Lent.
+<<bern>>Yes, officer, it's a Christian observance. You are not familiar? You never gave up something for Lent?<</bern>>
+
+You ignore the question, feeling the conversation is veering off course.
+<<you>>I apologize Ma'am, I'm trying to determine if I should be concerned about the well-being of this family. You said you didn't seem them today, but you expect they might be at church? Is there any number I could call?<</you>>
+
+She looks at you sympathetically.
+<<bern>>I'm sorry, I don't have any information I can give to you. These bulletins probably have some contact information that you could use to reach the pastor or the church office? I would start there. If I think of anything else, I'll let you know.<</bern>>
+
+You nod and pull one of the [[documents->object-lent-documents]] to you.
+
 
 When you look up again, the woman is gone.
-<<addinventory "??card??" "card-the-samaritan">>
-
-
+<<addinventory "??card??" "card-the-samaritan">>\
+You do find some phone numbers within the various documents, but no one answers any of your calls.
+You decide it is time to search the property for a member of the family or any hint as to where they may be. 
 [[Search the house->loc-mainhouse-kitchen][$chapter to $chapters[3]; $time += 1; $openhouse to true]]
+
+:: object-lent-documents {"position":"500,100","size":"150,100"}
+[[Overview of Lent->object-lent-description]]
+[[Lent Calendar->object-lent-calendar]]
+[[Lent Challenge Announcement->object-lent-challenge-announcement]]
+[[Lent Cards->object-lent-cards]]
+<<back>>
+
 
 :: action-driving-on-route-6
 You drive on route 6 toward the Lancaster Farm.

@@ -7,10 +7,10 @@ The town of Marlowe does not have its own police force, relying instead on the c
 Although Marlowe does not have its own police force, there is a section of the city hall building that serves as a de-facto police station. It is isolated from the rest of the building with its own entrance, phone line and even a few holding cells. 
 
 You pull into the parking lot for the offices of Marlowe and find the lone parking spot that says 'Sheriff or State Police parking only'. You park and walk up to the closest door - a metal door with a large sign that says:
-'''
+''
 For all emergency services, please call 911.
 For non-emergency inquiries, fill out a request and slip it through the slot below.
-''''
+''
 Indeed, there is a rusted slot in the door. There is also a keypad lock next to the handle. 
 
 You try the door but it is firmly locked. You look at the keypad. You don't know the code for this building off hand and decide that you can call the county sheriff's office for that. You walk back to your vehicle, hoping that your radio will be able to reach a dispatcher. But it isn't necessary, when you return to the car, your portable electronic assistant, the Q5, is flashing an alert. There is one line blinking on the screen.
@@ -29,7 +29,7 @@ But there is no answer.
 
 The desk is bare except for a pen and a phone. 
 [[Follow the dark corridor->loc-police-station-jail]]
-[[Try the vending maching->loc-police-station-vending-machine]]
+[[Try the vending machine->loc-police-station-vending-machine]]
 [[Approach the front desk->loc-police-station-front-desk]]
 
 :: loc-police-station-jail {"position":"200,50","size":"150,100"}
@@ -97,21 +97,25 @@ The 50-acre Lancaster farm stretches across rolling hills planted mostly with so
 :: loc-pool {"position":"250,100","size":"150,100"}
 A underground swimming pool occupies the majority of the backyard sitting between the main house and the forest like an abandoned promise from better times. The once-blue water has turned a murky green-brown, with leaves and debris floating on the surface that ripples without any apparent cause. The concrete edges are cracked and stained, and the diving board hangs at a precarious angle, its metal joints corroded by years of neglect.
 Along the north side of the pool is a single-story structure, perhaps a pool house. Nestled in the Northwest corner is a large mechanism that may be the pool's filtration system.
-
-[[Inspect the pool mechanism->loc-hottub]]
 [[Look into the pool->loc-pool-inspect]]
-
+[[Inspect the pool mechanism->loc-hottub]]
 [[Pool house->loc-poolhouse]]
 [[Main house porch north->loc-mainhouse-porch-north]]
 
 :: loc-hottub {"position":"300,100","size":"150,100"}
-The pool's maintenance mechanism is terminally rusted and silent. But between it and the poolhouse itself is a sunken hot tub - the water is suprisingly clear in comparison to the pool.
+The pool's maintenance mechanism is terminally rusted and silent. But between it and the poolhouse itself is a sunken hot tub - the water is surprisingly clear in comparison to the pool.
 [[Inspect the hot tub->loc-hot-tub-inspect]]
 [[Pool house->loc-poolhouse]]
 [[Pool->loc-pool]]
 [[Main house porch north->loc-mainhouse-porch-north]]
 
 :: loc-pool-inspect {"position":"250,150","size":"150,100"}
+The water is dark and dingy and what can be seen of the walls and bottom of the pool is green with algae. 
+[[Inspect the pool mechanism->loc-hottub]]
+[[Pool house->loc-poolhouse]]
+[[Main house porch north->loc-mainhouse-porch-north]]
+
+:: loc-hot-tub-inspect {"position":"300,150","size":"150,100"}
 Somehow this hottub is reasonably maintained and almost clean except for some floating leaves. Also floating in the water is a red one-piece swimsuit. You also see a glint of gold jewelry at the bottom of the tub. At this point you don't have any reason to retrieve either though you note their presence.
 Similarly strange is a woman's purse sitting near the edge of the tub. You are not an expert but it looks expensive to you. 
 Sticking out of the purse is a  [[white card->object-katie-envelope]]
@@ -157,9 +161,9 @@ There is alot of junk in this building, searching could take time and there woul
 
 :: loc-barn {"position":"100,400","size":"150,100"}
 The two-story barn looms near the main house, its weathered wood siding adorned with faded hex signs—traditional wards against ill fortune and spirits that now seem more desperate than protective. The structure creaks and settles with sounds independently of the wind as if it had a life of its own.
-There is a small side along the east side of this structure.
+There is a small cabin along the east side of this structure.
 [[Enter the barn->loc-barn-inside]]
-[[Cabin near the barn->loc-dougs-cabin]]
+[[Small cabin near the barn->loc-dougs-cabin]]
 
 :: loc-barn-inside
 The barn's interior is a cavernous space filled with the scent of hay, oil, and aged wood. The ground floor is covered with hay and pieces of wood. The livestock pens are empty.
@@ -170,7 +174,7 @@ The barn's interior is a cavernous space filled with the scent of hay, oil, and 
 
 :: loc-dougs-cabin {"position":"250,400","size":"150,100"}
 The cabin is located behind the barn, nestled among a group of pine treets. The building is more like a shed and seems to have been built from scavenged wood and metal siding. There is no lock on the door and it does not even seem to be latched.
-[[Push the door open->loc-dougs-cabin-inside]].
+[[Push the door open->loc-dougs-cabin-inside]].\
 [[Back to the driveway->loc-lancaster-machine-barn-driveway]]
 
 :: loc-dougs-cabin-inside {"position":"400,400","size":"150,100"}
@@ -182,22 +186,22 @@ Turning back to the door, you find the ubiquitous Farrah Fawcett poster taped to
 
 [[Look in the fridge->object-dougs-fridge]]
 [[Look in the trashcan->object-dougs-trashcan]]
-[[Exit the cabin->loc-dougs-cabin]]<<return>>
+[[Exit the cabin->loc-dougs-cabin]]
 
 :: loc-corn-maze {"position":"400,400","size":"150,100"}
 The corn fields north of the main house seem large but the eye can still see the dense forest which bounds it. The stalks are tall and thick but do not have so many ears of corn. Some humanoid shapes can be seen elevated over the fields, scarecrows perhaps. 
 The stalks rustle in the breeze. 
 <<if $chapter is "gameboardopen">>\
     [[Venture deeper into the maze->loc-corn-maze-inner]]
-You walk around a bit but get confused. There doesn't seem any point in continuing.
 <</if>>\
+You walk around a bit but get confused. There doesn't seem any point in continuing.
 [[Return to the old walking path->loc-old-walking-path-west]]
 
 :: loc-old-walking-path-west {"position":"550,400","size":"150,100"}
-The walking path is a barely visible dirt trail that begins near the poolhouse and  runs west through the forest of the property. 
+The walking path is a barely visible dirt trail that begins near the poolhouse and  runs west through the forest of the property. Through a gap in the brush, one can see corn stalks to the North and a bit of the poolhuse to the South.
 [[Corn maze->loc-corn-maze]]
 [[Poolhouse->loc-poolhouse]]
-[[Walk east->loc-loc-walking-east-on-path]]
+[[Walk east->loc-walking-east-on-path]]
 
 :: loc-walking-east-on-path {"position":"250,400","size":"150,100"}
 The brush of bushes rub against you as you make your way along the narrow path. The trees limbs are close overhead and their motions play tricks with your eyes. As you move eastward, you feel there may be a clearing ahead.
