@@ -9,6 +9,9 @@ Marlowe is so small that they don't even have their own police force - instead r
 <<set $debug to true>>
 <<set $inventory to []>>
 
+<<set $cardForJudge to "??">>
+
+
 <<set $cardForInebriate to "??">>
 <<set $cardForFool to "??">>
 <<set $cardForMiser to "??">>
@@ -29,13 +32,15 @@ Marlowe is so small that they don't even have their own police force - instead r
 <<set $secret_ready_for_farm to false>>
 <<set $secret_hidden_cards to false>>
 <<set $secret_has_all_cards to false>>
+<<set $found_ouija_board to false>>
+<<set $gameboard_is_set1 to false>>
 <<set $gameboard_is_set to false>>
 <<set $time to 0>>
 
 <!-- If he draws his weapon or shines light it can bo down. If he does not leave it can go up. -->
 <<set $relationWithBern to 0>> 
 
-<<set $chapters = ["beginning","porch","bernadette","hunt1","bern2","gameboardopen","gameboardset"]>>
+<<set $chapters = ["beginning","porch","bernadette","hunt1","bern2","gameboardopen1","gameboardopen","gameboardset"]>>
 <<set $chapter to $chapters[0]>>
 
 <<set $hal to {"charged":3,"busy":true,"alert":true,"temp":true}>>

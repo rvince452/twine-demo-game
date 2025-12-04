@@ -65,6 +65,7 @@ makeSpeakerMacro("al", "Al")
 makeSpeakerMacro("you", "You")
 makeSpeakerMacro("hal", "Hal")
 makeSpeakerMacro("bern", "Bernadette")
+makeSpeakerMacro("voice", "Voice")
 
 
 Macro.add('qspeak', {
