@@ -26,13 +26,15 @@ Game. Summon. Vows must be broken save sacrifice.
 :: loc-ouija-board
 The board is polished and clean unlike every other surface in this attic. You are not an expert but it looks vaguely like an Ouija board with letters and words scattered around the surface. A gold-colored coin sits on the surface. It slides easily across the board at the smallest impetus. There is a slot in the side of the board. If you shake the board gently, you hear something slide from within.
 Unlike any Oija board you have ever seen, this one has three rectangular inlays along the top edge, each is labeled in a language you do not recognize. 
-The left inlay has been [[painted->card-the-devil]]
+The left inlay is painted with a card-like, ominous   [[depiction->card-the-devil]]
 <<if $gameboard_is_set is true>>\
     This is your final decision.
 [[Done placing cards - close the board-->action-board-closed]]
 <<elseif $chapter is "gameboardopen1">>\
-Place the photos to match the part they play. 
-[[Configure the board->object-board]]
+The middle inlay contains a [[card->card-the-witch]].
+The right inlay is a cloudy black.
+The rest of the board has opened and scattered on top are six photos and six cards. To answer the challenge you must match cards with photos. The fact that your photo is among them fills you with dread.
+[[Configure the board->action-configure-board]]
 <<elseif $secret_hidden_cards is true>>\
 The outline of the center inlay is glowing in red, as if waiting for something to be placed there. 
 The right inlay is blacked out as if you are barred from seeing it.

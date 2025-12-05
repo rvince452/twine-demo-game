@@ -257,11 +257,11 @@ Bernadette looks over at you and removes her hat. Then she nimbly drops to a sit
     What happens if the opponent wins?
 <</you>>
 <<bern>>
-    They gain some power. I do not know those details. But in this case, the pawns are all sacrified.
+    They gain some power. I do not know those details. But in this case, the pawns are all sacrificed.
     <</bern>>
 <<you>>And if the opponent loses?<</you>>
 <<bern>>
-    Then both the opponent and the pawns are sacrified.
+    Then both the opponent and the pawns are sacrificed.
 <</bern>>
 <<you>>So it is a lose-lose situation?<</you>>
 <<bern>>For the pawns, yes, most of them. The game is a wager but it is also a test of deception. The opponent has attempted to trick each pawn into agreeing to satisfy the vow dictated by the card they have accepted. In this case, the card was delivered to them under the guise of a Lenten oath rather than just explaining the card's true nature. I will admit that was clever but I am not yet satisfied and it is not clear that you have been deceived. You simply do not know, that is different.<</bern>>
@@ -377,13 +377,11 @@ You realize that the white card contains another, smaller object within. You fin
 <<return>>
 
 :: action-check-gameboard-is-set
-Check that all the assignments are made.
-<<if $chapter is "gameboardset1">>\
+<<if $chapter is "gameboardopen1">>\
 <<if $cardForFool != "??">>\
     <<set $gameboard_is_set1 to true>>\
     [[Done->action-photo-assignments-complete]]
 <<else>>\
-    <<set $gameboard_is_set1 to false>>\ 
     You have not assigned all of the photos. 
     [[Return->loc-mainhouse-attic]]
 <</if>>\
@@ -398,6 +396,15 @@ Check that all the assignments are made.
 <</if>>\
 <</if>>
 
+:: action-photo-assignments-complete
+Check if the assignments is correct. If not, end the game.
+If correct then speak with Bernadette again.
+[[You have chosen correctly->action-bern-second-challenge]]
+
+:: action-bern-second-challenge
+A figure emerges, almost out of the darkness. Bernadette slides down beside you.
+<<bern>>You know this expression: Good news, Bad news?
+    <</bern>>
 :: action-board-closed1
 Check that all the assignments are made.
 

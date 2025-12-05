@@ -1,9 +1,18 @@
 :: debug-passage {"position":"0,0","size":"100,100"}
 <<return>>
 
+<<link "set gameboard">>
+	<<set $gameboard_is_set1 to true>>
+	<<set $chapter to "gameboardopen1">>
+<</link>>
 <<back>>
 <<addinventory "strange card from hottub" "card-the-miser">>
 <<set $chapter to "debug">>
+
+[[Enter Main House as open->loc-mainhouse-entry][$openhouse to true]]
+[[Check Map->map][$openhouse to true]]
+[[Test Decrypt->action-decrypt-card ]]
+
 
 [[board->object-board]]
 <<for _key, _value range State.variables>>

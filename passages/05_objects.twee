@@ -49,21 +49,17 @@ Looking under the surface, you find more whiskey bottles, some of them full and 
 "It was nice to meet you - I forgot to leave you my card. Talk soon?"
 <<return>>
 
-:: object-board
-You match each card with it's intended subject.
-The Opponent's card is fixed.
-The Judge's card is also fixed.
-But you must determine the player. 
+:: action-configure-board
 <table style="border:2px solid #DC143C; border-collapse:collapse; width:100%;">
   <tr>
     <th style="border:1px solid #DC143C;">The Player</th>
-    <th style="border:1px solid #DC143C;">The Opponent</th>
     <th style="border:1px solid #DC143C;">The Judge</th>
+    <th style="border:1px solid #DC143C;">The Opponent</th>
   </tr>
   <tr>
-    <td style="border:1px solid #DC143C;">[[card->obj-player]]</td>
-    <td style="border:1px solid #DC143C;">[[card->obj-opponent]]</td>
-    <td style="border:1px solid #DC143C;">[[card->obj-judge]]</td>
+    <td style="border:1px solid #DC143C;">The Devil</td>
+    <td style="border:1px solid #DC143C;">The Witch</td>
+    <td style="border:1px solid #DC143C;">         </td>
   </tr>
   <tr>
     <td colspan="3" style="border-bottom:2px solid #DC143C;"></td>
@@ -110,7 +106,8 @@ But you must determine the player.
     <td style="border:1px solid #DC143C;"></td>
   </tr>
 </table>
-[[Return->action-check-gameboard-is-set]]
+[[Submit->action-check-gameboard-is-set]]
+[[I'm not sure->loc-mainhouse-attic]]
 
 ::object-attic-journal {"position":"1100,100","size":"150,100"}
 TODO - talk about how easy it was to break their challenges. All 4 of them. Then the other is a GIMME

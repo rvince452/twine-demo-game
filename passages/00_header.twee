@@ -42,9 +42,6 @@ Does not show text, only links - check documentation
 <div style="border:1px solid #33C; padding:8px; margin:6px 0; border-radius:4px;"> \
 <<print "DEBUG  passage=" + passage() + " chapter=" + $chapter + " time=" + $time>>
 [[debug-passage]]
-[[Enter Main House as open->loc-mainhouse-entry][$openhouse to true]]
-[[Check Map->map][$openhouse to true]]
-[[Test Decrypt->action-decrypt-card ]]
 </div>\
 <</if>>\
 <<set _halInInv to setup.ininventory("HAL Q5 Assistant")>>\
