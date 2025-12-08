@@ -33,8 +33,6 @@ Marlowe is so small that they don't even have their own police force - instead r
 <<set $secret_hidden_cards to false>>
 <<set $secret_has_all_cards to false>>
 <<set $found_ouija_board to false>>
-<<set $gameboard_is_set1 to false>>
-<<set $gameboard_is_set to false>>
 <<set $time to 0>>
 
 <!-- If he draws his weapon or shines light it can bo down. If he does not leave it can go up. -->

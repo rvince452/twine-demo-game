@@ -71,7 +71,7 @@ Looking under the surface, you find more whiskey bottles, some of them full and 
   <tr>
     <td style="border:1px solid #DC143C;">[[card->card-the-inebriate]]</td>
     <td style="border:1px solid #DC143C;"><<cycle "$cardForFool" autoselect>>
-    <<option "??","">>
+    <<option "??","??">>
 	<<option "Photo - Alan Lancaster","Al">>
 	<<option "Susan Lancaster","Susan">>
 	<<option "Carl Lancaster","Carl">>

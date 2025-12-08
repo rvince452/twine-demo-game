@@ -27,7 +27,7 @@ Game. Summon. Vows must be broken save sacrifice.
 The board is polished and clean unlike every other surface in this attic. You are not an expert but it looks vaguely like an Ouija board with letters and words scattered around the surface. A gold-colored coin sits on the surface. It slides easily across the board at the smallest impetus. There is a slot in the side of the board. If you shake the board gently, you hear something slide from within.
 Unlike any Oija board you have ever seen, this one has three rectangular inlays along the top edge, each is labeled in a language you do not recognize. 
 The left inlay is painted with a card-like, ominous   [[depiction->card-the-devil]]
-<<if $gameboard_is_set is true>>\
+<<if $chapter is "gameboardopen">>\
     This is your final decision.
 [[Done placing cards - close the board-->action-board-closed]]
 <<elseif $chapter is "gameboardopen1">>\

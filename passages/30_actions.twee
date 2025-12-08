@@ -379,13 +379,13 @@ You realize that the white card contains another, smaller object within. You fin
 :: action-check-gameboard-is-set
 <<if $chapter is "gameboardopen1">>\
 <<if $cardForFool != "??">>\
-    <<set $gameboard_is_set1 to true>>\
+    <<set $chapter to "gameboardopen">>
     [[Done->action-photo-assignments-complete]]
 <<else>>\
     You have not assigned all of the photos. 
     [[Return->loc-mainhouse-attic]]
 <</if>>\
-<<elseif $chapter is "gameboardset">>\
+<<elseif $chapter is "gameboardopen">>\
 <<if $cardForOpponent != "??">>\
     <<set $gameboard_is_set to true>>\
     [[Done->action-opponent-assignment-complete]]
@@ -405,6 +405,7 @@ If correct then speak with Bernadette again.
 A figure emerges, almost out of the darkness. Bernadette slides down beside you.
 <<bern>>You know this expression: Good news, Bad news?
     <</bern>>
+    [[Return->loc-mainhouse-attic]]
 :: action-board-closed1
 Check that all the assignments are made.
 
