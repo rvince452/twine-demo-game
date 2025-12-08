@@ -78,9 +78,10 @@ Look - view of the shower. A robe hangs on towel rack.
 
 
 :: loc-mainhouse-basement-utility {"position":"1650,1325","size":"100,100"}
-\
+This room contains the fusebox for the house as well as some old cleaning equipment.
 <<if $chapter is "gameboardopen">>
-    [[You find a large, strange web here->action-talk-doug-web]]
+    The closet is filled with thick web-like fibers but you make up the shape of a large man toward the rear of the room. The man is nude. This looks like Doug Longview.
+    [[Speak with the man->action-talk-doug-web]]
 <</if>>
 [[basement->loc-mainhouse-basement]]
 
@@ -91,10 +92,12 @@ Look - view of the shower. A robe hangs on towel rack.
 
 :: loc-mainhouse-entry {"position":"1650,1075","size":"100,100"}
 \
+The entryway of the home. There are some pegs on the wall for hanging coats and an assortment of shoes and boots litter the floor beneath. A simple chair is the only furniture here.
 [[Living room->loc-mainhouse-living]]
 
 :: loc-mainhouse-living {"position":"1775,1075","size":"100,100"}
 \
+TOOD - describe an 80's living room with couch, ez chairs and television
 [[Entryway->loc-mainhouse-entry]]
 [[Kitchen->loc-mainhouse-kitchen]]
 [[Rec room->loc-mainhouse-recroom]]
@@ -103,6 +106,7 @@ Look - view of the shower. A robe hangs on towel rack.
 
 :: loc-mainhouse-kitchen {"position":"1650,1200","size":"100,100"}
 \
+The old farmhouse kitchen is functional though outdated. There are signs that it has been used recently.
 
 On the counter you see:
 [[A yellowed microwave->object-microwave]]
@@ -143,6 +147,8 @@ Loaded dice, marked cards, looks like he played with the lent money
 
 :: loc-mainhouse-downstairs-bath-1 {"position":"1650,1575","size":"100,100"}
 \
+This small bathroom contains a toilet in the far corner opposite an empty shower stall.
+To your left is a simple mirrored vanity and on your right a chair below a picture of the farmhouse in earlier days.
 
 Investigation will show the removed electric receptable accessable from below
 [[Rec room->loc-mainhouse-recroom]]
@@ -152,6 +158,7 @@ Investigation will show the removed electric receptable accessable from below
 
 :: loc-mainhouse-upstairs-hallway {"position":"1650,1325","size":"100,100"}
 \
+As you reach the top of the stairs from the first level, there is a linen closet in front of you. To the right is a master bedroom. To your left are two bedrooms and at the end of the hall are stairs leading upwards.
 [[Master bedroom->loc-mainhouse-upstairs-master]]
 [[Katie's room->loc-mainhouse-upstairs-katie]]
 [[Guest bedroom->loc-mainhouse-upstairs-bedroom-guest]]
@@ -173,18 +180,16 @@ Katie's room is a shrine to her past glories, with gymnastics trophies crowding 
 Investigation will show a trove of shoplifted and purchased cosmetics, jewelry, etc 
 Also will find copied checks and practiced handwriting samples. Some forms match the address next door.
 [[Read the yearbook->object-yearbook]]
-[[Read the textbook->object-textbook]]
 TODO - track/gymnast medal, note about Paul. No journal here 
 [[strange doll under pillow->object-voodoo-doll-carl]]
 <<return>>
 
-
-
-
-
 :: loc-mainhouse-upstairs-bedroom-guest {"position":"1775,1575","size":"100,100"}
 \
-Susan's office - nothing strange here, just a half-empty glass of something red but seems it is vegatable juice
+This room seems to serve as both a bedroom and an office. There is a single bed and bookcase on one side of the room and a small desk and filing cabinet on the right side. 
+
+Some 80's products concerning diet and healthy living are scattered about the room, including a copy of "The Complete Scarsdale Medical Diet" and a VHS tape titled "Jazzercise Your Way to Fitness." A stack of health food magazines from the era sits on the nightstand, their covers promising quick weight loss and improved vitality through natural foods and exercise routines. A few dusty jars of protein powder and vitamin supplements are tucked away in the bookcase, alongside cookbooks focused on low-fat and high-fiber recipes.
+There is a half-empty glass on the desk. The liquid is orange-red and smells of tomato. Perhaps some kind of vegetable joice...
 <<return>>
 
 :: loc-mainhouse-upstairs-master {"position":"1650,1450","size":"100,100"}
@@ -194,5 +199,6 @@ Al and Susan's bedroom reflects their divergent obsessions alongside their share
 [[Master bathroom->loc-mainhouse-upstairs-master-bath]]
 
 :: loc-mainhouse-upstairs-master-bath {"position":"1775,1450","size":"100,100"}
-\
+The master bathroom is large and spacious. There is a double vanity, a large enclosed shower and a separate tub. A small room holds the toilet.
+Some towels litter the floor.
 <<return>>

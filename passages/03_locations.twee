@@ -168,7 +168,9 @@ There is a small cabin along the east side of this structure.
 :: loc-barn-inside
 The barn's interior is a cavernous space filled with the scent of hay, oil, and aged wood. The ground floor is covered with hay and pieces of wood. The livestock pens are empty.
 <<if $chapter is "gameboardopen">>
-    [[You find a large, strange web here->action-talk-katie-web]]
+    Something strange has occurred in one of the horse stalls. The interior is filled with a web. Suspened in the center of the web is a young woman with short blonde hair, she is nude with blonde hair, her head tilted back, face toward the ceiling. Her arms are spread above her, her hands lost in the webbing that attaches to the rafters overhead. Her legs are similary spread below her, her bare calves and feet suspended above the ground. Her body trembles perhaps from fear or the results of crying.
+    This looks like Katie Lancaster.
+    [[Speak to the woman->action-talk-katie-web]]
 <</if>>
 [[Exit->loc-lancaster-machine-barn-driveway]]
 
@@ -227,7 +229,9 @@ You find yourself deeper within the corn maze, the rustlig of the stalks seems t
 [[Forest->loc-forest]]
 
 <<if $chapter is "gameboardopen">>
-    [[You find a large, strange web here->action-talk-susan-web]]
+    You find a large bare tree, it's trunk stripped of bark. A large cocoon-like pod is attached the to the tree approximately 10 feet from the ground. A woman's head sticks out from the top of the strange trap as her long legs hang from the bottom. Her midsection is entirely covered. She can see you.
+    This looks like Susan Lancaster 
+    [[Talk to the woman->action-talk-susan-web]]
 <</if>>
 
 :: loc-forest-clearing-firepits
@@ -254,6 +258,7 @@ Along Route 6, at the eastern edge of the lancaster property is another mailbox,
 :: loc-neighbors-copse {"position":"100,850","size":"150,100"}
 A small grove of mixed hardwood trees creates a natural boundary between properties, serving as both windbreak and privacy screen. The copse consists primarily of oak, maple, and birch trees with dense underbrush that provides cover for wildlife. Fallen logs and leaf litter create a soft carpet underfoot, and the dappled sunlight filtering through the canopy gives the area a peaceful, secluded feeling. However, there's something unsettling about the silence here—no bird songs, no rustling of small animals, just an oppressive quiet that seems to muffle even your own footsteps.
 <<if $chapter is "gameboardopen">>
-    [[You find a large, strange web here->action-talk-al-web]]
+Between two trees, inverted, is a middle-aged man caught between two trees in a thick web. His face is flushed red. Upson seeing you, he begins to yell angry words though his voice lacks much strength.
+    [[Speak to the man->action-talk-al-web]]
 <</if>>
 [[Return to the main road->loc-county-road-6-lancaster-farm]]
